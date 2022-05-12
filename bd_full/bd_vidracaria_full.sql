@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `tb_produtos` (
      
 ALTER TABLE `tb_produtos`
 	ADD PRIMARY KEY (`id_produto`),
-	MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT,
+	MODIFY  `id_produto` int(11) NOT NULL AUTO_INCREMENT,
 	ADD CONSTRAINT `id_unidade_produto_fk` FOREIGN KEY (`id_unidade_produto`)
 		REFERENCES `tb_unidade` (`id_unidade`)
 			ON DELETE NO ACTION
