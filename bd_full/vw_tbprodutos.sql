@@ -1,4 +1,4 @@
--- Criando a view lista de produto--------------------------------------------------
+-- Criando a view `vw_tbprodutos`-----------------------------
 CREATE VIEW `vw_tbprodutos` AS
 	SELECT	p.codigo_produto,
 			p.descri_produto,
@@ -18,6 +18,5 @@ CREATE VIEW `vw_tbprodutos` AS
     INNER join tb_unidade u ON p.id_unidade_produto = u.id_unidade
     INNER join tb_espessura e ON p.id_unidade_produto = e.id_espessura; 
     
--- chamando a view-------------------------
-      SELECT *
-       FROM  vw_tbprodutos       
+    SELECT *
+    FROM  vw_tbprodutos       
