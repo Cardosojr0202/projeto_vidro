@@ -1,0 +1,57 @@
+<!-- <?php 
+include("../cannection/cannection.php")
+
+$consul   =   "
+                SELECT *
+                FROM tb_tb_categoria
+                ORDER BY rotulo_categoria ASC
+                "
+
+$lista = $conect->query($consul);
+$row    =   $lista->fetch_assoc();
+$totalRows  =   ($lista)->num_rows;
+?> -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap-grid.min.css.map" >
+    <!-- Link para CSS específico -->
+    <link rel="stylesheet" href="../css/meu_estilo.css">
+</head>
+<body>
+    <main>
+        <h1>lista de categoria</h1>
+        <table border="1">
+             <!-- thead>tr>th*8 -->
+             <thead>
+                 <tr>
+                     <th>ID</th>
+                     <th>SIGLA</th>
+                     <th>ROTULO</th>
+                     <th>ADICIONAR</th>
+                 </tr>
+             </thead>
+              <!-- tbody>tr>td*8 -->
+              <tbody>
+                  <tr>
+                      <td>
+                          <td>1</td>
+                          <td>VD</td>
+                          <td>VIDRO</td>
+                          <td>ALTERAR|EXCLUIR</td>
+                      </td>
+                  </tr>
+              </tbody>
+        </table>
+    </main>
+
+    <!-- Link arquivos bootstrap script js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
