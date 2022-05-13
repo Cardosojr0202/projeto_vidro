@@ -23,7 +23,7 @@ $totalrows = ($list)->fetch_assoc();
 <body>
     <main class="container">
         <h1>lista de categoria</h1>
-        <table class="table">
+        <table class="table table-hover tbopacidade">
              <!-- thead>tr>th*8 -->
              <thead>
                  <tr>
@@ -52,3 +52,4 @@ $totalrows = ($list)->fetch_assoc();
     <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php mysqli_free_result($list); ?>
