@@ -7,14 +7,14 @@ $password_conn = "#@senac4321@#";
 $charset_conn = "utf8";
 
 // Definindo parâmetros da conexão
-$conn_produtos = new mysqli($hostname_conn, $username_conn, $password_conn, $database_conn);
+$conexao = new mysqli($hostname_conn, $username_conn, $password_conn, $database_conn);
 
 // Definindo o conjunto de caracteres da conexão
-mysqli_set_charset($conn_produtos,$charset_conn);
+mysqli_set_charset($conexao,$charset_conn);
 
 // Verificando possíveis erros na conexão
-if($conn_produtos->connect_error){
-    echo "Error: ".$conn_produtos->connect_error;
+if($conexao->connect_error){
+    echo "Error: ".$conexao->connect_error;
 };
 // Não deixar espaço vazio depois do fechamento do PHP causa erro HEADER
 ?>
