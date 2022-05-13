@@ -21,9 +21,10 @@ $totalrows = ($list)->fetch_assoc();
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body>
-    <main class="container">
-        <h1>lista de categoria</h1>
-        <table class="table table-hover tbopacidade">
+    <main class="container"><br>
+        <h1 class="bg-primary bg-gradient">lista de categoria</h1>
+        <div>
+            <table class="table table-primary table-hover tbopacidade">
              <!-- thead>tr>th*8 -->
              <thead>
                  <tr>
@@ -44,7 +45,8 @@ $totalrows = ($list)->fetch_assoc();
                   </tr>
                   <?php } while ($row = $list->fetch_assoc()); ?>
               </tbody>
-        </table>
+            </table>
+        </div>
     </main>
 
     <!-- Link arquivos bootstrap script js -->
