@@ -1,3 +1,8 @@
 .tbopacidade{
-    background-color: rgba(110, 179, 224, 0.6);
+    background-color: rgba(110, 178, 224, 0.6);
+}
+.fundofixo{
+    background: url(../imagens/bg_paralax.jpg) no-repeat fixed;
+    -webkit-background-size:cover;
+    background-size: cover;
 }
