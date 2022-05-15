@@ -15,7 +15,7 @@ $totalrows = ($list)->fetch_assoc();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lista categoria</title>
+    <title> Categoria - Lista</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" >
     <!-- Link para CSS específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
@@ -24,20 +24,20 @@ $totalrows = ($list)->fetch_assoc();
 </head>
 <body class="fundofixo">
     <main class="container"><br>
-        <h1 class="bg-primary bg-gradient">lista de Categoria</h1>
-        <div>
+        <h1 class="text-light bg-primary bg-gradient">lista de Categoria</h1>
+        <div class="mx-auto col-9">
             <table class="table table-hover tbopacidade">
              <!-- thead>tr>th*8 -->
              <thead>
                  <tr>
-                     <th class="d-none">ID</th>
-                     <th>SIGLA</th>
-                     <th>ROTULO</th>
+                     <th class="d-none text-light">ID</th>
+                     <th class="text-light">SIGLA</th>
+                     <th class="text-light">ROTULO</th>
                      <th>
-                         <a href="#" target="_self" class="btn btn-primary d-block" role="button">
+                        <a href="categoria_insere.php" target="_self" class="btn col-6 btn-primary" role="button">
                             <i class="d-xs-none">ADICIONAR </i>
                             <i class="bi bi-plus-circle"></i>
-                         </a>
+                        </a>
                     </th>
                  </tr>
              </thead>
@@ -46,14 +46,14 @@ $totalrows = ($list)->fetch_assoc();
                   <?php do { ?>
                   <tr>
                         <td class="d-none"><?php echo $row['id_categoria'] ?></td>
-                        <td><?php echo $row['sigla_categoria'] ?></td>
-                        <td><?php echo $row['rotulo_categoria'] ?></td>
+                        <td class="text-light"><?php echo $row['sigla_categoria'] ?></td>
+                        <td class="text-light"><?php echo $row['rotulo_categoria'] ?></td>
                         <td class="d-grid gap-2">
-                            <a href="#" class="btn btn-success" role="button">
+                            <a href="#" class="btn col-6 btn-success" role="button">
                                 <i>ALTERAR</i>
                                 <i class="bi bi-arrow-clockwise"></i>
                             </a>
-                            <button data-nome="" data-id="" class="btn btn-danger">
+                            <button data-nome="" data-id="" class="btn col-6 btn-danger">
                                 <i>EXCLUIR</i>
                                 <i class="bi bi-trash-fill"></i>
                             </button>
@@ -62,7 +62,7 @@ $totalrows = ($list)->fetch_assoc();
                   <?php } while ($row = $list->fetch_assoc()); ?>
               </tbody>
             </table>
-        </div>
+        </div><!-- fecha dimensionamento -->
     </main>
 
     <!-- Link arquivos bootstrap script js -->
