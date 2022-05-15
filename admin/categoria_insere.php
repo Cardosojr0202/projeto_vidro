@@ -24,7 +24,7 @@ if($_POST){
     $result = $conexao->query($cunsulSQL);
 
     // Após a ação a página será redirecionada
-    $destino = "lista_categoria.php";
+    $destino = "categoria_lista.php";
     if(mysqli_insert_id($conexao)){
         header("Location: $destino");
     }else{
