@@ -51,7 +51,7 @@ if($_POST){
         <div class="row">
             <div class="mx-auto col-8"><br>
                 <h1 class="text-light bg-primary bg-gradient">
-                    <a href="lista_categoria.php" >
+                    <a href="categoria_lista.php" >
                         <button class="btn btn-danger" type="button">
                             <span class="bi bi-chevron-left" aria-hidden="true"></span>
                         </button>
