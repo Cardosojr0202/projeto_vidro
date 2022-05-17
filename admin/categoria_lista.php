@@ -53,7 +53,7 @@ $totalrows = ($list)->fetch_assoc();
                                 <i>ALTERAR</i>
                                 <i class="bi bi-arrow-clockwise"></i>
                             </a>
-                            <button data-nome="<?php echo $row['rotulo_categoria']; ?>" data-id="<?php echo $row['id_categoria']; ?>" class="btn col-6 btn-danger">
+                            <button data-nome="<?php echo $row['rotulo_categoria']; ?>" data-id="<?php echo $row['id_categoria']; ?>" class="btn col-6 btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <i>EXCLUIR</i>
                                 <i class="bi bi-trash-fill"></i>
                             </button>
@@ -64,36 +64,39 @@ $totalrows = ($list)->fetch_assoc();
             </table>
         </div><!-- fecha dimensionamento -->
     </main>
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title text-danger">ATENÇÃO!</h4>
-            </div> <!-- fecha modal-header -->
-            <div class="modal-body">
-                Deseja mesmo EXCLUIR o item?
-                <h4><span class="nome text-danger"></span></h4>
-            </div> <!-- fecha modal-body -->
-            <div class="modal-footer">
-                <a href="#" type="button" class="btn btn-danger delete-yes">
-                    Confirmar
-                </a>
-                <button class="btn btn-success" data-dismiss="modal">
-                    Cancelar
-                </button>
-            </div> <!-- fecha modal-footer -->
-        </div> <!-- fecha modal-content -->
-    </div> <!-- fecha modal-dialog -->
-</div> <!-- Fecha myModal -->
+<!-- Modal (Bootstrap 5) -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title text-danger" id="exampleModalLabel">ATENÇÃO!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        Deseja mesmo EXCLUIR o item?
+        <h4><span class="nome text-danger"></span></h4>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
+        <a href="#" type="button" class="btn btn-danger delete-yes">
+            Confirmar
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fecha Modal (Bootstrap 5) -->
 
     <!-- Link arquivos bootstrap script js -->
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 
 <!-- Script para o Modal -->
-<script type="text/javascript">
+ <!-- <script type="text/javascript">
     $('.delete').on('click',function(){
         var nome    = $(this).data('nome');
         var id      = $(this).data('id');
@@ -101,7 +104,7 @@ $totalrows = ($list)->fetch_assoc();
         $('a.delete-yes').attr('href','categoria_exclui.php?id_categoria='+id);
         $('#myModal').modal('show');
     });
-</script>
+</script> -->
 
 </body>
 </html>
