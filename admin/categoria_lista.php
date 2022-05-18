@@ -49,11 +49,11 @@ $totalrows = ($list)->fetch_assoc();
                         <td class="text-light"><?php echo $row['sigla_categoria'] ?></td>
                         <td class="text-light"><?php echo $row['rotulo_categoria'] ?></td>
                         <td class="d-grid gap-2">
-                            <a href="#" class="btn col-6 btn-success" role="button">
+                            <a href="categoria_atualiza.php?id_categoria=<?php echo $row['id_categoria']; ?>" class="btn col-6 btn-success" role="button">
                                 <i>ALTERAR</i>
                                 <i class="bi bi-arrow-clockwise"></i>
                             </a>
-                            <button data-nome="<?php echo $row['rotulo_categoria']; ?>" data-id="<?php echo $row['id_categoria']; ?>" class="btn col-6 btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button data-nome="<?php echo $row['rotulo_categoria']; ?>" data-id="<?php echo $row['id_categoria']; ?>" class="btn col-6 btn-danger" data-bs-toggle="modal" data-bs-target="#confimacao">
                                 <i>EXCLUIR</i>
                                 <i class="bi bi-trash-fill"></i>
                             </button>
@@ -65,26 +65,26 @@ $totalrows = ($list)->fetch_assoc();
         </div><!-- fecha dimensionamento -->
     </main>
 <!-- Modal (Bootstrap 5) -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="confimacao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title text-danger" id="exampleModalLabel">ATENÇÃO!</h5>
+        <h5 class="modal-title text-danger">ATENÇÃO!</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+      </div><!-- Fecha Modal-header (Bootstrap 5) -->
 
       <div class="modal-body">
         Deseja mesmo EXCLUIR o item?
         <h4><span class="nome text-danger"></span></h4>
-      </div>
+      </div><!-- Fecha Modal-body (Bootstrap 5) -->
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
-        <a href="#" type="button" class="btn btn-danger delete-yes">
-            Confirmar
+        <button class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
+        <a href="categoria_exclui.php?id_categoria=" type="button" class="btn btn-danger delete-yes">
+            Confirmar 
         </a>
-      </div>
+      </div><!-- Fecha Modal-footer (Bootstrap 5) -->
 
     </div>
   </div>
@@ -92,11 +92,12 @@ $totalrows = ($list)->fetch_assoc();
 <!-- Fecha Modal (Bootstrap 5) -->
 
     <!-- Link arquivos bootstrap script js -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 
 <!-- Script para o Modal -->
- <!-- <script type="text/javascript">
+<!-- <script type="text/javascript">
     $('.delete').on('click',function(){
         var nome    = $(this).data('nome');
         var id      = $(this).data('id');
