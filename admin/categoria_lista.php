@@ -81,11 +81,11 @@ $totalrows = ($list)->fetch_assoc();
 
       <div class="modal-footer">
         <button class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
-        <a href="categoria_exclui.php?id_categoria=" type="button" class="btn btn-danger delete-yes">
+        <a href="categoria_exclui.php?id=" type="button" class="btn btn-danger delete-yes">
             Confirmar 
         </a>
       </div><!-- Fecha Modal-footer (Bootstrap 5) -->
-
+      
     </div>
   </div>
 </div>
