@@ -17,10 +17,10 @@ $totalrows = ($list)->fetch_assoc();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Categoria - Lista</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" >
-    <!-- Link para CSS específico -->
-    <link rel="stylesheet" href="../css/meu_estilo.css">
     <!-- Link para icones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <!-- Link para CSS específico -->
+    <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body class="fundofixo">
     <main class="container"><br>
@@ -34,8 +34,8 @@ $totalrows = ($list)->fetch_assoc();
                      <th class="text-light">SIGLA</th>
                      <th class="text-light">ROTULO</th>
                      <th>
-                        <a href="categoria_insere.php" target="_self" class="btn col-6 btn-primary" role="button">
-                            <i class="d-xs-none">ADICIONAR </i>
+                        <a href="categoria_insere.php" target="_self" class="btn col-12 btn-primary" role="button">
+                            <span class="d-xs-none">Cadastrar</span>
                             <i class="bi bi-plus-circle"></i>
                         </a>
                     </th>
@@ -49,12 +49,12 @@ $totalrows = ($list)->fetch_assoc();
                         <td class="text-light"><?php echo $row['sigla_categoria'] ?></td>
                         <td class="text-light"><?php echo $row['rotulo_categoria'] ?></td>
                         <td class="d-grid gap-2">
-                            <a href="categoria_atualiza.php?id_categoria=<?php echo $row['id_categoria']; ?>" class="btn col-6 btn-success" role="button">
-                                <i>ALTERAR</i>
+                            <a href="categoria_atualiza.php?id_categoria=<?php echo $row['id_categoria']; ?>" class="btn col-10 btn-success" role="button">
+                                <span>Atualizar</span>
                                 <i class="bi bi-arrow-clockwise"></i>
                             </a>
-                            <button data-nome="<?php echo $row['rotulo_categoria']; ?>" data-id="<?php echo $row['id_categoria']; ?>" class="btn col-6 btn-danger" data-bs-toggle="modal" data-bs-target="#confimacao">
-                                <i>EXCLUIR</i>
+                            <button data-nome="<?php echo $row['rotulo_categoria']; ?>" data-id="<?php echo $row['id_categoria']; ?>" class="btn col-10 btn-danger delete">
+                                <span>EXCLUIR</span>
                                 <i class="bi bi-trash-fill"></i>
                             </button>
                         </td>
@@ -81,7 +81,7 @@ $totalrows = ($list)->fetch_assoc();
 
       <div class="modal-footer">
         <button class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
-        <a href="categoria_exclui.php?id=" type="button" class="btn btn-danger delete-yes">
+        <a href="#" type="button" class="btn btn-danger delete-yes">
             Confirmar 
         </a>
       </div><!-- Fecha Modal-footer (Bootstrap 5) -->
@@ -92,20 +92,20 @@ $totalrows = ($list)->fetch_assoc();
 <!-- Fecha Modal (Bootstrap 5) -->
 
     <!-- Link arquivos bootstrap script js -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 
 <!-- Script para o Modal -->
-<!-- <script type="text/javascript">
-    $('.delete').on('click',function(){
+<script type="text/javascript">
+    $('.delete').on('click',function(){ 
         var nome    = $(this).data('nome');
         var id      = $(this).data('id');
         $('span.nome').text(nome);
         $('a.delete-yes').attr('href','categoria_exclui.php?id_categoria='+id);
-        $('#myModal').modal('show');
+        $('#confimacao').modal('show');
     });
-</script> -->
+</script> 
 
 </body>
 </html>
