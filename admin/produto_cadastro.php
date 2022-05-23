@@ -1,5 +1,4 @@
 <?php
-// Incluir o arquivo para fazer a conexão
 include("../connection/connection.php");
 
 if($_POST){
@@ -13,39 +12,39 @@ if($_POST){
     if(isset($_POST['enviar'])){
         $nome_img   =   $_FILES['imagem_produto']['name'];
         $tmp_img    =   $_FILES['imagem_produto']['tmp_name'];
-        $dir_img    =   "../imagem/".$nome_img;
+        $dir_img    =   "../imagens/".$nome_img;
         move_uploaded_file($tmp_img,$dir_img);
     };
 
     // Receber os dados do formulário sempre Organize os campos na mesma ordem
-    $codigo_produto   =   $_POST['codigo_produto'];
+    $codigo_produto     =   $_POST['codigo_produto'];
     $descri_produto     =   $_POST['descri_produto'];
     $unidade_produto    =   $_POST['unidade_produto']; 
     $espessura_produto  =   $_POST['espessura_produto'];
     $cor_produto        = $_POST['cor_produto'];
     $id_categoria_produto  = $_POST['id_categoria_produto'];
-    $imagem_produto     =   $_FILES['imagem_produto']['name'];
+    $imagem_produto     = $_FILES['imagem_produto']['name'];
     $venda_produto      = $_POST['venda_produto'];
     $promo_produto      = $_POST['promo_produto'];
    
 
     // Reunir os valores a serem inseridos
-    $valores_insert     =   "'$codigo_produto','$descri_produto','$unidade_produto','$espessura_produto','$cor_produto ','$id_categoria_produto',' $imagem_produto ','$venda_produto',' $promo_produto' ";
+    $valores_insert     =   "'$codigo_produto','$descri_produto','$unidade_produto','$espessura_produto','$cor_produto','$id_categoria_produto','$imagem_produto','$venda_produto',' $promo_produto'";
 
     // Consulta SQL para inserção dos dados
-    $insertSQL  =   "INSERT INTO ".$tabela_insert."
+    $SQLinsert  =   "INSERT INTO ".$tabela_insert."
                         (".$campos_insert.")
                     VALUES
                         (".$valores_insert.")
                     ";
-    $resultado  =   $conexao->query($insertSQL);
+    $resultado  =   $conexao->query($SQLinsert);
 
     // Após a ação a página será redirecionada
     $destino    =   "produto_lista.php";
     if(mysqli_insert_id($conexao)){
-        header("Location: $conexao");
+        header("Location: $destino");
     }else{
-        header("Location: $conexao");
+        header("Location: $destino");
     };
 };
 // Selecionar o banco de dados
