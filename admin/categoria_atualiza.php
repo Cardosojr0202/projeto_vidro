@@ -17,9 +17,9 @@ if($_POST){
 
     // Inserção dos dados
     $upSQL = "UPDATE ".$table."
-             SET sigla_categoria = '".$sigla_categoria."',
+            SET sigla_categoria = '".$sigla_categoria."',
                 rotulo_categoria = '".$rotulo_categoria."'
-             WHERE ".$campo_fil."='".$filtro_up."'
+            WHERE ".$campo_fil."='".$filtro_up."'
             ";
     $result = $conexao->query($upSQL);
 

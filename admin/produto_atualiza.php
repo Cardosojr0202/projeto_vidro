@@ -15,23 +15,23 @@ if($_POST){
     if($_FILES['imagem_produto']['name']){
         $nome_img   = $_FILES['imagem_produto']['name'];
         $tmp_img    = $_FILES['imagem_produto']['tmp_name'];
-        $dir_img    = "../imagem/".$nome_img;
+        $dir_img    = "../imagens/".$nome_img;
         move_uploaded_file($tmp_img,$dir_img);
     }else{
-        $nome_img=$_POST['imagem_produto_atual'];
+        $nome_img=$_POST['imagens_produto_atual'];
     };
 
 // Receber os dados do formulário e Organize os campos na mesma ordem
     
-    $codigo_produto    = $_POST['codigo_produto'];
-    $descri_produto   = $_POST['descri_produto'];
-    $unidade_produto     = $_POST['unidade_produto'];
-    $espessura_produto     = $_POST['espessura_produto'];
-    $cor_produto      = $_POST['cor_produto'];
-    $id_categoria_produto      = $_POST['id_categoria_produto'];
-    $imagem_produto     = $nome_img;
-    $venda_produto      = $_POST['venda_produto'];
-    $promo_produto      = $_POST['promo_produto'];
+    $codigo_produto = $_POST['codigo_produto'];
+    $descri_produto = $_POST['descri_produto'];
+    $unidade_produto = $_POST['unidade_produto'];
+    $espessura_produto = $_POST['espessura_produto'];
+    $cor_produto = $_POST['cor_produto'];
+    $id_categoria_produto = $_POST['id_categoria_produto'];
+    $imagem_produto = $nome_img;
+    $venda_produto = $_POST['venda_produto'];
+    $promo_produto = $_POST['promo_produto'];
 
 
 // Campo para filtrar o registro (WHERE)
@@ -113,7 +113,7 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                     </a>
                     Atualizando Produtos
                 </h2>
-                <div class="thumbnail"> <!-- Abre thumbnail -->
+                <div class="thumbnail col-md-12"> <!-- Abre thumbnail -->
                     <div class="alert alert-info" role="alert"> <!-- Abre Alert -->
                         <form action="produto_atualiza.php" id="form_produto_atualiza" name="form_produto_atualiza" method="post" enctype="multipart/form-data">
 
@@ -200,21 +200,21 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                             <br>
                             <!-- file imagem_produto ATUAL -->
                             <label for="">Imagem Atual:</label>
-                            <img src="../imagem/<?php echo $row['imagem_produto']; ?>" alt="" class="img-responsive" style="max-width:70%;">
-                            <!-- type="hidden" >> campo oculto para guardar dados -->
+                            <img src="../imagem/<?php echo $row['imagem_produto']; ?>" alt="" class="img-responsive" style="max-width:30%;">
+
                             <!-- guardamos o nome da imagem caso não seja alterada -->
                             <input type="hidden" name="imagem_produto_atual" id="imagem_produto_atual" value="<?php echo $row['imagem_produto']; ?>"> 
                             <br>
 
                             <!-- file imagem_produto NOVA -->
-                            <label for="imagem_produto">Imagem Nova:</label>
+                            <label for="imagem_produto">Imagem:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
                                 </span>
                                 <!-- Exibe a imagem inserida -->
                                 <img src="" alt="" name="imagem" id="imagem" class="img-responsive" >
-                                <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="image/*">
+                                <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="imagens/*">
                             </div> <!-- Fecha grupo de inserção -->
                             <!-- Fecha file imagem_produto -->
                             <br>
@@ -282,6 +282,7 @@ document.getElementById("imagem_produto").onchange = function(){
 
 <!-- Link arquivos bootstrap script js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
