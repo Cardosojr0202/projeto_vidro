@@ -34,7 +34,7 @@ $totalrows = ($list)->fetch_assoc();
                      <th class="text-light">SIGLA</th>
                      <th class="text-light">ROTULO</th>
                      <th>
-                        <a href="categoria_insere.php" target="_self" class="btn col-12 btn-primary" role="button">
+                        <a href="categoria_insere.php" target="_self" class="btn btn-sm col-12 btn-primary" role="button">
                             <span class="d-xs-none">Cadastrar</span>
                             <i class="bi bi-plus-circle"></i>
                         </a>
@@ -49,11 +49,11 @@ $totalrows = ($list)->fetch_assoc();
                         <td class="text-light"><?php echo $row['sigla_categoria'] ?></td>
                         <td class="text-light"><?php echo $row['rotulo_categoria'] ?></td>
                         <td class="d-grid gap-2">
-                            <a href="categoria_atualiza.php?id_categoria=<?php echo $row['id_categoria']; ?>" class="btn col-10 btn-success" role="button">
+                            <a href="categoria_atualiza.php?id_categoria=<?php echo $row['id_categoria']; ?>" class="btn btn-sm col-10 btn-success" role="button">
                                 <span>Atualizar</span>
                                 <i class="bi bi-arrow-clockwise"></i>
                             </a>
-                            <button data-nome="<?php echo $row['rotulo_categoria']; ?>" data-id="<?php echo $row['id_categoria']; ?>" class="btn col-10 btn-danger delete">
+                            <button data-nome="<?php echo $row['rotulo_categoria']; ?>" data-id="<?php echo $row['id_categoria']; ?>" class="btn btn-sm col-10 btn-danger delete">
                                 <span>EXCLUIR</span>
                                 <i class="bi bi-trash-fill"></i>
                             </button>

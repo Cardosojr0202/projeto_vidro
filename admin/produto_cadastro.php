@@ -6,7 +6,7 @@ if($_POST){
     mysqli_select_db($conexao,$database_conn);
     // Variáveis para inserir dados ao banco
     $tabela_insert  =   "tb_produtos";
-    $campos_insert  =   "codigo_produto, descri_produto,unidade_produto,espessura_produto,cor_produto,id_categoria_produto,imagem_produto,venda_produto, promo_produto,";
+    $campos_insert  =   "codigo_produto,descri_produto,unidade_produto,espessura_produto,cor_produto,id_categoria_produto,imagem_produto,venda_produto, promo_produto,";
 
     // Guardando o Nome da imagem no banco de dados e arquivo no diretório
     if(isset($_POST['enviar'])){
@@ -22,7 +22,7 @@ if($_POST){
     $unidade_produto    =   $_POST['unidade_produto']; 
     $espessura_produto  =   $_POST['espessura_produto'];
     $cor_produto        = $_POST['cor_produto'];
-    $id_categoria_produto  = $_POST['id_categoria_produto'];
+    $id_categoria_produto = $_POST['id_categoria_produto'];
     $imagem_produto     = $_FILES['imagem_produto']['name'];
     $venda_produto      = $_POST['venda_produto'];
     $promo_produto      = $_POST['promo_produto'];
@@ -37,7 +37,7 @@ if($_POST){
                     VALUES
                         (".$valores_insert.")
                     ";
-    $resultado  =   $conexao->query($SQLinsert);
+    $result  =   $conexao->query($SQLinsert);
 
     // Após a ação a página será redirecionada
     $destino    =   "produto_lista.php";
@@ -78,7 +78,7 @@ $totalRows_cat     =   ($lista_cat_fk)->num_rows;
 <body class="fundofixo"><br>
     <main class="container">
         <div class="row"> <!-- Abre Row -->
-            <div class="mx-auto col-8"><!--Abre Dimensionamento -->
+            <div class="mx-auto col-sm-12 col-md-8 col-lg-10 mx-auto"><!--Abre Dimensionamento -->
                 <h2 class="text-light bg-info bg-gradient">
                     <a href="produto_lista.php">
                         <button class="btn btn-danger">
@@ -197,7 +197,7 @@ $totalRows_cat     =   ($lista_cat_fk)->num_rows;
             </div><!-- Fecha Dimensionamento -->
         </div> <!-- Fecha Row -->
     </main><br>
-<!-- Script para a imagem ------------------------------------------------------------------------------>
+<!-- Script para a imagem -->
 <script>
 document.getElementById("imagem_produto").onchange = function(){
     var reader = new FileReader();

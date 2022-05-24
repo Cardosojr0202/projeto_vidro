@@ -19,7 +19,7 @@ $totalRows  =   ($lista)->num_rows;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LISTA DE PRODUTOS</title>
+    <title>Lista de Produtos</title>
     <!--link  para o Bootstrap-->
     <link rel="stylesheet" href="../css/bootstrap.min.css" rel="stylesheet">
     <!--link  para o meu css-->
@@ -29,68 +29,69 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <main class="container"><br>
-    <div class="mx-auto col-11">
-        <h1 class="alert-primary">Lista de Produtos</h1>
-        <table class="table table-hover table-condensed tbopacidade" >
-                <thead>
-                    <tr>
-                        <th class="d-none text-light">ID</th>
-                        <th class="text-light">CODIGO</th>
-                        <th class="text-light">DESCRIÇÃO</th>
-                        <th class="text-light">UNIDADE</th>
-                        <th class="text-light">ESPESSURA</th>
-                        <th class="text-light">COR</th>
-                        <th class="text-light">CATEGORIA</th>
-                        <th class="text-light">IMAGENS</th>
-                        <th class="text-light">Venda</th>
-                        <th class="text-light">Promoção</th>
-                        <th>
-                            <a href="produto_cadastro.php" target="_self" class="btn col-12 btn-primary">
-                                <span class="hidden-xs">Cadastrar</span>
-                                <i class="bi bi-plus-circle" aria-hidden="true"></i>
-                            </a>
-                        </th>
-                    </tr>
-                </thead>
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-10">
+            <h1 class="bg-primary bg-gradient">Lista de Produtos</h1>
+            <table class="table table-hover table-condensed tbopacidade">
+                    <thead>
+                        <tr>
+                            <th class="col d-none">ID</th>
+                            <th class="col text-light">CODIGO</th>
+                            <th class="col text-light">DESCRIÇÃO</th>
+                            <th class="col text-light">UNIDADE</th>
+                            <th class="col text-light">ESPESSURA</th>
+                            <th class="col text-light">COR</th>
+                            <th class="col text-light">CATEGORIA</th>
+                            <th class="col text-light">IMAGENS</th>
+                            <th class="col text-light">Venda</th>
+                            <th class="col text-light">Promoção</th>
+                            <th>
+                                <a href="produto_cadastro.php" target="_self" class="btn btn-sm col-12 btn-primary">
+                                    <span class="d-none-xs">Cadastrar</span>
+                                    <i class="bi bi-plus-circle" aria-hidden="true"></i>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    <?php do { ?>
-                    <tr>
-                        <td class="d-none text-light"><?php echo $row['id_produto']; ?></td>
-                        <td class="text-light"><?php echo $row['codigo_produto']; ?></td>
-                        <td class="text-light"><?php echo $row['descri_produto']; ?></td>
-                        <td class="text-light"><?php echo $row['unidade_produto']; ?></td>
-                        <td class="text-light"><?php echo $row['espessura_produto']; ?></td>
-                        <td class="text-light"><?php echo $row['cor_produto']; ?></td>
-                        <td class="text-light"><?php echo $row['rotulo_categoria']; ?></td>
-                        <td><img src="../imagem/<?php echo $row['imagem_produto']; ?>" alt="" width="100px"> </td>
-                        <td class="text-light"><?php echo number_format($row['venda_produto'],2,',','.');?></td>   
-                        <td>
-                            <?php 
-                                if($row['promo_produto']=='Sim'){
-                                    echo ("<span class='glyphicon glyphicon-ok text-info' arial-hidden='true'></span>");
-                                }else if($row['promo_produto']=='Não'){
-                                    echo ("<span class='glyphicon glyphicon-remove-sign text-danger' arial-hidden='true'></span>");
-                                };
-                            ?>
-                        </td>                    
-                        <td class="d-grid gap-2">
-                            <a href="produto_atualiza.php?id_produto=<?php echo $row['id_produto']; ?>" target="_self" class="btn btn-warning btn-block">
-                                <span class="hidden-xs">Atualizar</span>
-                                <i class="bi bi-arrow-clockwise"></i>
-                            </a>    
-                            <button class="btn btn-danger btn-block btn-xs delete" role="button" data-nome="<?php echo $row['descri_produto'];?>" data-id="<?php echo $row['id_produto'];?>">
-                                <span class="hidden-xs">Excluir</span>
-                                <i class="bi bi-trash-fill"></i>
-                            </button> 
-                        </td>                    
-                    </tr>    
-                    <?php } while ($row = $lista->fetch_assoc()); ?>
-                </tbody>                
-        </table>
-    </div><!-- fecha dimensionamento -->
-     
-
+                    <tbody>
+                        <?php do { ?>
+                        <tr>
+                            <td class="d-none"><?php echo $row['id_produto']; ?></td>
+                            <td class="text-light"><?php echo $row['codigo_produto']; ?></td>
+                            <td class="text-light"><?php echo $row['descri_produto']; ?></td>
+                            <td class="text-light"><?php echo $row['unidade_produto']; ?></td>
+                            <td class="text-light"><?php echo $row['espessura_produto']; ?></td>
+                            <td class="text-light"><?php echo $row['cor_produto']; ?></td>
+                            <td class="text-light"><?php echo $row['rotulo_categoria']; ?></td>
+                            <td ><img src="../imagem/<?php echo $row['imagem_produto']; ?>" alt="" width="100px"> </td>
+                            <td class="text-light"><?php echo number_format($row['venda_produto'],2,',','.');?></td>   
+                            <td>
+                                <?php 
+                                    if($row['promo_produto']=='Sim'){
+                                        echo ("<span class='glyphicon glyphicon-ok text-info' arial-hidden='true'></span>");
+                                    }else if($row['promo_produto']=='Não'){
+                                        echo ("<span class='glyphicon glyphicon-remove-sign text-danger' arial-hidden='true'></span>");
+                                    };
+                                ?>
+                            </td>                    
+                            <td class="d-grid gx-3 gap-2">
+                                <a href="produto_atualiza.php?id_produto=<?php echo $row['id_produto']; ?>" target="_self" class="btn btn-sm btn-success btn-xs">
+                                    <span class="d-xm-none">Atualizar</span>
+                                    <i class="bi bi-arrow-clockwise"></i>
+                                </a>    
+                                <button class="btn btn-sm btn-danger btn-xs delete" role="button" data-nome="<?php echo $row['descri_produto'];?>" data-id="<?php echo $row['id_produto'];?>">
+                                    <span class="d-xm-none">Excluir</span>
+                                    <i class="bi bi-trash-fill"></i>
+                                </button> 
+                            </td>                    
+                        </tr>    
+                        <?php } while ($row = $lista->fetch_assoc()); ?>
+                    </tbody>                
+            </table>
+        </div><!-- fecha dimensionamento -->
+    </div><!-- fecha Row -->
+    
 </main>
 
 <!-- Modal (Bootstrap 5) -->
@@ -122,6 +123,7 @@ $totalRows  =   ($lista)->num_rows;
   
     <!--link arquivo bootstrap script js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>   
 
 <!-- Abre Script para o Modal -->
