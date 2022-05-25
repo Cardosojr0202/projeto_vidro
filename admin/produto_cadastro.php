@@ -6,7 +6,7 @@ if($_POST){
     mysqli_select_db($conexao,$database_conn);
     // Variáveis para inserir dados ao banco
     $tabela_insert  =   "tb_produtos";
-    $campos_insert  =   "codigo_produto,descri_produto,unidade_produto,espessura_produto,cor_produto,id_categoria_produto,imagem_produto,venda_produto, promo_produto,";
+    $campos_insert  =   "codigo_produto,descri_produto,unidade_produto,espessura_produto,cor_produto,id_categoria_produto,imagem_produto,venda_produto,promo_produto";
 
     // Guardando o Nome da imagem no banco de dados e arquivo no diretório
     if(isset($_POST['enviar'])){
@@ -29,7 +29,7 @@ if($_POST){
    
 
     // Reunir os valores a serem inseridos
-    $valores_insert     =   "'$codigo_produto','$descri_produto','$unidade_produto','$espessura_produto','$cor_produto','$id_categoria_produto','$imagem_produto','$venda_produto',' $promo_produto'";
+    $valores_insert     =  "'$codigo_produto','$descri_produto','$unidade_produto','$espessura_produto','$cor_produto','$id_categoria_produto','$imagem_produto','$venda_produto',' $promo_produto'";
 
     // Consulta SQL para inserção dos dados
     $SQLinsert  =   "INSERT INTO ".$tabela_insert."
@@ -59,7 +59,7 @@ $consulta_cat_fk    =   "
                     ";
 $lista_cat_fk       =   $conexao->query($consulta_cat_fk);
 $row_cat_fk         =   $lista_cat_fk->fetch_assoc();
-$totalRows_cat     =   ($lista_cat_fk)->num_rows;
+$totalRows_cat      =   ($lista_cat_fk)->num_rows;
 ?>
 
 <!DOCTYPE html>

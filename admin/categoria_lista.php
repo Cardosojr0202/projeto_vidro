@@ -106,7 +106,6 @@ $totalrows = ($list)->fetch_assoc();
         $('#confimacao').modal('show');
     });
 </script> 
-
 </body>
 </html>
 <?php mysqli_free_result($list); ?>

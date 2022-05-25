@@ -72,7 +72,7 @@ $totalrow = ($list)->num_rows;
                     <div class="alert alert-primary">
                         <form action="categoria_insere.php" name="form_categoria_insere" id="form_categoria_insere" method="post" enctype="multipart/form-data">
 
-                            <input type="hidden" name="id_tipo" id="id_tipo" value="<?php echo $row['id_categoria']; ?>">
+                            <input type="hidden" name="id_categoria" id="id_categoria" value="<?php echo $row['id_categoria']; ?>">
 
                             <br>
                             <!-- input rotulo_categoria -->
@@ -92,7 +92,7 @@ $totalrow = ($list)->num_rows;
 
                             <br>
                             <!-- Botão enviar -->
-                            <input type="submit" value="Atualizar" name="Atualizar" id="Atualizar" role="button" class="btn col-12 btn-primary">
+                            <input type="submit" value="Atualizar" name="enviar" id="enviar" role="button" class="btn col-12 btn-primary">
                         </form>
                     </div><!-- fecha alert -->
                 </div><!-- fecha thumbnail -->
@@ -101,7 +101,9 @@ $totalrow = ($list)->num_rows;
     </main>
 
     <!-- Link arquivos bootstrap script js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php mysqli_free_result($list); ?>
