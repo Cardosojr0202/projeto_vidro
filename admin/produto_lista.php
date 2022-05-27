@@ -23,11 +23,13 @@ $totalRows  =   ($lista)->num_rows;
     <!--link  para o Bootstrap-->
     <link rel="stylesheet" href="../css/bootstrap.min.css" rel="stylesheet">
     <!--link  para o meu css-->
-    <link rel="stylesheet" href="../css/meu_estilo.css">
+    <link rel="stylesheet" href="../css/meu_estilo.css" type="text/css">
     <!-- Link para icones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 </head>
 <body class="fundofixo">
+<?php //include'menu_ad.html'; ?>
+<?php include'menu_adm.php'; ?>
 <main class="container"><br>
     <div class="row">
         <div class="col-xs-12 col-sm-10 col-md-10">
@@ -48,7 +50,7 @@ $totalRows  =   ($lista)->num_rows;
                             <th>
                                 <a href="produto_cadastro.php" target="_self" class="btn btn-sm col-12 btn-primary">
                                     <span class="d-none-xs">Cadastrar</span>
-                                    <i class="bi bi-plus-circle" aria-hidden="true"></i>
+                                    <span class="bi bi-plus-circle" aria-hidden="true"></span>
                                 </a>
                             </th>
                         </tr>
@@ -64,14 +66,14 @@ $totalRows  =   ($lista)->num_rows;
                             <td class="text-light"><?php echo $row['espessura_produto']; ?></td>
                             <td class="text-light"><?php echo $row['cor_produto']; ?></td>
                             <td class="text-light"><?php echo $row['rotulo_categoria']; ?></td>
-                            <td ><img src="../imagem/<?php echo $row['imagem_produto']; ?>" alt="" width="100px"> </td>
+                            <td ><img src="../imagens/<?php echo $row['imagem_produto']; ?>" alt="" width="100px"> </td>
                             <td class="text-light"><?php echo number_format($row['venda_produto'],2,',','.');?></td>   
                             <td>
                                 <?php 
                                     if($row['promo_produto']=='Sim'){
-                                        echo ("<span class='glyphicon glyphicon-ok text-info' arial-hidden='true'></span>");
+                                        echo ("<span class='bi bi-cart-check-fill text-info' arial-hidden='true'></span>");
                                     }else if($row['promo_produto']=='Não'){
-                                        echo ("<span class='glyphicon glyphicon-remove-sign text-danger' arial-hidden='true'></span>");
+                                        echo ("<span class='bi bi-cart-x-fill text-danger' arial-hidden='true'></span>");
                                     };
                                 ?>
                             </td>                    
