@@ -28,7 +28,6 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 </head>
 <body class="fundofixo">
-<?php //include'menu_ad.html'; ?>
 <?php include'menu_adm.php'; ?>
 <main class="container"><br>
     <div class="row">

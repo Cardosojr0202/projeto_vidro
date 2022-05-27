@@ -23,6 +23,7 @@ $totalrows = ($list)->fetch_assoc();
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body class="fundofixo">
+<?php include'menu_adm.php'; ?>
     <main class="container"><br>
         <h1 class="text-light bg-primary bg-gradient">Lista de Categoria</h1>
         <div class="mx-auto col-9">
