@@ -24,7 +24,7 @@ $totalrows = ($list)->fetch_assoc();
 </head>
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
-    <main class="container"><br>
+    <main class="container" style="margin-left: 100px;"><br>
         <h1 class="text-light bg-primary bg-gradient">Lista de Categoria</h1>
         <div class="mx-auto col-9">
             <table class="table table-hover tbopacidade">

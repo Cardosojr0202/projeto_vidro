@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>área administrativa</title>
     <!-- Link do CSS do bootstrap -->
     <link rel="stylesheet" href="../css/bootstrap.min.css" >
     <!-- Link para CSS específico -->
@@ -14,8 +14,7 @@
 </head>
 <body>
     <?php include'menu_adm.php'; ?>
-    <main class="container">
-        <br>
+    <main class="container" style="margin-left: 90px;"><br>
         <?php include'adm_options.php'; ?>
 
     </main>

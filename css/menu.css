@@ -1,0 +1,83 @@
+.esquerda h3{
+    color: #fff;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+}
+.esquerda span{
+    color: #51b3ec;
+}
+
+.sidebar{
+    position: fixed;
+    z-index: 1;
+    width: 250px;
+    height: 100%;
+    padding-top: 30px;
+    left: 0;
+    background: #193446;
+    transition: 0.5s;
+    transition-property: left;
+}
+.sidebar .image{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+.sidebar h2{
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.sidebar a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property:background ;
+}
+.sidebar a:hover{
+    background: #51b3ec;
+}
+.sidebar i{
+    padding-right: 10px;
+}
+label #sidebar_btn{
+    z-index: 1;
+    padding: 23px;
+    left: 300px;
+    color: #fff;
+    font-size: 25px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-property:color ;
+}
+label #sidebar_btn:hover{
+    color: #51b3ec;
+}
+#check:checked ~ .sidebar{
+    left: -190px;
+}
+#check:checked ~ .sidebar a span{
+    display: none;
+}
+#check:checked ~ .sidebar a{
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+/* .content{
+    background: url(/image/img-2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    transition: 0.5s;
+} */
+#check:checked ~ .content{
+    margin-left: 60px;
+}
