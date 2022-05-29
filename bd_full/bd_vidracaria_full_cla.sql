@@ -23,15 +23,15 @@
      INSERT INTO `tb_produtos` ( `codigo_produto`,`descri_produto`,`unidade_produto`,`espessura_produto`,`cor_produto`,
      `id_categoria_produto`,`venda_produto`,`imagem_produto`,`promo_produto`)
      VALUES
-     ('VTI4','Vidro temperado incolor 4mm','ml','8mm','incolor',1,'150.00','incolor.jpg','Sim'),
-	 ('VTV4','Vidro temperado VERDE 4mm','ml','8mm','incolor',1,'150.00','incolor.jpg','Sim'),
-	 ('VTI6','Vidro temperado incolor 6mm','br','8mm','incolor',1,'150.00','incolor.jpg','Sim'),
-	 ('VTV6','Vidro temperado VERDE 6mm','br','8mm','incolor',1,'150.00','incolor.jpg','Sim'),
-	 ('AL1523','TRINCO SUPERIOR PARA BASCULANTE','un','8mm','incolor',1,'150.00','incolor.jpg','Sim'),
-	 ('AL1335','TRINCP PARA PORTA PIVOTANTE','un','8mm','incolor',1,'150.00','incolor.jpg','Sim'),
-	 ('CG-25','CORRRIMÃO PANORAMICO','un','8mm','incolor',1,'150.00','incolor.jpg','Sim'),
-	 ('BCC-02','TRILHO SUPERIOR','un','8mm','incolor',1,'150.00','incolor.jpg','Sim'),
-	 ('GUA-00','BARRACHA PARA VIDRO FIXO','un','8mm','incolor',1,'150.00','incolor.jpg','Sim');
+     ('VTI4','Vidro temperado incolor 4mm','ml','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('VTV4','Vidro temperado VERDE 4mm','ml','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('VTI6','Vidro temperado incolor 6mm','br','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('VTV6','Vidro temperado VERDE 6mm','br','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('AL1523','TRINCO SUPERIOR PARA BASCULANTE','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('AL1335','TRINCP PARA PORTA PIVOTANTE','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('CG-25','CORRRIMÃO PANORAMICO','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('BCC-02','TRILHO SUPERIOR','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('GUA-00','BARRACHA PARA VIDRO FIXO','un','8mm','incolor',1,'150.00','incolor.png','Sim');
     
 
 

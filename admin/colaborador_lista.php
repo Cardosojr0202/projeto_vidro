@@ -29,9 +29,9 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
-<main class="container" style="margin-left: 180px;"><br>
+<main class="container" style="margin-left: 83px;"><br>
     <div class="row">
-        <div class="col-xs-12 col-sm-10 col-md-10">
+        <div class="mx-auto col-xs-7 col-sm-7 col-md-7">
             <h1 class="bg-primary bg-gradient">Lista de Colaboradores</h1>
             <table class="table table-hover table-condensed tbopacidade">
                     <thead>
