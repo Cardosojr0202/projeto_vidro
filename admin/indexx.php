@@ -15,8 +15,8 @@
 <body>
     <?php include'menu_adm.php'; ?>
     <main class="container" style="margin-left: 20px;"><br>
-        <div class="row gx-2 px-4">
-            <div class="mx-auto col-md-10 col-sm-9">
+        <div class="row gx-1 px-4">
+            <div class="mx-auto col-md-9 col-sm-8">
                 <?php include'adm_options.php'; ?>
 
             </div><!-- Fecha Div dimensionamento -->
