@@ -23,7 +23,7 @@
                     <h3>Front <span>Vidraçaria</span></h3>
                 </div>
                 <div class="direita">
-                    <a type="button" class="btn btn-info position-absolute end-0 top-o" href="#">Sair</a>
+                    <a type="button" class="btn btn-outline-danger position-absolute end-0 top-o me-3" href="#"><i class="bi bi-box-arrow-left"></i> Sair</a>
                 </div>
             </header>
             <!-- As a heading -->
@@ -33,7 +33,7 @@
     <!--header final-->
     
     <!--sidebar começo-->
-    <div class="sidebar">
+    <div class="sidebar z-index">
         <!-- <img src="image/img-1.jpg" class="image" alt=""> -->
         <h2 class="text-center">Maria</h2>
         <a href="indexx.php"><i class="bi bi-display"></i><span>Painel</span></a>

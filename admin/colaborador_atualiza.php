@@ -65,14 +65,14 @@ $totalRows      =   ($lista)->num_rows;
 <body class="fundofixo"><br>
     <main class="container">
         <div class="row"> <!-- Abre Row -->
-            <div class="mx-auto col-5"> <!-- Dimensionamento -->
+            <div class="mx-auto col-sm-12 col-md-3 col-lg-4 mx-auto"> <!-- Dimensionamento -->
                 <h2 class="text-light bg-info bg-gradient">
-                    <a href="produto_lista.php">
+                    <a href="colaborador_lista.php">
                         <button class="btn btn-danger">
                             <span class="bi bi-chevron-left" aria-hidden="true"></span>
                         </button>
                     </a>
-                    Atualizando Produtos
+                    Atualizando Colaboradores
                 </h2>
                 <div class="thumbnail col-md-12"> <!-- Abre thumbnail -->
                     <div class="alert alert-info" role="alert"> <!-- Abre Alert -->

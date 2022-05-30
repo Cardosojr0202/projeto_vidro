@@ -49,7 +49,7 @@ if($_POST){
 <body class="fundofixo">
     <main class="container">
         <div class="row">
-            <div class="mx-auto col-8"><br>
+            <div class="mx-auto col-xs-12 col-sm-6 col-md-7"><br>
                 <h1 class="text-light bg-primary bg-gradient">
                     <a href="categoria_lista.php" >
                         <button class="btn btn-danger" type="button">

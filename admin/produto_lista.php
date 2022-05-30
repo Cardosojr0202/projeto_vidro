@@ -29,9 +29,9 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
-<main class="container" style="margin-left: 66px;"><br>
+<main class="container" style="margin-left: 20px;"><br>
     <div class="row">
-        <div class="mx-auto col-xs-12 col-sm-8 col-md-9">
+        <div class="mx-auto col-md-10 col-sm-7">
             <h1 class="bg-primary bg-gradient">Lista de Produtos</h1>
             <table class="table table-hover table-condensed tbopacidade">
                     <thead>
@@ -48,7 +48,7 @@ $totalRows  =   ($lista)->num_rows;
                             <th class="col text-light">Promoção</th>
                             <th>
                                 <a href="produto_cadastro.php" target="_self" class="btn btn-sm col-12 btn-primary">
-                                    <span class="d-none-xs">Cadastrar</span>
+                                    <span class="d-none-sm">Cadastrar</span>
                                     <span class="bi bi-plus-circle" aria-hidden="true"></span>
                                 </a>
                             </th>
