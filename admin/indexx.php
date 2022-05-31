@@ -14,7 +14,7 @@
 </head>
 <body>
     <?php include'menu_adm.php'; ?>
-    <main class="container" style="margin-left: 20px;"><br>
+    <main class="container" style="margin-left: 40px; margin-right: -200px;"><br>
         <div class="row gx-2 px-4">
             <div class="mx-auto col-md-10 col-sm-9">
                 <?php include'adm_options.php'; ?>

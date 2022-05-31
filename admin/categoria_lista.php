@@ -24,8 +24,8 @@ $totalrows = ($list)->fetch_assoc();
 </head>
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
-    <main class="container" style="margin-left: 20px;"><br>
-        <div class="mx-auto container-xs-8 col-sm-7 col-md-10">
+    <main class="container-md" style="margin-left: 50px; margin-right: -200px;"><br>
+        <div class="mx-auto col-sm-8 col-sm-7 col-md-10 mx-auto">
             <h1 class="text-light bg-primary bg-gradient">Lista de Categoria</h1>
             <table class="table table-hover tbopacidade">
              <!-- thead>tr>th*8 -->

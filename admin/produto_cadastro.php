@@ -167,7 +167,7 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                                 </span>
                                 <!-- Exibe a imagem inserida -->
                                 <img src="" alt="" name="imagem" id="imagem" class="img-responsive" >
-                                <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="image/*">
+                                <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="imagens/*">
                             </div> <!-- Fecha grupo de inserção -->
 
                             <label for="venda_produto">Preço de Venda:</label>
