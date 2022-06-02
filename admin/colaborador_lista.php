@@ -1,8 +1,7 @@
 <?php
 include("../connection/connection.php");
 // consultar SQL
-$consulta   =   "
-                SELECT *
+$consulta   =   "SELECT *
                 FROM tb_colaborador
                 ORDER BY login_colaborador ASC
                 ";

@@ -1,8 +1,7 @@
 <?php
 include("../connection/connection.php");
 // consultar SQL
-$consulta   =   "
-                SELECT *
+$consulta   =   "SELECT *
                 FROM vw_tbprodutos
                 ORDER BY descri_produto ASC
                 ";
