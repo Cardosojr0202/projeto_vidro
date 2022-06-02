@@ -29,9 +29,9 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
-<main class="container" style="margin-left: 20px;"><br>
+<main style="margin-left: 65px; margin-right: 5px;"><br>
     <div class="row">
-        <div class="mx-auto col-sm-12 col-md-6 col-lg-8">
+        <div class="mx-auto col-sm-7 col-md-8 col-lg-8 col-xs-9">
             <h1 class="bg-primary bg-gradient">Lista de Colaboradores</h1>
             <table class="table table-hover table-condensed tbopacidade">
                     <thead>
@@ -42,7 +42,7 @@ $totalRows  =   ($lista)->num_rows;
                             <th class="col text-light">Nivel</th>
                             <th>
                                 <a href="colaborador_insere.php" target="_self" class="btn btn-sm col-12 btn-primary">
-                                    <span class="d-none-xs">Cadastrar</span>
+                                    <span class="d-none d-sm-block">Cadastrar</span>
                                     <i class="bi bi-plus-circle" aria-hidden="true"></i>
                                 </a>
                             </th>
@@ -58,11 +58,11 @@ $totalRows  =   ($lista)->num_rows;
                             <td class="text-light"><?php echo $row['nivel_colaborador']; ?></td>                 
                             <td class="d-grid gx-3 gap-2">
                                 <a href="colaborador_atualiza.php?id_colaborador=<?php echo $row['id_colaborador']; ?>" target="_self" class="btn btn-sm btn-success btn-xs">
-                                    <span class="d-xm-none">Atualizar</span>
+                                    <span class="d-none d-sm-block">Atualizar</span>
                                     <i class="bi bi-arrow-clockwise"></i>
                                 </a>    
                                 <button class="btn btn-sm btn-danger btn-xs delete" role="button" data-nome="<?php echo $row['login_colaborador'];?>" data-id="<?php echo $row['id_colaborador'];?>">
-                                    <span class="d-xm-none">Excluir</span>
+                                    <span class="d-none d-sm-block">Excluir</span>
                                     <i class="bi bi-trash-fill"></i>
                                 </button> 
                             </td>                    

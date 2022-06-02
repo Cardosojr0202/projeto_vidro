@@ -22,7 +22,6 @@ if($_POST){
     };
 
 // Receber os dados do formulário e Organize os campos na mesma ordem
-    
     $codigo_produto = $_POST['codigo_produto'];
     $descri_produto = $_POST['descri_produto'];
     $unidade_produto = $_POST['unidade_produto'];
@@ -200,7 +199,7 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                             <br>
                             <!-- file imagem_produto ATUAL -->
                             <label for="">Imagem Atual:</label>
-                            <img src="../imagem/<?php echo $row['imagem_produto']; ?>" alt="" class="img-responsive" style="max-width:30%;">
+                            <img src="../imagens/<?php echo $row['imagem_produto']; ?>" alt="" class="img-responsive" style="max: width 100px;">
 
                             <!-- guardamos o nome da imagem caso não seja alterada -->
                             <input type="hidden" name="imagem_produto_atual" id="imagem_produto_atual" value="<?php echo $row['imagem_produto']; ?>"> 

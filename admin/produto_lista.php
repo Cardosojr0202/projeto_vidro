@@ -29,7 +29,7 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
-<main class="container" style="margin-left: 20px;"><br>
+<main class="container" style="margin-left: 65px;"><br>
     <div class="row">
         <div class="mx-auto col-md-10 col-sm-7">
             <h1 class="bg-primary bg-gradient">Lista de Produtos</h1>
@@ -48,7 +48,7 @@ $totalRows  =   ($lista)->num_rows;
                             <th class="col text-light">Promoção</th>
                             <th>
                                 <a href="produto_cadastro.php" target="_self" class="btn btn-sm col-12 btn-primary">
-                                    <span class="d-none-sm">Cadastrar</span>
+                                    <span class="d-none d-sm-block">Cadastrar</span>
                                     <span class="bi bi-plus-circle" aria-hidden="true"></span>
                                 </a>
                             </th>
@@ -78,11 +78,11 @@ $totalRows  =   ($lista)->num_rows;
                             </td>                    
                             <td class="d-grid gx-3 gap-2">
                                 <a href="produto_atualiza.php?id_produto=<?php echo $row['id_produto']; ?>" target="_self" class="btn btn-sm btn-success btn-xs">
-                                    <span class="d-xm-none">Atualizar</span>
+                                    <span class="d-none d-sm-block">Atualizar</span>
                                     <i class="bi bi-arrow-clockwise"></i>
                                 </a>    
                                 <button class="btn btn-sm btn-danger btn-xs delete" role="button" data-nome="<?php echo $row['descri_produto'];?>" data-id="<?php echo $row['id_produto'];?>">
-                                    <span class="d-xm-none">Excluir</span>
+                                    <span class="d-none d-sm-block">Excluir</span>
                                     <i class="bi bi-trash-fill"></i>
                                 </button> 
                             </td>                    

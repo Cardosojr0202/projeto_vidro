@@ -24,8 +24,8 @@ $totalrows = ($list)->fetch_assoc();
 </head>
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
-    <main class="container" style="margin-left: 20px;"><br>
-        <div class="mx-auto container-xs-8 col-sm-7 col-md-10">
+    <main style="margin-left: 65px; margin-right: 5px;"><br>
+        <div class="mx-auto col-sm-7 col-md-8 col-lg-8 col-xs-9">
             <h1 class="text-light bg-primary bg-gradient">Lista de Categoria</h1>
             <table class="table table-hover tbopacidade">
              <!-- thead>tr>th*8 -->
@@ -36,7 +36,7 @@ $totalrows = ($list)->fetch_assoc();
                      <th class="text-light">ROTULO</th>
                      <th>
                         <a href="categoria_insere.php" target="_self" class="btn btn-sm col-12 btn-primary" role="button">
-                            <span class="d-xs-none">Cadastrar</span>
+                            <span class="d-none d-sm-block">Cadastrar</span>
                             <i class="bi bi-plus-circle"></i>
                         </a>
                     </th>
@@ -51,11 +51,11 @@ $totalrows = ($list)->fetch_assoc();
                         <td class="text-light"><?php echo $row['rotulo_categoria'] ?></td>
                         <td class="d-grid gap-2">
                             <a href="categoria_atualiza.php?id_categoria=<?php echo $row['id_categoria']; ?>" class="btn btn-sm col-10 btn-success" role="button">
-                                <span>Atualizar</span>
+                                <span class="d-none d-sm-block">Atualizar</span>
                                 <i class="bi bi-arrow-clockwise"></i>
                             </a>
                             <button data-nome="<?php echo $row['rotulo_categoria']; ?>" data-id="<?php echo $row['id_categoria']; ?>" class="btn btn-sm col-10 btn-danger delete">
-                                <span>EXCLUIR</span>
+                                <span class="d-none d-sm-block">EXCLUIR</span>
                                 <i class="bi bi-trash-fill"></i>
                             </button>
                         </td>
