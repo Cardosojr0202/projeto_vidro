@@ -179,13 +179,14 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                             </div> <!-- Fecha grupo de inserção -->
 
                             <br>
-                            <label for="promo_produto">Está em Promoção?</label>
+                            <!-- radio promo_produto -->
+                            <label for="promo_produto">Em Promoção?</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
                                 <label for="promo_produto_s" class="radio-inline">
-                                    <input type="radio" name="promo_produto" id="promo_produto" value="Sim">Sim
+                                    <input type="radio" name="promo_produto" id="promo_produto" value="Sim" > Sim
                                 </label>
                                 <label for="promo_produto_s" class="radio-inline">
-                                    <input type="radio" name="promo_produto" id="promo_produto" value="Não" checked>Não
+                                    <input type="radio" name="promo_produto" id="promo_produto" value="Não" > Não
                                 </label>
                             </div> <!-- Fecha grupo de inserção -->
 
@@ -199,32 +200,32 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
     </main><br>
 <!-- Script para a imagem -->
 <script>
-document.getElementById("imagem_produto").onchange = function(){
-    var reader = new FileReader();
-    if(this.files[0].size>528385){
-        alert("A imagem dever ter no máximo 500kb");
-        $("#imagem").attr("src","blank");
-        $("#imagem").hide();
-        $('#imagem_produto').wrap('<form>').closest('form').get(0).reset();
-        $('#imagem_produto').unwrap();
-        return false;
+    document.getElementById("imagem_produto").onchange = function(){
+        var reader = new FileReader();
+        if(this.files[0].size>528385){
+            alert("A imagem dever ter no máximo 500kb");
+            $("#imagem").attr("src","blank");
+            $("#imagem").hide();
+            $('#imagem_produto').wrap('<form>').closest('form').get(0).reset();
+            $('#imagem_produto').unwrap();
+            return false;
+        }
+        if(this.files[0].type.indexOf("image")==-1){
+            alert("Formato inválido, escolha uma imagem!");
+            $("#imagem").attr("src","blank");
+            $("#imagem").hide();
+            $('#imagem_produto').wrap('<form>').closest('form').get(0).reset();
+            $('#imagem_produto').unwrap();
+            return false;
+        }
+        reader.onload = function(e) {
+            // obter dados carregados e renderizar miniatura.
+            document.getElementById("imagem").src = e.target.result;
+            $("#imagem").show();
+        }
+        // leia o arquivo de imagem com um URL de dados.
+        reader.readAsDataURL(this.files[0]);
     }
-    if(this.files[0].type.indexOf("image")==-1){
-        alert("Formato inválido, escolha uma imagem!");
-        $("#imagem").attr("src","blank");
-        $("#imagem").hide();
-        $('#imagem_produto').wrap('<form>').closest('form').get(0).reset();
-        $('#imagem_produto').unwrap();
-        return false;
-    }
-    reader.onload = function(e) {
-        // obter dados carregados e renderizar miniatura.
-        document.getElementById("imagem").src = e.target.result;
-        $("#imagem").show();
-    }
-    // leia o arquivo de imagem com um URL de dados.
-    reader.readAsDataURL(this.files[0]);
-}
 </script>
 <!-- Link arquivos bootstrap script js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
