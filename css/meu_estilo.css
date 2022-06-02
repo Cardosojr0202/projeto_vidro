@@ -6,3 +6,13 @@
     -webkit-background-size:cover;
     background-size: cover;
 }
+/* Logo */
+.logo h3{
+    color: #fff;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+}
+.logo span{
+    color: #51b3ec;
+}

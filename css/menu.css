@@ -1,4 +1,4 @@
-.esquerda h3{
+/* .esquerda h3{
     color: #fff;
     margin: 0;
     font-size: 22px;
@@ -6,8 +6,7 @@
 }
 .esquerda span{
     color: #51b3ec;
-}
-
+} */
 .sidebar{
     position: fixed;
     z-index: 1; 

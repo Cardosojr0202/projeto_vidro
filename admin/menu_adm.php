@@ -19,7 +19,7 @@
                 <label for="check">
                     <i class="bi bi-list" id="sidebar_btn"></i>
                 </label>
-                <div class="esquerda">
+                <div class="logo">
                     <h3>Front <span>Vidraçaria</span></h3>
                 </div>
                 <div class="direita">
