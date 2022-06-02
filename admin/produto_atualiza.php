@@ -250,32 +250,32 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
     </main><br>
 <!-- Script para a imagem -->
 <script>
-document.getElementById("imagem_produto").onchange = function(){
-    var reader = new FileReader();
-    if(this.files[0].size>528385){
-        alert("A imagem dever ter no máximo 500kb");
-        $("#imagem").attr("src","blank");
-        $("#imagem").hide();
-        $('#imagem_produto').wrap('<form>').closest('form').get(0).reset();
-        $('#imagem_produto').unwrap();
-        return false;
+    document.getElementById("imagem_produto").onchange = function(){
+        var reader = new FileReader();
+        if(this.files[0].size>528385){
+            alert("A imagem dever ter no máximo 500kb");
+            $("#imagem").attr("src","blank");
+            $("#imagem").hide();
+            $('#imagem_produto').wrap('<form>').closest('form').get(0).reset();
+            $('#imagem_produto').unwrap();
+            return false;
+        }
+        if(this.files[0].type.indexOf("image")==-1){
+            alert("Formato inválido, escolha uma imagem!");
+            $("#imagem").attr("src","blank");
+            $("#imagem").hide();
+            $('#imagem_produto').wrap('<form>').closest('form').get(0).reset();
+            $('#imagem_produto').unwrap();
+            return false;
+        }
+        reader.onload = function(e) {
+            // obter dados carregados e renderizar miniatura.
+            document.getElementById("imagem").src = e.target.result;
+            $("#imagem").show();
+        }
+        // leia o arquivo de imagem com um URL de dados.
+        reader.readAsDataURL(this.files[0]);
     }
-    if(this.files[0].type.indexOf("image")==-1){
-        alert("Formato inválido, escolha uma imagem!");
-        $("#imagem").attr("src","blank");
-        $("#imagem").hide();
-        $('#imagem_produto').wrap('<form>').closest('form').get(0).reset();
-        $('#imagem_produto').unwrap();
-        return false;
-    }
-    reader.onload = function(e) {
-        // obter dados carregados e renderizar miniatura.
-        document.getElementById("imagem").src = e.target.result;
-        $("#imagem").show();
-    }
-    // leia o arquivo de imagem com um URL de dados.
-    reader.readAsDataURL(this.files[0]);
-}
 </script>
 
 

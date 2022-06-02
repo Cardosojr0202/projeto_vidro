@@ -21,7 +21,6 @@
 
             </div><!-- Fecha Div dimensionamento -->
         </div>
-        
     </main>
 
     <!-- Link arquivos bootstrap script js -->
