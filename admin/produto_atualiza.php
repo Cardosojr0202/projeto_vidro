@@ -18,7 +18,7 @@ if($_POST){
         $dir_img    = "../imagens/".$nome_img;
         move_uploaded_file($tmp_img,$dir_img);
     }else{
-        $nome_img=$_POST['imagens_produto_atual'];
+        $nome_img=$_POST['imagem_produto_atual'];
     };
 
 // Receber os dados do formulário e Organize os campos na mesma ordem
@@ -230,10 +230,10 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                             <!-- radio promo_produto -->
                             <label for="promo_produto">Em Promoção?</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <label for="promo_produto_s" class="radio-inline">
+                                <label for="promo_produto_s" class="radio-inline mx-2">
                                     <input type="radio" name="promo_produto" id="promo_produto" value="Sim" <?php echo $row['promo_produto']=="Sim" ? "checked" : null; ?> > Sim
                                 </label>
-                                <label for="promo_produto_s" class="radio-inline">
+                                <label for="promo_produto_n" class="radio-inline">
                                     <input type="radio" name="promo_produto" id="promo_produto" value="Não"  <?php echo $row['promo_produto']=="Não" ? "checked" : null; ?>> Não
                                 </label>
                             </div> <!-- Fecha grupo de inserção -->

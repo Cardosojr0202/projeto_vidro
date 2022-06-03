@@ -107,18 +107,18 @@ $totalRows      =   ($lista)->num_rows;
                             <!-- input nivel_colaborador -->
                             <label for="nivel_colaborador" class="mx-3">Nivel:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <label for="nivel_colaborador" class="radio-inline mx-2">
-                                    <input type="radio" name="nivel_colaborador" id="nivel_colaborador" value="adm"> adm
+                                <label for="nivel_colaborador_s" class="radio-inline mx-2">
+                                    <input type="radio" name="nivel_colaborador" id="nivel_colaborador" value="adm" <?php echo $row['nivel_colaborador']=="adm" ? "checked" : null; ?>> adm
                                 </label>
-                                <label for="nivel_colaborador" class="radio-inline">
-                                    <input type="radio" name="nivel_colaborador" id="nivel_colaborador" value="com" checked> Comum
+                                <label for="nivel_colaborador_c" class="radio-inline">
+                                    <input type="radio" name="nivel_colaborador" id="nivel_colaborador" value="comum" <?php echo $row['nivel_colaborador']=="comum" ? "checked" : null; ?>> Comum
                                 </label>
                             </div> <!-- Fecha grupo de inserção -->
                             <!-- Fecha radio nivel_colaborador -->    
 
                             <br>
                             <!-- btn Enviar -->
-                            <input type="submit" value="Atualizar" name="enviar" id="enviar" class="btn col-12 btn-info ">
+                            <input type="submit" value="Atualizar" name="atualizar" id="atualizar" class="btn col-12 btn-info ">
                             <!-- Fecha btn Enviar -->
                         </form>
                     </div> <!-- Fecha Alert -->

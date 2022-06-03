@@ -28,9 +28,9 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
-<main class="container" style="margin-left: 50px; margin-right: -200px;"><br>
+<main class="container-md" ><br>
     <div class="row">
-        <div class="mx-auto col-md-10 col-sm-7">
+        <div class="mx-auto col-sm-8 col-md-9 col-lg-10 col-xl-11">
             <h1 class="bg-primary bg-gradient">Lista de Produtos</h1>
             <table class="table table-hover table-condensed tbopacidade">
                     <thead>
@@ -48,7 +48,7 @@ $totalRows  =   ($lista)->num_rows;
                             <th>
                                 <a href="produto_cadastro.php" target="_self" class="btn btn-sm col-12 btn-primary">
                                     <span class="d-none d-sm-block">Cadastrar</span>
-                                    <span class="bi bi-plus-circle" aria-hidden="true"></span>
+                                    <span class="bi bi-plus-circle"></span>
                                 </a>
                             </th>
                         </tr>
@@ -57,15 +57,15 @@ $totalRows  =   ($lista)->num_rows;
                     <tbody>
                         <?php do { ?>
                         <tr>
-                            <td class="d-none"><?php echo $row['id_produto']; ?></td>
-                            <td class="text-light"><?php echo $row['codigo_produto']; ?></td>
-                            <td class="text-light"><?php echo $row['descri_produto']; ?></td>
-                            <td class="text-light"><?php echo $row['unidade_produto']; ?></td>
-                            <td class="text-light"><?php echo $row['espessura_produto']; ?></td>
-                            <td class="text-light"><?php echo $row['cor_produto']; ?></td>
-                            <td class="text-light"><?php echo $row['rotulo_categoria']; ?></td>
-                            <td ><img src="../imagens/<?php echo $row['imagem_produto']; ?>" alt="" width="100px"> </td>
-                            <td class="text-light"><?php echo number_format($row['venda_produto'],2,',','.');?></td>   
+                            <td class="col d-none"><?php echo $row['id_produto']; ?></td>
+                            <td class="col text-light"><?php echo $row['codigo_produto']; ?></td>
+                            <td class="col text-light"><?php echo $row['descri_produto']; ?></td>
+                            <td class="col text-light"><?php echo $row['unidade_produto']; ?></td>
+                            <td class="col text-light"><?php echo $row['espessura_produto']; ?></td>
+                            <td class="col text-light"><?php echo $row['cor_produto']; ?></td>
+                            <td class="col text-light"><?php echo $row['rotulo_categoria']; ?></td>
+                            <td class="col"><img src="../imagens/<?php echo $row['imagem_produto']; ?>" alt="" width="100px"></td>
+                            <td class="col text-light"><?php echo number_format($row['venda_produto'],2,',','.');?></td>   
                             <td>
                                 <?php 
                                     if($row['promo_produto']=='Sim'){
@@ -91,7 +91,6 @@ $totalRows  =   ($lista)->num_rows;
             </table>
         </div><!-- fecha dimensionamento -->
     </div><!-- fecha Row -->
-    
 </main>
 
 <!-- Modal (Bootstrap 5) -->

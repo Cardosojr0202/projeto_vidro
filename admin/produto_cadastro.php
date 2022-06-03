@@ -29,7 +29,7 @@ if($_POST){
    
 
     // Reunir os valores a serem inseridos
-    $valores_insert     =  "'$codigo_produto','$descri_produto','$unidade_produto','$espessura_produto','$cor_produto','$id_categoria_produto','$imagem_produto','$venda_produto',' $promo_produto'";
+    $valores_insert     =  "'$codigo_produto','$descri_produto','$unidade_produto','$espessura_produto','$cor_produto','$id_categoria_produto','$imagem_produto','$venda_produto','$promo_produto'";
 
     // Consulta SQL para inserção dos dados
     $SQLinsert  =   "INSERT INTO ".$tabela_insert."
@@ -167,9 +167,10 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                                 </span>
                                 <!-- Exibe a imagem inserida -->
                                 <img src="" alt="" name="imagem" id="imagem" class="img-responsive" >
-                                <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="imagens/*">
+                                <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="imagens/*" width="100px">
                             </div> <!-- Fecha grupo de inserção -->
 
+                            <br>
                             <label for="venda_produto">Preço de Venda:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
                                 <span class="input-group-addon">
@@ -182,16 +183,16 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                             <!-- radio promo_produto -->
                             <label for="promo_produto">Em Promoção?</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <label for="promo_produto_s" class="radio-inline">
-                                    <input type="radio" name="promo_produto" id="promo_produto" value="Sim" > Sim
+                                <label for="promo_produto_s" class="radio-inline mx-2">
+                                    <input type="radio" name="promo_produto" id="promo_produto" value="Sim"> Sim
                                 </label>
-                                <label for="promo_produto_s" class="radio-inline">
-                                    <input type="radio" name="promo_produto" id="promo_produto" value="Não" > Não
+                                <label for="promo_produto_n" class="radio-inline">
+                                    <input type="radio" name="promo_produto" id="promo_produto" value="Não"> Não
                                 </label>
                             </div> <!-- Fecha grupo de inserção -->
 
                             <br>    
-                            <input type="submit" value="Cadastrar" name="enviar" id="enviar" class="btn col-12 btn-info ">
+                            <input type="submit" value="Cadastrar" name="cadastrar" id="cadastrar" class="btn col-12 btn-info">
                         </form>
                     </div> <!-- Fecha Alert -->
                 </div><!-- Fecha thumbnail -->
