@@ -50,11 +50,11 @@ $totalrows = ($list)->fetch_assoc();
                         <td class="text-light"><?php echo $row['sigla_categoria'] ?></td>
                         <td class="text-light"><?php echo $row['rotulo_categoria'] ?></td>
                         <td class="d-grid gap-2">
-                            <a href="categoria_atualiza.php?id_categoria=<?php echo $row['id_categoria']; ?>" class="btn btn-sm col-10 btn-success" role="button">
+                            <a href="categoria_atualiza.php?id_categoria=<?php echo $row['id_categoria']; ?>" class="btn btn-sm col-12 btn-success" role="button">
                                 <span class="d-none d-sm-block">Atualizar</span>
                                 <i class="bi bi-arrow-clockwise"></i>
                             </a>
-                            <button data-nome="<?php echo $row['rotulo_categoria']; ?>" data-id="<?php echo $row['id_categoria']; ?>" class="btn btn-sm col-10 btn-danger delete">
+                            <button data-nome="<?php echo $row['rotulo_categoria']; ?>" data-id="<?php echo $row['id_categoria']; ?>" class="btn btn-sm col-12 btn-danger delete">
                                 <span class="d-none d-sm-block">EXCLUIR</span>
                                 <i class="bi bi-trash-fill"></i>
                             </button>

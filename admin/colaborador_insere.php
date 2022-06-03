@@ -87,7 +87,7 @@ if($_POST){
                                     <input type="radio" name="nivel_colaborador" id="nivel_colaborador" value="adm"> adm
                                 </label>
                                 <label for="nivel_colaborador" class="radio-inline">
-                                    <input type="radio" name="nivel_colaborador" id="nivel_colaborador" value="com" checked> Comum
+                                    <input type="radio" name="nivel_colaborador" id="nivel_colaborador" value="comum" checked> Comum
                                 </label>
                             </div> <!-- Fecha grupo de inserção -->
                             <!-- Fecha radio nivel_colaborador -->

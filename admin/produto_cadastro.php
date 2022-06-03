@@ -9,10 +9,10 @@ if($_POST){
     $campos_insert  =   "codigo_produto,descri_produto,unidade_produto,espessura_produto,cor_produto,id_categoria_produto,imagem_produto,venda_produto,promo_produto";
 
     // Guardando o Nome da imagem no banco de dados e arquivo no diretório
-    if(isset($_POST['enviar'])){
-        $nome_img   =   $_FILES['imagem_produto']['name'];
-        $tmp_img    =   $_FILES['imagem_produto']['tmp_name'];
-        $dir_img    =   "../imagens/".$nome_img;
+    if($_FILES['imagem_produto']['name']){
+        $nome_img   = $_FILES['imagem_produto']['name'];
+        $tmp_img    = $_FILES['imagem_produto']['tmp_name'];
+        $dir_img    = "../imagens/".$nome_img;
         move_uploaded_file($tmp_img,$dir_img);
     };
 
@@ -167,7 +167,7 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                                 </span>
                                 <!-- Exibe a imagem inserida -->
                                 <img src="" alt="" name="imagem" id="imagem" class="img-responsive" >
-                                <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="imagens/*" width="100px">
+                                <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="imagens/*">
                             </div> <!-- Fecha grupo de inserção -->
 
                             <br>
