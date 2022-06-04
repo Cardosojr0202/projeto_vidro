@@ -23,7 +23,7 @@
                     <h3>Front <span>Vidraçaria</span></h3>
                 </div>
                 <div class="direita">
-                    <a type="button" class="btn btn-outline-danger position-absolute end-0 top-o me-3" href="#"><i class="bi bi-box-arrow-left"></i> Sair</a>
+                    <a type="button" class="btn btn-outline-danger position-absolute end-0 top-o me-3" href="sair.php"><i class="bi bi-box-arrow-left"></i> Sair</a>
                 </div>
             </header>
             <!-- As a heading -->
@@ -39,7 +39,7 @@
         <a href="indexx.php"><i class="bi bi-display"></i><span>Painel</span></a>
         <a href="produto_lista.php"><i class="bi bi-archive-fill"></i><span>Produtos</span></a>
         <a href="categoria_lista.php"><i class="bi bi-badge-wc-fill"></i><span>Categoria</span></a>
-        <a href="colaborador_lista.php"><i class="bi bi-people-fill"></i></ion-icon><span>Colaboradores</span></a>
+        <a href="colaborador_lista.php"><i class="bi bi-people-fill"></i><span>Colaboradores</span></a>
         <a href="#"><i class="bi bi-gear-fill"></i><span>Configuração</span></a>
     </div>
     <!--sidebar final-->

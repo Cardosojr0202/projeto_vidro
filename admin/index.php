@@ -1,3 +1,16 @@
+<?php 
+    session_start();
+    // corfirmando se a secão esta sendo criada
+    //print_r($_SESSION);
+    if((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true) and (!isset($_SESSION['nivel']) == true))
+    {
+        unset($_SESSION['login']);
+        unset($_SESSION['senha']);
+        unset($_SESSION['nivel']);
+        header('Location: login.php');
+    }
+      $logado = $_SESSION['login'];
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,7 +27,7 @@
 </head>
 <body>
     <?php include'menu_adm.php'; ?>
-    <main  style="margin-left: 55px;"><br>
+    <main  style="margin-left: 9vh; margin-right: 1vh;"><br>
         <div class="row gx-2 px-4">
             <div class="mx-auto col-sm-8 col-md-10">
                 <?php include'adm_options.php'; ?>
