@@ -1,4 +1,17 @@
 <?php
+    session_start();
+    // corfirmando se a secão esta sendo criada
+    //print_r($_SESSION);
+    if((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true) and (!isset($_SESSION['nivel']) == true))
+    {
+        // Destroi qualquer sessão ativa
+        unset($_SESSION['login']);
+        unset($_SESSION['senha']);
+        unset($_SESSION['nivel']);
+        header('Location: login.php');
+    }
+      $logado = $_SESSION['login'];
+
 include("../connection/connection.php");
 // consultar SQL
 $consulta   =   "SELECT *
@@ -28,7 +41,7 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
-<main style="margin-left: 65px; margin-right: 12px;"><br>
+<main style="margin-left: 68px; margin-right: 12px;"><br>
     <div class="row">
         <div class="mx-auto col-sm-7 col-md-8 col-lg-8 col-xs-9">
             <h1 class="bg-primary bg-gradient">Lista de Colaboradores</h1>

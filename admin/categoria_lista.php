@@ -1,4 +1,17 @@
 <?php
+    session_start();
+    // corfirmando se a secão esta sendo criada
+    //print_r($_SESSION);
+    if((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true) and (!isset($_SESSION['nivel']) == true))
+    {
+        // Destroi qualquer sessão ativa
+        unset($_SESSION['login']);
+        unset($_SESSION['senha']);
+        unset($_SESSION['nivel']);
+        header('Location: login.php');
+    }
+      $logado = $_SESSION['login'];
+
 include("../connection/connection.php");
 $consul = "SELECT * FROM tb_categoria ORDER BY rotulo_categoria ASC";
 
@@ -24,8 +37,8 @@ $totalrows = ($list)->fetch_assoc();
 </head>
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
-    <main style="margin-left: 8vh; margin-right: 1vh;"><br>
-        <div class="mx-auto col-sm-8 col-md-8 col-lg-8 col-xs-9">
+    <main style="margin-left: 9vh; margin-right: 1vh;"><br>
+        <div class="mx-auto col-sm-8 col-md-8 col-lg-9 col-xs-9">
             <h1 class="text-light bg-primary bg-gradient">Lista de Categoria</h1>
             <table class="table table-hover tbopacidade">
              <!-- thead>tr>th*8 -->

@@ -35,8 +35,8 @@
     <!--sidebar começo-->
     <div class="sidebar z-index">
         <!-- <img src="image/img-1.jpg" class="image" alt=""> -->
-        <h2 class="text-center">Maria</h2>
-        <a href="indexx.php"><i class="bi bi-display"></i><span>Painel</span></a>
+        <h2 class="text-center"><?php echo $logado; ?></h2>
+        <a href="index.php"><i class="bi bi-display"></i><span>Painel</span></a>
         <a href="produto_lista.php"><i class="bi bi-archive-fill"></i><span>Produtos</span></a>
         <a href="categoria_lista.php"><i class="bi bi-badge-wc-fill"></i><span>Categoria</span></a>
         <a href="colaborador_lista.php"><i class="bi bi-people-fill"></i><span>Colaboradores</span></a>

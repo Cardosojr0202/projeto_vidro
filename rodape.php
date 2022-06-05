@@ -14,6 +14,7 @@
 </head>
 <body>
     <div class="row panel-footer" style="background-color: rgba(0,0,0,0.7); padding: 10px;">
+        <br>
         <div class="col-sm-6 col-md-4 gx-10">
             <div class="logo">
                 <h3>Front <span>Vidraçaria</span></h3>
@@ -36,10 +37,35 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14628.240866035618!2d-48.0576013921875!3d-23.566280699999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cd2de69de473%3A0x194ba889f0d8768c!2sVidra%C3%A7aria%20J.A.%20Crespo!5e0!3m2!1spt-BR!2sbr!4v1654188283528!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div><!-- Fecha Dimensinamento -->
+
+        <br>
         <div class="col-md-4">
-            <h4 class="text-white">Rede social</h4>
-            
+            <h4 class="text-white">Social</h4>
+            <ul class="nav list-group">
+                <li class="nav-item espacamento">
+                    <a href="#home" class="text-danger">
+                        <img class="redimensionamento" src="imagens/facebook.png" alt="">
+                    </a>
+                </li>
+                <li class="nav-item espacamento">
+                    <a href="#home" class="text-danger">
+                        <img class="redimensionamento" src="imagens/instagram-colorido.png" alt="">
+                    </a>
+                </li>
+                <li class="nav-item espacamento">
+                    <a href="#home" class="text-danger">
+                        <img class="redimensionamento" src="imagens/twitter.png" alt="">
+                    </a>
+                </li>
+                <li class="nav-item espacamento">
+                    <a href="#home" class="text-danger">
+                        <img class="redimensionamento" src="imagens/whatsapp.png" alt="">
+                    </a>
+                </li>
+            </ul>
         </div>
+
+        <br>
         <div class="col-md-4">
             <div style="background: none;">
                 <h4 class="text-white">Contato</h4>
@@ -80,6 +106,8 @@
                 </form>
             </div>
         </div>
+        
+        <br>
         <div class="container">
             <h6 class="text-info text-center">
                 Developed by cardosojr™/claudio™ 2022.

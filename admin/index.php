@@ -27,9 +27,9 @@
 </head>
 <body>
     <?php include'menu_adm.php'; ?>
-    <main  style="margin-left: 9vh; margin-right: 1vh;"><br>
-        <div class="row gx-2 px-4">
-            <div class="mx-auto col-sm-8 col-md-10">
+    <main  style="margin-left: 10vh; margin-right: 3vh;"><br>
+        <div class="row">
+            <div class="mx-auto col-sm-9 col-md-10">
                 <?php include'adm_options.php'; ?>
 
             </div><!-- Fecha Div dimensionamento -->
