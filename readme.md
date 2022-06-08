@@ -1,3 +1,3 @@
-Esse projeto vidro é o meu projeto integrador do curso
-de Técnico de Informática(TI)
+Projeto integrador do curso
+de Técnico de Informática(TI) do Senac
 estou fazendo 

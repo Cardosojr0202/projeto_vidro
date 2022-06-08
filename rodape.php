@@ -41,25 +41,29 @@
         <br>
         <div class="col-md-4">
             <h4 class="text-white">Social</h4>
-            <ul class="nav list-group">
+            <ul class="nav list-group text-center">
                 <li class="nav-item espacamento">
-                    <a href="#home" class="text-danger">
-                        <img class="redimensionamento" src="imagens/facebook.png" alt="">
+                    <a href="#home" class="text-info">
+                        <i class="bi bi-facebook" style="font-size: 3rem;"></i>
+                        <!-- <img class="redimensionamento" src="imagens/facebook.png" alt=""> -->
                     </a>
                 </li>
                 <li class="nav-item espacamento">
                     <a href="#home" class="text-danger">
-                        <img class="redimensionamento" src="imagens/instagram-colorido.png" alt="">
+                        <i class="bi bi-instagram" style="font-size: 3rem;"></i>
+                        <!-- <img class="redimensionamento" src="imagens/instagram-colorido.png" alt=""> -->
                     </a>
                 </li>
                 <li class="nav-item espacamento">
-                    <a href="#home" class="text-danger">
-                        <img class="redimensionamento" src="imagens/twitter.png" alt="">
+                    <a href="#home" class="text-info">
+                        <i class="bi bi-twitter" style="font-size: 3rem;"></i>
+                        <!-- <img class="redimensionamento" src="imagens/twitter.png" alt=""> -->
                     </a>
                 </li>
                 <li class="nav-item espacamento">
-                    <a href="#home" class="text-danger">
-                        <img class="redimensionamento" src="imagens/whatsapp.png" alt="">
+                    <a href="#home" class="text-success" style="font-size: 3rem;">
+                        <i class="bi bi-whatsapp"></i>
+                        <!-- <img class="redimensionamento" src="imagens/whatsapp.png" alt=""> -->
                     </a>
                 </li>
             </ul>
