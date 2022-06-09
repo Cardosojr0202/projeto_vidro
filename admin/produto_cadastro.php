@@ -19,7 +19,7 @@ if($_POST){
     mysqli_select_db($conexao,$database_conn);
     // Variáveis para inserir dados ao banco
     $tabela_insert  =   "tb_produtos";
-    $campos_insert  =   "codigo_produto,descri_produto,unidade_produto,espessura_produto,cor_produto,id_categoria_produto,imagem_produto,venda_produto,promo_produto";
+    $campos_insert  =   "codigo_produto,legenda_produto,descri_produto,unidade_produto,espessura_produto,cor_produto,id_categoria_produto,imagem_produto,venda_produto,promo_produto";
 
     // Guardando o Nome da imagem no banco de dados e arquivo no diretório
     if($_FILES['imagem_produto']['name']){
@@ -31,18 +31,19 @@ if($_POST){
 
     // Receber os dados do formulário sempre Organize os campos na mesma ordem
     $codigo_produto     =   $_POST['codigo_produto'];
+    $legenda_produto    =   $_POST['legenda_produto'];
     $descri_produto     =   $_POST['descri_produto'];
     $unidade_produto    =   $_POST['unidade_produto']; 
     $espessura_produto  =   $_POST['espessura_produto'];
-    $cor_produto        = $_POST['cor_produto'];
+    $cor_produto        =   $_POST['cor_produto'];
     $id_categoria_produto = $_POST['id_categoria_produto'];
-    $imagem_produto     = $_FILES['imagem_produto']['name'];
-    $venda_produto      = $_POST['venda_produto'];
-    $promo_produto      = $_POST['promo_produto'];
+    $imagem_produto     =   $_FILES['imagem_produto']['name'];
+    $venda_produto      =   $_POST['venda_produto'];
+    $promo_produto      =   $_POST['promo_produto'];
    
 
     // Reunir os valores a serem inseridos
-    $valores_insert     =  "'$codigo_produto','$descri_produto','$unidade_produto','$espessura_produto','$cor_produto','$id_categoria_produto','$imagem_produto','$venda_produto','$promo_produto'";
+    $valores_insert     =  "'$codigo_produto','$legenda_produto','$descri_produto','$unidade_produto','$espessura_produto','$cor_produto','$id_categoria_produto','$imagem_produto','$venda_produto','$promo_produto'";
 
     // Consulta SQL para inserção dos dados
     $SQLinsert  =   "INSERT INTO ".$tabela_insert."
@@ -91,7 +92,7 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
 <body class="fundofixo"><br>
     <main class="container">
         <div class="row"> <!-- Abre Row -->
-            <div class="mx-auto col-sm-12 col-md-8 col-lg-6"><!--Abre Dimensionamento -->
+            <div class="mx-auto col-sm-12 col-md-7 col-lg-6"><!--Abre Dimensionamento -->
                 <h2 class="text-light bg-info bg-gradient">
                     <a href="produto_lista.php">
                         <button class="btn btn-danger">
@@ -106,17 +107,26 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
         
                             <label for="codigo_produto">Código:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+                                <span class="input-group-text">
+                                    <i class="bi bi-link-45deg"></i>
                                 </span>
                                 <input type="text" name="codigo_produto" id="codigo_produto" class="form-control" placeholder="código" maxlength="10" required>
+                            </div> <!-- Fecha grupo de inserção -->
+
+                            <br>
+                            <label for="descri_produto">LEGENDA:</label>
+                            <div class="input-group"> <!-- Abre grupo de inserção -->
+                                <span class="input-group-text">
+                                    <i class="bi bi-list-ol"></i>
+                                </span>
+                                <textarea name="legenda_produto" id="legenda_produto" cols="30" rows="2" placeholder="Digite a legenda do produto." class="form-control"></textarea>
                             </div> <!-- Fecha grupo de inserção -->
         
                             <br>
                             <label for="descri_produto">DESCRIÇÃO:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                                <span class="input-group-text">
+                                    <i class="bi bi-list-ol"></i>
                                 </span>
                                 <textarea name="descri_produto" id="descri_produto" cols="30" rows="2" placeholder="Digite a descrição do produto." class="form-control"></textarea>
                             </div> <!-- Fecha grupo de inserção -->
@@ -124,7 +134,7 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                             <br>
                             <label for="unidade_produto">Unidade:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
+                                <span class="input-group-text">
                                     <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
                                 </span>
                                 <input type="text" name="unidade_produto" id="unidade_produto" class="form-control" placeholder="unidade" maxlength="10" required>
@@ -133,7 +143,7 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                             <br>
                             <label for="espessura_produto">Espessura:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
+                                <span class="input-group-text">
                                     <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
                                 </span>
                                 <input type="text" name="espessura_produto" id="espessura_produto" class="form-control" placeholder="espessura" maxlength="10" required>
@@ -142,8 +152,8 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                             <br>
                             <label for="cor_produto">Cor:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                                <span class="input-group-text">
+                                    <i class="bi bi-palette-fill"></i>
                                 </span>
                                 <input type="text" name="cor_produto" id="cor_produto" class="form-control" placeholder="cor" maxlength="10" required>
                             </div> <!-- Fecha grupo de inserção -->
@@ -151,7 +161,7 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                             <br>          
                             <label for="id_categoria_produto">CATEGORIA:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
+                                <span class="input-group-text">
                                     <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
                                 </span>
                                 <!-- select>opt*2 -->
@@ -175,19 +185,19 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                             <br>                
                             <label for="imagem_produto">Imagem:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                                <span class="input-group-text">
+                                    <i class="bi bi-image-fill" aria-hidden="true"></i>
                                 </span>
                                 <!-- Exibe a imagem inserida -->
                                 <img src="" alt="" name="imagem" id="imagem" class="img-responsive" >
-                                <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="imagens/*">
+                                <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="imagens/*" style="width: 30%;">
                             </div> <!-- Fecha grupo de inserção -->
 
                             <br>
                             <label for="venda_produto">Preço de Venda:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+                                <span class="input-group-text">
+                                <i class="bi bi-currency-exchange"></i>
                                 </span>
                                 <input type="number" name="venda_produto" id="venda_produto" min="0" step="0.01" class="form-control" placeholder="Preço de venda">
                             </div> <!-- Fecha grupo de inserção -->

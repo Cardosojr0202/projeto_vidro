@@ -50,6 +50,7 @@ $totalRows  =   ($lista)->num_rows;
                         <tr>
                             <th class="col d-none">ID</th>
                             <th class="col text-light">CODIGO</th>
+                            <th class="col text-light">LEGENDA</th>
                             <th class="col text-light">DESCRIÇÃO</th>
                             <th class="col text-light">UNIDADE</th>
                             <th class="col text-light">ESPESSURA</th>
@@ -72,6 +73,7 @@ $totalRows  =   ($lista)->num_rows;
                         <tr>
                             <td class="col d-none"><?php echo $row['id_produto']; ?></td>
                             <td class="col text-light"><?php echo $row['codigo_produto']; ?></td>
+                            <td class="col text-light"><?php echo $row['legenda_produto']; ?></td>
                             <td class="col text-light"><?php echo $row['descri_produto']; ?></td>
                             <td class="col text-light"><?php echo $row['unidade_produto']; ?></td>
                             <td class="col text-light"><?php echo $row['espessura_produto']; ?></td>

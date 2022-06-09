@@ -7,7 +7,8 @@
 	CREATE TABLE IF NOT EXISTS`bd_vidracaria`.`tb_produtos` (
      `id_produto` INT NOT NULL AUTO_INCREMENT, 
      `codigo_produto` VARCHAR(15) NOT NULL , 
-     `descri_produto`  VARCHAR(100) NOT NULL , 
+     `legenda_produto` varchar(100) NOT NULL,
+     `descri_produto`  VARCHAR(300) NOT NULL , 
      `unidade_produto` VARCHAR(100) NOT NULL,
      `espessura_produto`  VARCHAR(100)NOT NULL,
 	 `cor_produto`  VARCHAR(100) NOT NULL,
@@ -20,18 +21,18 @@
       DESCRIBE tb_produtos;
      
 -- Inserindo dados na Tabela produtos---------------------------------------------
-     INSERT INTO `tb_produtos` ( `codigo_produto`,`descri_produto`,`unidade_produto`,`espessura_produto`,`cor_produto`,
+     INSERT INTO `tb_produtos` ( `codigo_produto`,`legenda_produto`,`descri_produto`,`unidade_produto`,`espessura_produto`,`cor_produto`,
      `id_categoria_produto`,`venda_produto`,`imagem_produto`,`promo_produto`)
      VALUES
-     ('VTI4','Vidro temperado incolor 4mm','ml','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('VTV4','Vidro temperado VERDE 4mm','ml','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('VTI6','Vidro temperado incolor 6mm','br','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('VTV6','Vidro temperado VERDE 6mm','br','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('AL1523','TRINCO SUPERIOR PARA BASCULANTE','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('AL1335','TRINCP PARA PORTA PIVOTANTE','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('CG-25','CORRRIMÃO PANORAMICO','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('BCC-02','TRILHO SUPERIOR','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('GUA-00','BARRACHA PARA VIDRO FIXO','un','8mm','incolor',1,'150.00','incolor.png','Sim');
+     ('VTI4','Vidro temperado incolor 4mm','Vidro temperado 4mm suporta peso de até 50kg e na cor incolor tem mais transparencia','ml','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('VTV4','Vidro temperado VERDE 4mm','Vidro temperado 4mm suporta peso de até 50kg e na cor verde tem mais proteção','ml','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('VTI6','Vidro temperado incolor 6mm','Vidro temperado 6mm suporta peso de até 100kg','br','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('VTV6','Vidro temperado VERDE 6mm','Vidro temperado 6mm suporta peso de até 100kg','br','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('AL1523','TRINCO SUPERIOR PARA BASCULANTE','Utilizado como trinco de basculante','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('AL1335','TRINCP PARA PORTA PIVOTANTE','Utilizado como trinco de porta na parte inferior','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('CG-25','CORRRIMÃO PANORAMICO','Utilizado no guarda corpo uma barra mais reformaçada','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('BCC-02','TRILHO SUPERIOR','Utilizado no guarda corpo uma barra mais reformaçada','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
+	 ('GUA-00','BARRACHA PARA VIDRO FIXO','em caso de aluminio mais largo que o vidro podemos usar a borracha','un','8mm','incolor',1,'150.00','incolor.png','Sim');
     
 
 
@@ -67,8 +68,9 @@
 INSERT INTO `tb_colaborador` 
 	(`login_colaborador`,`senha_colaborador`,`nivel_colaborador`) 
 	VALUES
-		('claudiomilton',123,'adm'),
-		('alinesilva',123,'adm');		
+		('Claudio milton',123,'adm'),
+		('alinesilva',123,'adm');
+		('gabriel',123,'adm');		
 
 
 -- Adicionar Chave Primária tabela colaborador-------------------
@@ -98,10 +100,13 @@ INSERT INTO `tb_colaborador`
 	CREATE VIEW `vw_tbprodutos` AS
 		SELECT	p.id_produto,
 				p.codigo_produto,
+                p.legenda_produto,
 				p.descri_produto,
 				p.unidade_produto,
 				p.espessura_produto,
 				p.cor_produto,
+                p.id_categoria_produto,
+                c.sigla_categoria,
 				c.rotulo_categoria,
 				p.imagem_produto,
 				p.venda_produto,

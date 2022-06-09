@@ -54,8 +54,8 @@ $totalRows_tipos = ($lista_categoria)->num_rows;
     <!--sidebar começo-->
     <div class="sidebar z-index">
         <a href="admin/index.php"><i class="bi bi-person-fill"></i><span>Area adm</span></a>
-        <a href="#produto"><i class="bi bi-archive-fill"></i><span>Produtos</span></a>
-
+        <a href="#"><i class="bi bi-archive-fill"></i><span>Promoção</span></a>
+        <a href="#produto"><i class="bi bi-archive"></i><span>Produtos</span></a>
          <div class="item">
             <a style="cursor: pointer;" class="sub-btn"><i class="bi bi-badge-wc-fill"></i><span>Categoria</span><span class="bi bi-caret-down mx-3"></span></a>
             <div class="sub-menu" style="background-color: rgb(44, 86, 137);">
@@ -65,9 +65,7 @@ $totalRows_tipos = ($lista_categoria)->num_rows;
                 <?php } while ($row_categoria=$lista_categoria->fetch_assoc()); ?>
                 <!-- Fecha estrutura de repetição -->
             </div>
-           
         </div>
-    
         <a href="#contato"><i class="bi bi-telephone-fill"></i><span>Contato</span></a>
 
        

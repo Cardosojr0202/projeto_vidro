@@ -35,15 +35,16 @@ if($_POST){
     };
 
 // Receber os dados do formulário e Organize os campos na mesma ordem
-    $codigo_produto = $_POST['codigo_produto'];
-    $descri_produto = $_POST['descri_produto'];
+    $codigo_produto  = $_POST['codigo_produto'];
+    $legenda_produto = $_POST['legenda_produto'];
+    $descri_produto  = $_POST['descri_produto'];
     $unidade_produto = $_POST['unidade_produto'];
     $espessura_produto = $_POST['espessura_produto'];
     $cor_produto = $_POST['cor_produto'];
     $id_categoria_produto = $_POST['id_categoria_produto'];
     $imagem_produto = $nome_img;
-    $venda_produto = $_POST['venda_produto'];
-    $promo_produto = $_POST['promo_produto'];
+    $venda_produto  = $_POST['venda_produto'];
+    $promo_produto  = $_POST['promo_produto'];
 
 
 // Campo para filtrar o registro (WHERE)
@@ -51,13 +52,14 @@ if($_POST){
 
 // Consulta SQL para atualização dos dados
     $updateSQL  =   "UPDATE ".$tabela."
-                    SET codigo_produto = '".$codigo_produto."',
-                        descri_produto= '".$descri_produto."',
-                        unidade_produto  = '".$unidade_produto."',
+                    SET codigo_produto  = '".$codigo_produto."',
+                        descri_produto  = '".$legenda_produto."',
+                        descri_produto  = '".$descri_produto."',
+                        unidade_produto = '".$unidade_produto."',
                         espessura_produto  = '".$espessura_produto."',
-                        cor_produto   = '".$cor_produto."',
+                        cor_produto = '".$cor_produto."',
                         id_categoria_produto  = '".$id_categoria_produto."',
-                        imagem_produto   = '".$imagem_produto."',
+                        imagem_produto  = '".$imagem_produto."',
                         venda_produto   = '".$venda_produto."',
                         promo_produto   = '".$promo_produto."'    
                     WHERE ".$campo_filtro."='".$filtro_update."'
@@ -116,7 +118,7 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
 <body class="fundofixo"><br>
     <main class="container">
         <div class="row"> <!-- Abre Row -->
-            <div class="mx-auto col-sm-12 col-md-8 col-lg-6 mx-auto"> <!-- Dimensionamento -->
+            <div class="mx-auto col-sm-12 col-md-7 col-lg-6"> <!-- Dimensionamento -->
                 <h2 class="text-light bg-info bg-gradient">
                     <a href="produto_lista.php">
                         <button class="btn btn-danger">
@@ -136,57 +138,73 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                             <!-- text codigo_produto -->
                             <label for="codigo_produto">Código:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
+                                <span class="input-group-text">
+                                    <i class="bi bi-link-45deg"></i>
                                 </span>
                                 <input type="text" name="codigo_produto" id="codigo_produto" class="form-control" placeholder="Digite o codigo do produto." maxlength="100" required value="<?php echo $row['codigo_produto']; ?>">
                             </div> <!-- Fecha grupo de inserção -->
                             <!-- Fecha text codigo_produto -->
+
+                            <br>
+                            <!-- Abre textarea descri_produto -->
+                            <label for="descri_produto">Legenda:</label>
+                            <div class="input-group"> <!-- Abre grupo de inserção -->
+                                <span class="input-group-text">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </span>
+                                <textarea name="legenda_produto" id="legenda_produto" cols="30" rows="8" placeholder="Digite a legenda do produto." class="form-control"><?php echo $row['legenda_produto']; ?></textarea>
+                            </div> <!-- Fecha grupo de inserção -->
+                            <!-- Fecha textarea descri_produto -->
+
                             <br>
                             <!-- Abre textarea descri_produto -->
                             <label for="descri_produto">Descrição:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                                <span class="input-group-text">
+                                    <i class="bi bi-pencil-fill"></i>
                                 </span>
                                 <textarea name="descri_produto" id="descri_produto" cols="30" rows="8" placeholder="Digite a descrição do produto." class="form-control"><?php echo $row['descri_produto']; ?></textarea>
                             </div> <!-- Fecha grupo de inserção -->
                             <!-- Fecha textarea descri_produto -->
+
                             <br>
                             <!-- text unidade_produto -->
                             <label for="unidade_produto">Unidade:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
+                                <span class="input-group-text">
                                     <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
                                 </span>
                                 <input type="text" name="unidade_produto" id="unidade_produto" class="form-control" placeholder="Digite a unidade do produto." maxlength="100" required value="<?php echo $row['unidade_produto']; ?>">
                             </div> <!-- Fecha grupo de inserção -->
                             <!-- Fecha text unidade_produto -->
+
                             <br>
                             <!-- text espessura_produto -->
                             <label for="espessura_produto">Espessura:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
+                                <span class="input-group-text">
                                     <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
                                 </span>
                                 <input type="text" name="espessura_produto" id="espessura_produto" class="form-control" placeholder="Digite a espessura do produto." maxlength="100" required value="<?php echo $row['espessura_produto']; ?>">
                             </div> <!-- Fecha grupo de inserção -->
                             <!-- Fecha text espessura_produto -->
+
                             <br>
                             <!-- text cor_produto -->
                             <label for="cor_produto">Cor:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
+                                <span class="input-group-text">
+                                    <i class="bi bi-palette-fill"></i>
                                 </span>
                                 <input type="text" name="cor_produto" id="cor_produto" class="form-control" placeholder="Digite a cor do produto." maxlength="100" required value="<?php echo $row['cor_produto']; ?>">
                             </div> <!-- Fecha grupo de inserção -->
                             <!-- Fecha text cor_produto -->
+
                             <br>
                             <!-- Select id_categoria_produto -->
                             <label for="id_categoria_produto">Categoria:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
+                                <span class="input-group-text">
                                     <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
                                 </span>
                                 <!-- select>opt*2 -->
@@ -221,8 +239,8 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                             <!-- file imagem_produto NOVA -->
                             <label for="imagem_produto">Imagem:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                                <span class="input-group-text">
+                                    <i class="bi bi-image-fill"></i>
                                 </span>
                                 <!-- Exibe a imagem inserida -->
                                 <img src="" alt="" name="imagem" id="imagem" class="img-responsive" >
@@ -233,8 +251,8 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                             <!-- number venda_produto -->
                             <label for="venda_produto">Valor:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+                                <span class="input-group-text">
+                                    <i class="bi bi-currency-exchange"></i>
                                 </span>
                                 <input type="number" name="venda_produto" id="venda_produto" min="0" step="0.01" class="form-control" value="<?php echo $row['venda_produto']; ?>">
                             </div> <!-- Fecha grupo de inserção -->
