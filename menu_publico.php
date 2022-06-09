@@ -40,7 +40,7 @@ $totalRows_tipos = ($lista_categoria)->num_rows;
                 </div>
                 <div class="direita position-absolute end-0 top-o me-3">
                     <form action="produtos_busca.php" method="get" name="form_busca" id="form_busca" class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control me-2" type="search" name="buscar" id="buscar" placeholder="Search" aria-label="Search" required>
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
@@ -54,7 +54,7 @@ $totalRows_tipos = ($lista_categoria)->num_rows;
     <!--sidebar começo-->
     <div class="sidebar z-index">
         <a href="admin/index.php"><i class="bi bi-person-fill"></i><span>Area adm</span></a>
-        <a href="#"><i class="bi bi-archive-fill"></i><span>Promoção</span></a>
+        <a href="#promo"><i class="bi bi-archive-fill"></i><span>Promoção</span></a>
         <a href="#produto"><i class="bi bi-archive"></i><span>Produtos</span></a>
          <div class="item">
             <a style="cursor: pointer;" class="sub-btn"><i class="bi bi-badge-wc-fill"></i><span>Categoria</span><span class="bi bi-caret-down mx-3"></span></a>

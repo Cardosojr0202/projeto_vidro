@@ -33,7 +33,7 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
 </head>
-<body class="fundofixo">
+<body>
 <h1 class="bg-primary bg-gradient">Promoção</h1>
 
 <div class="row"><!-- abre row manter os elementos da linha -->

@@ -4,13 +4,13 @@ include("connection/connection.php");
 
 // Consulta para trazer os dados e se necessário filtrar
 $table          = "vw_tbprodutos";
-$campo_filtro   = "id_categoria_produto";
-$filtro_select  = $_GET['id_categoria'];
-$order          = "rotulo_categoria ASC";
+$order          = "legenda_produto ASC";
+$campo_filtro   = "legenda_produto";
+$filtro_s  = $_GET['buscar'];
 $consul     =   "
                 SELECT *
                 FROM ".$table."
-                WHERE ".$campo_filtro."='".$filtro_select."'
+                WHERE ".$campo_filtro." LIKE ('%".$filtro_s."%')
                 ORDER BY ".$order."
                 ";
 $lista      =   $conexao->query($consul);
@@ -39,7 +39,9 @@ $totalRows  =   ($lista)->num_rows;
                 <h2 class=" alert alert-primary">
                         <a href="javascript:window.history.go(-1)" class="btn btn-danger">        
                             <i class="bi bi-caret-left-fill"></i>    
-                        </a>       
+                        </a>
+                        <strong><i><?php echo $_GET['buscar'] ?></i></strong>
+                        <br>       
                         Em breve mais produtos ao seu dispor!     
                 </h2> 
             <?php }; ?> 
