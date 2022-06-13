@@ -40,7 +40,7 @@ $totalrows = ($list)->fetch_assoc();
     <main style="margin-left: 12vh; margin-right: 1vh;"><br>
         <div class="mx-auto col-sm-8 col-md-8 col-lg-9 col-xs-9">
             <h1 class="text-light bg-primary bg-gradient">Lista de Categoria</h1>
-            <table class="table table-hover tbopacidade">
+            <table class="table table-hover tbopacidade blur">
              <!-- thead>tr>th*8 -->
              <thead>
                  <tr>

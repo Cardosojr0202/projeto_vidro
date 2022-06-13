@@ -45,7 +45,7 @@ $totalRows  =   ($lista)->num_rows;
     <div class="row">
         <div class="mx-auto col-sm-7 col-md-8 col-lg-8 col-xs-9">
             <h1 class="bg-primary bg-gradient">Lista de Colaboradores</h1>
-            <table class="table table-hover table-condensed tbopacidade">
+            <table class="table table-hover table-condensed tbopacidade blur">
                     <thead>
                         <tr>
                             <th class="col d-none">ID</th>
