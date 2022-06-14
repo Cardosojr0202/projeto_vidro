@@ -1,16 +1,6 @@
 <?php
-    session_start();
-    // corfirmando se a secão esta sendo criada
-    //print_r($_SESSION);
-    if((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true) and (!isset($_SESSION['nivel']) == true))
-    {
-        // Destroi qualquer sessão ativa
-        unset($_SESSION['login']);
-        unset($_SESSION['senha']);
-        unset($_SESSION['nivel']);
-        header('Location: login.php');
-    }
-      $logado = $_SESSION['login'];
+// Incluindo o sistema de autentificação 
+include("acesso_com.php");
 
 include("../connection/connection.php");
 $consul = "SELECT * FROM tb_categoria ORDER BY rotulo_categoria ASC";

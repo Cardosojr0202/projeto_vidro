@@ -1,5 +1,5 @@
 .tbopacidade{
-    background-color: rgba(53, 156, 224, 0.4);
+    background-color: rgba(28, 133, 204, 0.4);
 }
 .fundofixo{
     background: url(../imagens/bg_paralax.jpg) no-repeat fixed;
@@ -26,7 +26,5 @@
 .blur {
     backdrop-filter: blur(15px) saturate(180%);
     -webkit-backdrop-filter: blur(15px) saturate(180%);
-    /* background-color: rgba(15, 36, 95, 0.8); */
     border-radius: 12px;
-    /* border: 1px solid rgba(255, 255, 255, 0.125); */
 }

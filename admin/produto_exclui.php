@@ -1,4 +1,7 @@
-<?php 
+<?php
+// Incluindo o sistema de autentificação 
+include("acesso_adm.php");
+ 
 // Incluir o arquivo e fazer a conexão
 include("../connection/connection.php");
 

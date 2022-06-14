@@ -1,4 +1,7 @@
 <?php
+// Incluindo o sistema de autentificação 
+include("acesso_adm.php");
+
 include("../connection/connection.php");
 
 // Definindo o banco de dados

@@ -23,7 +23,7 @@
                     <h3>Front <span>Vidraçaria</span></h3>
                 </div>
                 <div class="direita">
-                    <a type="button" class="btn btn-outline-danger position-absolute end-0 top-o me-3" href="sair.php"><i class="bi bi-box-arrow-left"></i> Sair</a>
+                    <a type="button" class="btn btn-outline-danger position-absolute end-0 top-o me-3" href="logout.php"><i class="bi bi-box-arrow-left"></i> Sair</a>
                 </div>
             </header>
             <!-- As a heading -->
@@ -35,7 +35,7 @@
     <!--sidebar começo-->
     <div class="sidebar z-index">
         <!-- <img src="image/img-1.jpg" class="image" alt=""> -->
-        <h2 class="text-center"><?php echo $logado; ?></h2>
+        <h2 class="text-center">Olá, <?php echo($_SESSION['login_colaborador']) ?></h2>
         <a href="index.php"><i class="bi bi-display"></i><span>Painel</span></a>
         <a href="produto_lista.php"><i class="bi bi-archive-fill"></i><span>Produtos</span></a>
         <a href="categoria_lista.php"><i class="bi bi-badge-wc-fill"></i><span>Categoria</span></a>

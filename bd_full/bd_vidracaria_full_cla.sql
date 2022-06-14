@@ -68,9 +68,10 @@
 INSERT INTO `tb_colaborador` 
 	(`login_colaborador`,`senha_colaborador`,`nivel_colaborador`) 
 	VALUES
-		('Claudio milton',123,'adm'),
-		('alinesilva',123,'adm');
-		('gabriel',123,'adm');		
+		('claudio milton',123,'adm'),
+		('aline silva',123,'adm'),
+		('gabriel',123,'comum'),
+		('Anderson',123,'comum');		
 
 
 -- Adicionar Chave Primária tabela colaborador-------------------
