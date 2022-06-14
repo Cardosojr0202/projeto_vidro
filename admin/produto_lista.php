@@ -31,24 +31,24 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
-<main class="container-md" ><br>
+<main class="container" style="margin-left: 15vh;"><br>
     <div class="row">
-        <div class="mx-auto col-sm-8 col-md-9 col-lg-10 col-xl-11">
+        <div class="mx-auto ">
             <h1 class="bg-primary bg-gradient">Lista de Produtos</h1>
             <table class="table table-hover table-condensed tbopacidade blur">
                     <thead>
                         <tr>
-                            <th class="col d-none">ID</th>
-                            <th class="col text-light">CODIGO</th>
-                            <th class="col text-light">LEGENDA</th>
-                            <th class="col text-light">DESCRIÇÃO</th>
-                            <th class="col text-light">UNIDADE</th>
-                            <th class="col text-light">ESPESSURA</th>
-                            <th class="col text-light">COR</th>
-                            <th class="col text-light">CATEGORIA</th>
-                            <th class="col text-light">IMAGENS</th>
-                            <th class="col text-light">Venda</th>
-                            <th class="col text-light">Promoção</th>
+                            <th class="d-none">ID</th>
+                            <th class="text-light">CODIGO</th>
+                            <th class="text-light">LEGENDA</th>
+                            <th class="text-light">DESCRIÇÃO</th>
+                            <th class="text-light">UNIDADE</th>
+                            <th class="text-light">ESPESSURA</th>
+                            <th class="text-light">COR</th>
+                            <th class="text-light">CATEGORIA</th>
+                            <th class="text-light">IMAGENS</th>
+                            <th class="text-light">Venda</th>
+                            <th class="text-light">Promoção</th>
                             <th>
                                 <a href="produto_cadastro.php" target="_self" class="btn btn-sm col-12 btn-primary">
                                     <span class="d-none d-sm-block">Cadastrar</span>
@@ -61,16 +61,16 @@ $totalRows  =   ($lista)->num_rows;
                     <tbody>
                         <?php do { ?>
                         <tr>
-                            <td class="col d-none"><?php echo $row['id_produto']; ?></td>
-                            <td class="col text-light"><?php echo $row['codigo_produto']; ?></td>
-                            <td class="col text-light"><?php echo $row['legenda_produto']; ?></td>
-                            <td class="col text-light"><?php echo $row['descri_produto']; ?></td>
-                            <td class="col text-light"><?php echo $row['unidade_produto']; ?></td>
-                            <td class="col text-light"><?php echo $row['espessura_produto']; ?></td>
-                            <td class="col text-light"><?php echo $row['cor_produto']; ?></td>
-                            <td class="col text-light"><?php echo $row['rotulo_categoria']; ?></td>
-                            <td class="col"><img src="../imagens/<?php echo $row['imagem_produto']; ?>" alt="" width="100px"></td>
-                            <td class="col text-light"><?php echo number_format($row['venda_produto'],2,',','.');?></td>   
+                            <td class="d-none"><?php echo $row['id_produto']; ?></td>
+                            <td class="text-light"><?php echo $row['codigo_produto']; ?></td>
+                            <td class="text-light"><?php echo $row['legenda_produto']; ?></td>
+                            <td class="text-light"><?php echo $row['descri_produto']; ?></td>
+                            <td class="text-light"><?php echo $row['unidade_produto']; ?></td>
+                            <td class="text-light"><?php echo $row['espessura_produto']; ?></td>
+                            <td class="text-light"><?php echo $row['cor_produto']; ?></td>
+                            <td class="text-light"><?php echo $row['rotulo_categoria']; ?></td>
+                            <td class="text-light"><img src="../imagens/<?php echo $row['imagem_produto']; ?>" alt="" width="100px"></td>
+                            <td class="text-light"><?php echo number_format($row['venda_produto'],2,',','.');?></td>   
                             <td>
                                 <?php 
                                     if($row['promo_produto']=='Sim'){

@@ -37,7 +37,7 @@
     padding-left: 40px;
     box-sizing: border-box;
     transition: 0.5s;
-    transition-property:background ;
+
 }
 .sidebar a:hover{
     background: #51b3ec;
@@ -60,7 +60,7 @@ label #sidebar_btn:hover{
     color: #51b3ec;
 }
 #check:checked ~ .sidebar{
-    left: -190px;
+    left: -243px;
 }
 #check:checked ~ .sidebar a span{
     display: none;

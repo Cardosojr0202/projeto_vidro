@@ -47,7 +47,7 @@ if($_POST){
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta http-equiv="Refresh" content="25;URL=../index.php"> -->
+    <meta http-equiv="Refresh" content="20;URL=../index.php"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../css/meu_estilo.css">
@@ -109,7 +109,7 @@ if($_POST){
         <p class="text-center">
             <small>
                 <br>
-                caso não faça uma escolha em 25 segundo será redirecionado automaticamente para pagina inicial.
+                caso não faça uma escolha em 20 segundo será redirecionado automaticamente para pagina inicial.
             </small>
         </p>
     </div>
