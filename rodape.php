@@ -34,7 +34,7 @@
                 </a>
             </address>
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14628.240866035618!2d-48.0576013921875!3d-23.566280699999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cd2de69de473%3A0x194ba889f0d8768c!2sVidra%C3%A7aria%20J.A.%20Crespo!5e0!3m2!1spt-BR!2sbr!4v1654188283528!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117003.53227995423!2d-48.10015538099095!3d-23.591404900785765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5cc70ba456a65%3A0x770be09241987369!2sItapetininga%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1655317823382!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div><!-- Fecha Dimensinamento -->
 

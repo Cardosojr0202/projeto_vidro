@@ -34,7 +34,8 @@ if($_POST){
     if($totalRow_session>0){
         $_SESSION['login_colaborador']  = $login_colaborador;
         $_SESSION['nivel_colaborador']  = $row_session['nivel_colaborador'];
-        $_SESSION['nome_da_sessao'] = session_name();
+        $_SESSION['imagem_colaborador'] = $row_session['imagem_colaborador'];
+        $_SESSION['nome_da_sessao']     = session_name();
         echo "<script>window.open('index.php','_self')</script>";
     }else{
         echo "<script>window.open('invasor.php','_self')</script>";

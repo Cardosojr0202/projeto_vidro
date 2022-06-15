@@ -134,7 +134,7 @@ $totalRows      =   ($lista)->num_rows;
                             <br>
                             <!-- file imagem_produto ATUAL -->
                             <label for="">Imagem Atual:</label>
-                            <img src="../imagens/<?php echo $row['imagem_colaborador']; ?>" alt="" class="img-responsive" style="max-width:30%;">
+                            <img src="../imagens/perfil/<?php echo $row['imagem_colaborador']; ?>" alt="" class="img-responsive" style="max-width:30%;">
 
                             <!-- guardamos o nome da imagem caso não seja alterada -->
                             <input type="hidden" name="imagem_colaborador_atual" id="imagem_colaborador_atual" value="<?php echo $row['imagem_colaborador']; ?>"> 

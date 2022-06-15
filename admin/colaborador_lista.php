@@ -59,7 +59,7 @@ $totalRows  =   ($lista)->num_rows;
                             <td class="text-light"><?php echo $row['login_colaborador']; ?></td>
                             <td class="d-none"><?php echo $row['senha_colaborador']; ?></td>
                             <td class="text-light"><?php echo $row['nivel_colaborador']; ?></td>
-                            <td class="text-light"><img src="../imagens/<?php echo $row['imagem_colaborador']; ?>" alt="" width="100px"></td>                 
+                            <td class="text-light"><img src="../imagens/perfil/<?php echo $row['imagem_colaborador']; ?>" alt="" width="100px"></td>                 
                             <td class="d-grid gx-3 gap-2">
                                 <a href="colaborador_atualiza.php?id_colaborador=<?php echo $row['id_colaborador']; ?>" target="_self" class="btn btn-sm btn-success btn-xs">
                                     <span class="d-none d-sm-block">Atualizar</span>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +34,7 @@
     
     <!--sidebar começo-->
     <div class="sidebar z-index">
-        <img src="../imagens/<?php //echo ($_SESSION['imagem_colaborador']) ?>" class="image mx-auto d-block" alt="perfil">
+        <img src="../imagens/perfil/<?php echo ($_SESSION['imagem_colaborador']) ?>" class="image mx-auto d-block" alt="perfil">
         <h2 class="text-center">Olá, <?php echo($_SESSION['login_colaborador']) ?></h2>
         <a href="index.php"><i class="bi bi-display"></i><span>Painel</span></a>
         <a href="produto_lista.php"><i class="bi bi-archive-fill"></i><span>Produtos</span></a>
