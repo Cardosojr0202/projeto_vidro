@@ -31,7 +31,7 @@ $totalRows  =   ($lista)->num_rows;
 </head>
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
-<main style="margin-left: 68px; margin-right: 12px;"><br>
+<main class="container"><br>
     <div class="row">
         <div class="mx-auto col-sm-7 col-md-8 col-lg-8 col-xs-9">
             <h1 class="bg-primary bg-gradient">Lista de Colaboradores</h1>
@@ -40,8 +40,9 @@ $totalRows  =   ($lista)->num_rows;
                         <tr>
                             <th class="col d-none">ID</th>
                             <th class="col text-light">Login</th>
-                            <th class="col text-light">Senha</th>
+                            <th class="col d-none">Senha</th>
                             <th class="col text-light">Nivel</th>
+                            <th class="col text-light">Imagem</th>
                             <th>
                                 <a href="colaborador_insere.php" target="_self" class="btn btn-sm col-12 btn-primary">
                                     <span class="d-none d-sm-block">Cadastrar</span>
@@ -56,8 +57,9 @@ $totalRows  =   ($lista)->num_rows;
                         <tr>
                             <td class="d-none"><?php echo $row['id_colaborador']; ?></td>
                             <td class="text-light"><?php echo $row['login_colaborador']; ?></td>
-                            <td class="text-light"><?php echo $row['senha_colaborador']; ?></td>
-                            <td class="text-light"><?php echo $row['nivel_colaborador']; ?></td>                 
+                            <td class="d-none"><?php echo $row['senha_colaborador']; ?></td>
+                            <td class="text-light"><?php echo $row['nivel_colaborador']; ?></td>
+                            <td class="text-light"><img src="../imagens/<?php echo $row['imagem_colaborador']; ?>" alt="" width="100px"></td>                 
                             <td class="d-grid gx-3 gap-2">
                                 <a href="colaborador_atualiza.php?id_colaborador=<?php echo $row['id_colaborador']; ?>" target="_self" class="btn btn-sm btn-success btn-xs">
                                     <span class="d-none d-sm-block">Atualizar</span>

@@ -17,11 +17,11 @@ include("acesso_com.php");
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 </head>
 <body>
-    <?php include'menu_adm.php'; ?>
-    <main  style="margin-left: 10vh; margin-right: 3vh;"><br>
+    <?php include('menu_adm.php'); ?>
+    <main class="container"><br>
         <div class="row">
             <div class="mx-auto col-sm-9 col-md-10">
-                <?php include'adm_options.php'; ?>
+                <?php include('adm_options.php'); ?>
 
             </div><!-- Fecha Div dimensionamento -->
         </div>

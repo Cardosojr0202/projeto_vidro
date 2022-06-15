@@ -9,15 +9,24 @@ if($_POST){
 
     // Variáveis para acrescentar dados ao banco
     $table_insert = "tb_colaborador";
-    $campos_insert = "login_colaborador,senha_colaborador,nivel_colaborador";
+    $campos_insert = "login_colaborador,senha_colaborador,nivel_colaborador,imagem_colaborador";
+
+    // Guardando o Nome da imagem no banco de dados e arquivo no diretório
+    if($_FILES['imagem_produto']['name']){
+        $nome_img   = $_FILES['imagem_colaborador']['name'];
+        $tmp_img    = $_FILES['imagem_colaborador']['tmp_name'];
+        $dir_img    = "../imagens/".$nome_img;
+        move_uploaded_file($tmp_img,$dir_img);
+    };
 
     // Receber os dados do formulário
     $login_colaborador = $_POST['login_colaborador'];
     $senha_colaborador = $_POST['senha_colaborador'];
     $nivel_colaborador = $_POST['nivel_colaborador'];
+    $imagem_colaborador = $_POST['imagem_colaborador'];
 
     // Reunir os valores a serem inseridos
-    $valores_in = "'$login_colaborador','$senha_colaborador','$nivel_colaborador'";
+    $valores_in = "'$login_colaborador','$senha_colaborador','$nivel_colaborador','$imagem_colaborador'";
 
     // Consulta SQL
     $cunsulSQL = "INSERT INTO ".$table_insert."
@@ -95,6 +104,17 @@ if($_POST){
                             </div> <!-- Fecha grupo de inserção -->
                             <!-- Fecha radio nivel_colaborador -->
 
+                            <br>                
+                            <label for="imagem_produto">Imagem:</label>
+                            <div class="input-group"> <!-- Abre grupo de inserção -->
+                                <span class="input-group-text">
+                                    <i class="bi bi-image-fill" aria-hidden="true"></i>
+                                </span>
+                               <!-- Exibe a imagem inserida -->
+                                <img src="" alt="" name="imagem" id="imagem" class="img-responsive" >
+                                <input type="file" name="imagem_colaborador" id="imagem_colaborador" class="form-control" accept="image/*">
+                            </div> <!-- Fecha grupo de inserção -->
+
                             <br>
                             <!-- Botão enviar -->
                             <input type="submit" value="Cadastrar" name="enviar" id="enviar" role="button" class="btn col-12 btn-primary">
@@ -104,6 +124,36 @@ if($_POST){
             </div><!-- fecha dimensionamento -->
         </div><!-- Fecha row -->
     </main>
+
+    <!-- Script para a imagem -->
+    <script>
+        document.getElementById("imagem_colaborador").onchange = function(){
+            var reader = new FileReader();
+            if(this.files[0].size>528385){
+                alert("A imagem dever ter no máximo 500kb");
+                $("#imagem").attr("src","blank");
+                $("#imagem").hide();
+                $('#imagem_colaborador').wrap('<form>').closest('form').get(0).reset();
+                $('#imagem_colaborador').unwrap();
+                return false;
+            }
+            if(this.files[0].type.indexOf("image")==-1){
+                alert("Formato inválido, escolha uma imagem!");
+                $("#imagem").attr("src","blank");
+                $("#imagem").hide();
+                $('#imagem_colaborador').wrap('<form>').closest('form').get(0).reset();
+                $('#imagem_colaborador').unwrap();
+                return false;
+            }
+            reader.onload = function(e) {
+                // obter dados carregados e renderizar miniatura.
+                document.getElementById("imagem").src = e.target.result;
+                $("#imagem").show();
+            }
+            // leia o arquivo de imagem com um URL de dados.
+            reader.readAsDataURL(this.files[0]);
+        }
+    </script>
 
     <!-- Link arquivos bootstrap script js -->
     <script src="../js/bootstrap.bundle.min.js"></script>

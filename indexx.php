@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 </head>
 <body class="fundofixo">
-<?php //include('menu_publico.php') ?>
+<?php include('menu_publico.php') ?>
     <main>
         <br>
         <?php include('carrousel.php') ?>

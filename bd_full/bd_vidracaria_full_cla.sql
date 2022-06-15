@@ -60,18 +60,19 @@
 	`login_colaborador` VARCHAR(30) NOT NULL, 
 	`senha_colaborador` VARCHAR(10) NOT NULL, 
 	`nivel_colaborador` enum('adm','comum') NOT NULL,
+	`imagem_colaborador` VARCHAR(50) NOT NULL,
     PRIMARY KEY (id_colaborador)) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
     
  DESCRIBE tb_colaborador;
 
 -- Inserindo Dados na Tabela colaborador-------------------------
 INSERT INTO `tb_colaborador` 
-	(`login_colaborador`,`senha_colaborador`,`nivel_colaborador`) 
+	(`login_colaborador`,`senha_colaborador`,`nivel_colaborador`,`imagem_colaborador`) 
 	VALUES
-		('claudio milton',123,'adm'),
-		('aline silva',123,'comum'),
-		('gabriel',123,'comum'),
-		('Anderson',123,'adm');		
+		('claudio milton',123,'adm','perfil-1.jpeg'),
+		('aline silva',123,'comum','perfil-2.jpg'),
+		('gabriel',123,'comum','perfil-2.jpg'),
+		('Anderson',123,'adm','perfil-1.jpeg');		
 
 
 -- Adicionar Chave Primária tabela colaborador-------------------

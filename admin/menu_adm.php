@@ -34,7 +34,7 @@
     
     <!--sidebar começo-->
     <div class="sidebar z-index">
-        <!-- <img src="image/img-1.jpg" class="image" alt=""> -->
+        <img src="../imagens/<?php //echo ($_SESSION['imagem_colaborador']) ?>" class="image mx-auto d-block" alt="perfil">
         <h2 class="text-center">Olá, <?php echo($_SESSION['login_colaborador']) ?></h2>
         <a href="index.php"><i class="bi bi-display"></i><span>Painel</span></a>
         <a href="produto_lista.php"><i class="bi bi-archive-fill"></i><span>Produtos</span></a>
@@ -46,6 +46,7 @@
     <!-- <div class="content"></div> -->
     
     <!-- Link bootstrap js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 </body>

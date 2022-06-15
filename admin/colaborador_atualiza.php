@@ -14,10 +14,21 @@ if($_POST){
     // Definindo o USE do banco de dados
     mysqli_select_db($conexao,$database_conn);
 
+// Guardo o nome da imagem no banco e o arquivo no diretório
+    if($_FILES['imagem_colaborador']['name']){
+        $nome_img   = $_FILES['imagem_colaborador']['name'];
+        $tmp_img    = $_FILES['imagem_colaborador']['tmp_name'];
+        $dir_img    = "../imagens/".$nome_img;
+        move_uploaded_file($tmp_img,$dir_img);
+    }else{
+        $nome_img=$_POST['imagem_colaborador_atual'];
+    };
+
 // Receber os dados do formulário e Organize os campos na mesma ordem
     $login_colaborador = $_POST['login_colaborador'];
     $senha_colaborador = $_POST['senha_colaborador'];
     $nivel_colaborador = $_POST['nivel_colaborador'];
+    $imagem_colaborador = $nome_img;
 
 // Campo para filtrar o registro (WHERE)
     $filtro_update      = $_POST['id_colaborador'];
@@ -26,7 +37,8 @@ if($_POST){
     $updateSQL  =   "UPDATE ".$tabela."
                     SET login_colaborador = '".$login_colaborador."',
                         senha_colaborador= '". $senha_colaborador."',
-                        nivel_colaborador   = '".$nivel_colaborador."'    
+                        nivel_colaborador   = '".$nivel_colaborador."',
+                        imagem_colaborador  = '".$imagem_colaborador."'    
                     WHERE ".$campo_filtro."='".$filtro_update."'
                     ";
     $resultado  =   $conexao->query($updateSQL);
@@ -117,7 +129,28 @@ $totalRows      =   ($lista)->num_rows;
                                     <input type="radio" name="nivel_colaborador" id="nivel_colaborador" value="comum" <?php echo $row['nivel_colaborador']=="comum" ? "checked" : null; ?>> Comum
                                 </label>
                             </div> <!-- Fecha grupo de inserção -->
-                            <!-- Fecha radio nivel_colaborador -->    
+                            <!-- Fecha radio nivel_colaborador -->
+                            
+                            <br>
+                            <!-- file imagem_produto ATUAL -->
+                            <label for="">Imagem Atual:</label>
+                            <img src="../imagens/<?php echo $row['imagem_colaborador']; ?>" alt="" class="img-responsive" style="max-width:30%;">
+
+                            <!-- guardamos o nome da imagem caso não seja alterada -->
+                            <input type="hidden" name="imagem_colaborador_atual" id="imagem_colaborador_atual" value="<?php echo $row['imagem_colaborador']; ?>"> 
+                            <br>
+
+                            <!-- file imagem_produto NOVA -->
+                            <label for="imagem_colaborador">Imagem:</label>
+                            <div class="input-group"> <!-- Abre grupo de inserção -->
+                                <span class="input-group-text">
+                                    <i class="bi bi-image-fill"></i>
+                                </span>
+                                <!-- Exibe a imagem inserida -->
+                                <img src="" alt="" name="imagem" id="imagem" class="img-responsive" style="max-width:30%;">
+                                <input type="file" name="imagem_colaborador" id="imagem_colaborador" class="form-control" accept="imagens/*">
+                            </div> <!-- Fecha grupo de inserção -->
+                            <!-- Fecha file imagem_produto -->
 
                             <br>
                             <!-- btn Enviar -->
@@ -129,6 +162,36 @@ $totalRows      =   ($lista)->num_rows;
             </div><!-- Fecha Dimensionamento -->
         </div> <!-- Fecha Row -->
     </main><br>
+<!-- Script para a imagem -->
+<script>
+    document.getElementById("imagem_colaborador").onchange = function(){
+        var reader = new FileReader();
+        if(this.files[0].size>528385){
+            alert("A imagem dever ter no máximo 500kb");
+            $("#imagem").attr("src","blank");
+            $("#imagem").hide();
+            $('#imagem_colaborador').wrap('<form>').closest('form').get(0).reset();
+            $('#imagem_colaborador').unwrap();
+            return false;
+        }
+        if(this.files[0].type.indexOf("image")==-1){
+            alert("Formato inválido, escolha uma imagem!");
+            $("#imagem").attr("src","blank");
+            $("#imagem").hide();
+            $('#imagem_colaborador').wrap('<form>').closest('form').get(0).reset();
+            $('#imagem_colaborador').unwrap();
+            return false;
+        }
+        reader.onload = function(e) {
+            // obter dados carregados e renderizar miniatura.
+            document.getElementById("imagem").src = e.target.result;
+            $("#imagem").show();
+        }
+        // leia o arquivo de imagem com um URL de dados.
+        reader.readAsDataURL(this.files[0]);
+    }
+</script>
+
 <!-- Script para a imagem -->
 <!-- Link arquivos bootstrap script js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
