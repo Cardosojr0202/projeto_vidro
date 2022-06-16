@@ -19,7 +19,7 @@ include("acesso_com.php");
 <body>
     <?php include('menu_adm.php'); ?>
     <main class="container"><br>
-        <div class="row">
+        <div class="row" style="margin-top: 4rem;">
             <div class="mx-auto col-sm-9 col-md-10">
                 <?php include('adm_options.php'); ?>
 

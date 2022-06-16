@@ -18,7 +18,7 @@ if($_POST){
     if($_FILES['imagem_colaborador']['name']){
         $nome_img   = $_FILES['imagem_colaborador']['name'];
         $tmp_img    = $_FILES['imagem_colaborador']['tmp_name'];
-        $dir_img    = "../imagens/".$nome_img;
+        $dir_img    = "../imagens/perfil/".$nome_img;
         move_uploaded_file($tmp_img,$dir_img);
     }else{
         $nome_img=$_POST['imagem_colaborador_atual'];

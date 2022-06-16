@@ -11,8 +11,8 @@ if($_POST){
     $table_insert = "tb_colaborador";
     $campos_insert = "login_colaborador,senha_colaborador,nivel_colaborador,imagem_colaborador";
 
-    // Guardando o Nome da imagem no banco de dados e arquivo no diretório
-    if($_FILES['imagem_produto']['name']){
+    // Guardo o nome da imagem no banco e o arquivo no diretório
+    if($_FILES['imagem_colaborador']['name']){
         $nome_img   = $_FILES['imagem_colaborador']['name'];
         $tmp_img    = $_FILES['imagem_colaborador']['tmp_name'];
         $dir_img    = "../imagens/perfil/".$nome_img;
@@ -111,8 +111,8 @@ if($_POST){
                                     <i class="bi bi-image-fill" aria-hidden="true"></i>
                                 </span>
                                <!-- Exibe a imagem inserida -->
-                                <img src="" alt="" name="imagem" id="imagem" class="img-responsive" >
-                                <input type="file" name="imagem_colaborador" id="imagem_colaborador" class="form-control" accept="image/*">
+                                <img src="" alt="" name="imagem" id="imagem" class="img-responsive">
+                                <input type="file" name="imagem_colaborador" id="imagem_colaborador" class="form-control" accept="image/*" style="width: 30%;">
                             </div> <!-- Fecha grupo de inserção -->
 
                             <br>

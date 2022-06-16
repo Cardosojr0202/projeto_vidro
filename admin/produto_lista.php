@@ -32,23 +32,23 @@ $totalRows  =   ($lista)->num_rows;
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
 <main class="container"><br>
-    <div class="row">
-        <div class="mx-auto ">
+    <div class="row" >
+        <div class="mx-auto table-responsive" style="margin-top: 4rem;">
             <h1 class="bg-primary bg-gradient">Lista de Produtos</h1>
             <table class="table table-hover table-condensed tbopacidade blur">
                     <thead>
                         <tr>
-                            <th class="d-none">ID</th>
-                            <th class="text-light">CODIGO</th>
-                            <th class="text-light">LEGENDA</th>
-                            <th class="text-light">DESCRIÇÃO</th>
-                            <th class="text-light">UNIDADE</th>
-                            <th class="text-light">ESPESSURA</th>
-                            <th class="text-light">COR</th>
-                            <th class="text-light">CATEGORIA</th>
-                            <th class="text-light">IMAGENS</th>
-                            <th class="text-light">Venda</th>
-                            <th class="text-light">Promoção</th>
+                            <th class="col d-none">ID</th>
+                            <th class="col text-light d-none">CODIGO</th>
+                            <th class="col text-light">LEGENDA</th>
+                            <th class="col text-light">DESCRIÇÃO</th>
+                            <th class="col text-light">UNIDADE</th>
+                            <th class="col text-light">ESPESSURA</th>
+                            <th class="col text-light">COR</th>
+                            <th class="col text-light">CATEGORIA</th>
+                            <th class="col text-light">IMAGENS</th>
+                            <th class="col text-light">Venda</th>
+                            <th class="col text-light">Promoção</th>
                             <th>
                                 <a href="produto_cadastro.php" target="_self" class="btn btn-sm col-12 btn-primary">
                                     <span class="d-none d-sm-block">Cadastrar</span>
@@ -61,14 +61,17 @@ $totalRows  =   ($lista)->num_rows;
                     <tbody>
                         <?php do { ?>
                         <tr>
-                            <td class="d-none"><?php echo $row['id_produto']; ?></td>
-                            <td class="text-light"><?php echo $row['codigo_produto']; ?></td>
-                            <td class="text-light"><?php echo $row['legenda_produto']; ?></td>
-                            <td class="text-light"><?php echo $row['descri_produto']; ?></td>
-                            <td class="text-light"><?php echo $row['unidade_produto']; ?></td>
-                            <td class="text-light"><?php echo $row['espessura_produto']; ?></td>
-                            <td class="text-light"><?php echo $row['cor_produto']; ?></td>
-                            <td class="text-light"><?php echo $row['rotulo_categoria']; ?></td>
+                            <td class="col d-none"><?php echo $row['id_produto']; ?></td>
+                            <td class="col text-light d-none"><?php echo $row['codigo_produto']; ?></td>
+                            <td class="col text-light"><?php echo $row['legenda_produto']; ?></td>
+                            <td class="col text-light"><?php echo $row['descri_produto']; ?></td>
+                            <td class="col text-center text-light"><?php echo $row['unidade_produto']; ?></td>
+                            <td class="col text-center text-light"><?php echo $row['espessura_produto']; ?></td>
+                            <td class="col text-center text-light"><?php echo $row['cor_produto']; ?></td>
+                            <td class="col text-center text-light">
+                                <span class="d-none d-sm-none d-md-block"><?php echo $row['rotulo_categoria']; ?></span>
+                                <span class="d-none d-md-none d-sm-block d-xs-block"><?php echo $row['sigla_categoria']; ?></span>
+                            </td>
                             <td class="text-light"><img src="../imagens/<?php echo $row['imagem_produto']; ?>" alt="" width="100px"></td>
                             <td class="text-light"><?php echo number_format($row['venda_produto'],2,',','.');?></td>   
                             <td>

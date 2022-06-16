@@ -40,7 +40,7 @@ $totalRows  =   ($lista)->num_rows;
     <!-- ABRE estrutura de repetição -->
     <?php do { ?>
       <div class="col-sm-6 col-md-4"> <!-- Abre Dimensionamento -->
-        <div class="card mb-3" style="max-width: 540px; height: 300px;">
+        <div class="card mb-3">
           <div class="row g-1">
             <div class="col-md-4"><br>
               <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start" alt="">

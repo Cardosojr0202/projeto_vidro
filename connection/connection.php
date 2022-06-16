@@ -3,7 +3,6 @@
 $hostname_conn = "localhost";
 $database_conn = "bd_vidracaria";
 $username_conn = "cardosojr";
-//$password_conn = "1234";
 $password_conn = "#@senac4321@#";
 $charset_conn = "utf8";
 
