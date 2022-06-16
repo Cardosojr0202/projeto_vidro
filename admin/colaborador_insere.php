@@ -23,7 +23,7 @@ if($_POST){
     $login_colaborador = $_POST['login_colaborador'];
     $senha_colaborador = $_POST['senha_colaborador'];
     $nivel_colaborador = $_POST['nivel_colaborador'];
-    $imagem_colaborador = $_POST['imagem_colaborador'];
+    $imagem_colaborador = $nome_img;
 
     // Reunir os valores a serem inseridos
     $valores_in = "'$login_colaborador','$senha_colaborador','$nivel_colaborador','$imagem_colaborador'";

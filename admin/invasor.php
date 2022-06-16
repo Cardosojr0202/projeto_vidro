@@ -12,22 +12,22 @@
     <link rel="stylesheet" href="../css/meu_estilo.css">
 </head>
 <body class="fundofixo">
-<main class="container">
+<main class="container" style="margin-top: 3rem;">
 <section>
     <article>
         <div class="row">
             <div class="bg mx-auto col-sm-6 col-md-5 col-lg-4">
                 <h1 class="breadcrumb text-danger text-center">ATENÇÃO!</h1>
                 <div class="thumbnail text-center">
-                    <span class="fa-stack fa-7x">
+                    <span class="fa-stack fa-9x">
                         <i class="fas fa-user-secret fa-stack-1x"></i>
                         <i class="fas fa-ban fa-stack-2x text-danger"></i>
                     </span>
                     <br><br>
-                    <div class="alert alert-danger" role="alert">
+                    <div class="alert alert-warning" role="alert">
                         <h4>
                             <i class="fas fa-spinner fa-lg fa-pulse"></i>
-                            Usuario e/ou senha invalida
+                            Usuario e/ou senha invalida <br>Tente novamente ou sai logo
                         </h4>
                         <p class="text-danger">
                             <a href="login.php" class="btn btn-danger">

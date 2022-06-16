@@ -70,28 +70,29 @@ $totalrows = ($list)->fetch_assoc();
     </main>
 <!-- Modal (Bootstrap 5) -->
 <div class="modal fade" id="confimacao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
+    <br>
+    <div class="modal-dialog">
+        <div class="modal-content">
 
-      <div class="modal-header">
-        <h5 class="modal-title text-danger">ATENÇÃO!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div><!-- Fecha Modal-header (Bootstrap 5) -->
+        <div class="modal-header">
+            <h5 class="modal-title text-danger">ATENÇÃO!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div><!-- Fecha Modal-header (Bootstrap 5) -->
 
-      <div class="modal-body">
-        Deseja mesmo EXCLUIR o item?
-        <h4><span class="nome text-danger"></span></h4>
-      </div><!-- Fecha Modal-body (Bootstrap 5) -->
+        <div class="modal-body">
+            Deseja mesmo EXCLUIR o item?
+            <h4><span class="nome text-danger"></span></h4>
+        </div><!-- Fecha Modal-body (Bootstrap 5) -->
 
-      <div class="modal-footer">
-        <button class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
-        <a href="#" type="button" class="btn btn-danger delete-yes">
-            Confirmar 
-        </a>
-      </div><!-- Fecha Modal-footer (Bootstrap 5) -->
-      
+        <div class="modal-footer">
+            <button class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
+            <a href="#" type="button" class="btn btn-danger delete-yes">
+                Confirmar 
+            </a>
+        </div><!-- Fecha Modal-footer (Bootstrap 5) -->
+        
+        </div>
     </div>
-  </div>
 </div>
 <!-- Fecha Modal (Bootstrap 5) -->
 

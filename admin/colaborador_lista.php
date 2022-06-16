@@ -80,6 +80,7 @@ $totalRows  =   ($lista)->num_rows;
 
 <!-- Modal (Bootstrap 5) -->
 <div class="modal fade" id="confimacao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <br>
     <div class="modal-dialog">
       <div class="modal-content">
   
