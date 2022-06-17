@@ -40,7 +40,6 @@
         <a href="produto_lista.php"><i class="bi bi-archive-fill"></i><span>Produtos</span></a>
         <a href="categoria_lista.php"><i class="bi bi-badge-wc-fill"></i><span>Categoria</span></a>
         <a href="colaborador_lista.php"><i class="bi bi-people-fill"></i><span>Colaboradores</span></a>
-        <a href="#"><i class="bi bi-gear-fill"></i><span>Configuração</span></a>
     </div>
     <!--sidebar final-->
     <!-- <div class="content"></div> -->

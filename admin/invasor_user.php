@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Refresh" content="15;URL=../index.php">
+    <meta http-equiv="Refresh" content="15;URL=index.php">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invasor</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" rel="stylesheet">
@@ -43,12 +43,12 @@
                                 <br><br>
                                 <h4>
                                     <i class="fas fa-spinner fa-lg fa-pulse"></i>
-                                    Usuario e/ou senha invalida <br>Tente novamente com uma senha valida
+                                    Você não tem <br>acesso a essa página 
                                 </h4>
                                 <div class="btn-group m-2" role="group" aria-label="Basic mixed styles example">
-                                    <a href="login.php" type="button" class="btn btn-success">
+                                    <a href="index.php" type="button" class="btn btn-success">
                                         <i class="fas fa-external-link-alt fa-rotate-270 fa-1x"></i><br>
-                                        Tente novamente
+                                        Voltar ao painel
                                     </a>
                                     <a href="../index.php" type="button" class="btn btn-danger">
                                         <i class="fas fa-home fa-1x"></i><br>
