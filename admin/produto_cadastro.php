@@ -107,7 +107,7 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                             <label for="descri_produto">LEGENDA:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
                                 <span class="input-group-text">
-                                    <i class="bi bi-list-ol"></i>
+                                    <i class="bi bi-pencil-fill"></i>
                                 </span>
                                 <textarea name="legenda_produto" id="legenda_produto" cols="30" rows="2" placeholder="Digite a legenda do produto." class="form-control"></textarea>
                             </div> <!-- Fecha grupo de inserção -->
@@ -116,7 +116,7 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                             <label for="descri_produto">DESCRIÇÃO:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
                                 <span class="input-group-text">
-                                    <i class="bi bi-list-ol"></i>
+                                    <i class="bi bi-pen-fill"></i>
                                 </span>
                                 <textarea name="descri_produto" id="descri_produto" cols="30" rows="2" placeholder="Digite a descrição do produto." class="form-control"></textarea>
                             </div> <!-- Fecha grupo de inserção -->
@@ -125,7 +125,7 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                             <label for="unidade_produto">Unidade:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
                                 <span class="input-group-text">
-                                    <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                                    <i class="bi bi-archive-fill"></i>
                                 </span>
                                 <input type="text" name="unidade_produto" id="unidade_produto" class="form-control" placeholder="unidade" maxlength="10" required>
                             </div> <!-- Fecha grupo de inserção -->
@@ -134,7 +134,7 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                             <label for="espessura_produto">Espessura:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
                                 <span class="input-group-text">
-                                    <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                                    <i class="bi bi-aspect-ratio-fill"></i>
                                 </span>
                                 <input type="text" name="espessura_produto" id="espessura_produto" class="form-control" placeholder="espessura" maxlength="10" required>
                             </div> <!-- Fecha grupo de inserção -->
@@ -152,7 +152,7 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                             <label for="id_categoria_produto">CATEGORIA:</label>
                             <div class="input-group"> <!-- Abre grupo de inserção -->
                                 <span class="input-group-text">
-                                    <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                                    <i class="bi bi-badge-wc-fill"></i>
                                 </span>
                                 <!-- select>opt*2 -->
                                 <select name="id_categoria_produto" id="id_categoria_produto" class="form-control" required>
