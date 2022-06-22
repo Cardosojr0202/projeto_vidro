@@ -67,7 +67,7 @@ label #sidebar_btn:hover{
 }
 #check:checked ~ .sidebar a{
     font-size: 20px;
-    margin-left: 170px;
+    margin-left: 0;
     width: 80px;
 }
 #check:checked ~ .content{

@@ -28,7 +28,7 @@ $totalRows_tipos = ($lista_categoria)->num_rows;
 <body>
     <input type="checkbox" id="check" class="d-none">
     
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark position-fixed"style="width: 100%; z-index: 2000;">
         <div class="container-fluid">
             <!--header começo-->
             <header class="d-flex justify-content-between">
