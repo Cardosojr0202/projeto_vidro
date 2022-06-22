@@ -34,7 +34,7 @@ $totalRows  =   ($lista)->num_rows;
 
 </head>
 <body>
-<h1 class="bg-primary bg-gradient">Todos Nossos Produtos</h1>
+<h1 class="bg-primary bg-gradient" style="padding-left: 20px;">Todos Nossos Produtos</h1>
 
 <div class="row"><!-- abre row manter os elementos da linha -->
     <!-- ABRE estrutura de repetição -->
@@ -65,10 +65,10 @@ $totalRows  =   ($lista)->num_rows;
                             <span class="hidden-xs">Saiba mais...</span>
                             <span class="visible-xs glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                         </a>
-                        <a href="#" class="btn btn-success" role="button">
+                        <!-- <a href="#" class="btn btn-success" role="button">
                             <span class="hidden-xs">Comprar</span>
                             <span class="visible-xs glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                        </a>
+                        </a> -->
                     </p>
               </div>
             </div>

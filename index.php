@@ -23,6 +23,9 @@
                 <a id="promo"></a>
                 <?php include('produto_promo.php') ?>
                 <br>
+                <a id="produtos"></a>
+                <?php include('produto_geral.php') ?>
+                <br>
                 <a id="contato"></a>
                 <?php include('rodape.php') ?>
             </div>
