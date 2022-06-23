@@ -16,14 +16,14 @@
 <?php include('menu_publico.php') ?>
     <main class="container">
         <div class="row">
-            <div style="margin-top: 4rem;">
+            <div style="margin-top: 5rem;">
                 <br>
                 <?php include('carrousel.php') ?>
-                <br><hr>
                 <a id="promo"></a>
+                <br><br><hr>
                 <?php include('produto_promo.php') ?>
-                <br>
-                <a id="produtos"></a>
+                <a id="produ"></a>
+                <br><br><br>
                 <?php include('produto_geral.php') ?>
                 <br>
                 <a id="contato"></a>

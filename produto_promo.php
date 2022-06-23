@@ -40,40 +40,34 @@ $totalRows  =   ($lista)->num_rows;
     <!-- ABRE estrutura de repetição -->
     <?php do { ?>
       <div class="col-sm-6 col-md-4"> <!-- Abre Dimensionamento -->
-        <div class="card mb-3">
-          <div class="row g-1">
-            <div class="col-md-4"><br>
-              <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start" alt="">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Categoria: 
-                <strong><?php echo $row['rotulo_categoria']; ?></strong>  
-                </h5>
-                <br>
-                    <p class="card ">
-                        <h4 class="text-danger">
-                            <strong><?php echo $row['legenda_produto']; ?></strong>
-                        </h4>
-                    </p>
-                    <br>
-                    <p>
-                        <button class="btn btn-primary text-right" role="button">R$  
-                            <?php echo number_format($row['venda_produto'],2,',','.'); ?>
+        <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" style="text-decoration: none;">
+          <div class="card mb-3">
+            <div class="row g-1">
+              <div class="col-md-4"><br>
+                <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start" alt="">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Categoria: 
+                  <strong><?php echo $row['rotulo_categoria']; ?></strong>  
+                  </h5>
+                  <br>
+                      <p class="card">
+                          <h4 class="text-danger">
+                              <strong><?php echo $row['legenda_produto']; ?></strong>
+                          </h4>
+                      </p>
+                      <br>
+                      <p>
+                        <button class="btn btn-outline-primary text-dark disabled" role="button">R$  
+                          <?php echo number_format($row['venda_produto'],2,',','.'); ?>
                         </button>
-                        <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" class="btn btn-warning" role="button">
-                            <span class="hidden-xs">Saiba mais...</span>
-                            <span class="visible-xs glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                        </a>
-                        <!-- <a href="#" class="btn btn-success" role="button">
-                            <span class="hidden-xs">Comprar</span>
-                            <span class="visible-xs glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                        </a> -->
-                    </p>
+                      </p>    
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </a>
       </div><!-- FECHA Dimensionamento --> 
     <?php } while ($row=$lista->fetch_assoc()); ?>
     <!-- FECHA estrutura de repetição-->

@@ -45,25 +45,21 @@
                 <li class="nav-item espacamento">
                     <a href="#home" class="text-info">
                         <i class="bi bi-facebook" style="font-size: 3rem;"></i>
-                        <!-- <img class="redimensionamento" src="imagens/facebook.png" alt=""> -->
                     </a>
                 </li>
                 <li class="nav-item espacamento">
                     <a href="#home" class="text-danger">
                         <i class="bi bi-instagram" style="font-size: 3rem;"></i>
-                        <!-- <img class="redimensionamento" src="imagens/instagram-colorido.png" alt=""> -->
                     </a>
                 </li>
                 <li class="nav-item espacamento">
                     <a href="#home" class="text-info">
                         <i class="bi bi-twitter" style="font-size: 3rem;"></i>
-                        <!-- <img class="redimensionamento" src="imagens/twitter.png" alt=""> -->
                     </a>
                 </li>
                 <li class="nav-item espacamento">
                     <a href="#home" class="text-success" style="font-size: 3rem;">
                         <i class="bi bi-whatsapp"></i>
-                        <!-- <img class="redimensionamento" src="imagens/whatsapp.png" alt=""> -->
                     </a>
                 </li>
             </ul>
@@ -116,8 +112,8 @@
             <h6 class="text-info text-center">
                 Developed by cardosojr™/claudio™ 2022.
                 <br>
-                <a class="link-warning" href="http://www.cardosojr.com.br">
-                    www.cardosojr.com.br
+                <a class="link-warning" href="developer.php">
+                    www.developer.com.br
                 </a>
             </h6>
         </div>
