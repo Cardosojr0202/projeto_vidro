@@ -34,12 +34,12 @@ $totalRows  =   ($lista)->num_rows;
 
 </head>
 <body>
-<h1 class="bg-primary bg-gradient" style="padding-left: 20px;">Todos Nossos Produtos</h1>
+<h1 class="bg-primary bg-gradient" style="padding-left: 15px; margin-bottom: 30px;">Todos Nossos Produtos</h1>
 
 <div class="row"><!-- abre row manter os elementos da linha -->
     <!-- ABRE estrutura de repetição -->
     <?php do { ?>
-      <div class="col-sm-6 col-md-4"> <!-- Abre Dimensionamento -->
+      <div class="col-sm-6 col-md-4" style="margin-top: 20px;"> <!-- Abre Dimensionamento -->
         <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" style="text-decoration: none;">
           <div class="card mb-3">
             <div class="row g-1">
@@ -51,17 +51,17 @@ $totalRows  =   ($lista)->num_rows;
                   <h5 class="card-title">Categoria: 
                   <strong><?php echo $row['rotulo_categoria']; ?></strong>  
                   </h5>
-                  <br>
-                      <p class="card ">
+                  <hr>
+                      <p>
                           <h4 class="text-danger">
                               <strong><?php echo $row['legenda_produto']; ?></strong>
                           </h4>
                       </p>
                       <br>
                       <p class="d-flex justify-content-between">
-                          <button class="btn btn-outline-primary text-dark disabled" role="button">R$  
+                          <h3 class="btn btn-outline-info disabled" role="button">R$  
                               <?php echo number_format($row['venda_produto'],2,',','.'); ?>
-                          </button>
+                          </h3>
                           <!-- <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" class="btn btn-warning" role="button">
                               <span class="d-none d-sm-block">Saiba mais...</span>
                               <i class="bi bi-eye-fill visible-xs"></i>

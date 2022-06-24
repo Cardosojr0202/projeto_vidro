@@ -34,45 +34,55 @@ $totalRows  =   ($lista)->num_rows;
 
 </head>
 <body>
-<h1 class="bg-primary bg-gradient" style="padding-left: 20px;">Promoção</h1>
-
-<div class="row"><!-- abre row manter os elementos da linha -->
-    <!-- ABRE estrutura de repetição -->
-    <?php do { ?>
-      <div class="col-sm-6 col-md-4"> <!-- Abre Dimensionamento -->
-        <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" style="text-decoration: none;">
-          <div class="card mb-3">
-            <div class="row g-1">
-              <div class="col-md-4"><br>
-                <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start" alt="">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Categoria: 
-                  <strong><?php echo $row['rotulo_categoria']; ?></strong>  
-                  </h5>
-                  <br>
-                      <p class="card">
-                          <h4 class="text-danger">
-                              <strong><?php echo $row['legenda_produto']; ?></strong>
-                          </h4>
-                      </p>
-                      <br>
-                      <p>
-                        <button class="btn btn-outline-primary text-dark disabled" role="button">R$  
-                          <?php echo number_format($row['venda_produto'],2,',','.'); ?>
-                        </button>
-                      </p>    
+    <h1 class="bg-primary bg-gradient" style="padding-left: 20px; margin-bottom: 25px;">Produtos em Promoção</h1>
+    <div class="row"><!-- abre row manter os elementos da linha -->
+    <!-- Mostrar se o registro retornar VAZIO -->
+    <?php if($totalRows == 0){ ?>
+      <br>    
+      <h2 class=" alert alert-primary">
+             DESCULPA. <br>
+              No momento não temos Produto em Promoção!!    
+      </h2> 
+    <?php }; ?> 
+    <!-- Mostrar se o registro NÃO retornar VAZIO -->
+     <?php if($totalRows > 0){ ?>
+        <!-- ABRE estrutura de repetição -->
+        <?php do { ?>
+          <div class="col-sm-6 col-md-4"> <!-- Abre Dimensionamento -->
+            <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" style="text-decoration: none;">
+              <div class="card mb-3">
+                <div class="row g-1">
+                  <div class="col-md-4"><br>
+                    <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start" alt="">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Categoria: 
+                      <strong><?php echo $row['rotulo_categoria']; ?></strong>  
+                      </h5>
+                      <hr>
+                          <p>
+                            
+                              <h4 class="text-danger">
+                                  <strong><?php echo $row['legenda_produto']; ?></strong>
+                              </h4>
+                          </p>
+                          <br>
+                          <p>
+                            <button class="btn btn-outline-primary text-dark disabled" role="button">R$  
+                              <?php echo number_format($row['venda_produto'],2,',','.'); ?>
+                            </button>
+                          </p>    
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </a>
-      </div><!-- FECHA Dimensionamento --> 
-    <?php } while ($row=$lista->fetch_assoc()); ?>
-    <!-- FECHA estrutura de repetição-->
-</div><!-- fecha row manter os elementos da linha -->
-   
+            </a>
+          </div><!-- FECHA Dimensionamento --> 
+        <?php } while ($row=$lista->fetch_assoc()); ?>
+        <!-- FECHA estrutura de repetição-->
+      <?php };?>
+    </div><!-- fecha row manter os elementos da linha -->
 <!--link arquivo bootstrap script js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>

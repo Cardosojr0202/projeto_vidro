@@ -49,8 +49,8 @@ $totalRows_tipos = ($lista_categoria)->num_rows;
 
             <div class="direita position-absolute end-0 top-o me-3">
                 <form action="produtos_busca.php" method="get" name="form_busca" id="form_busca" class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" name="buscar" id="buscar" placeholder="Search" aria-label="Search" required>
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <input class="form-control me-2" style="width: 8em;" type="search" name="buscar" id="buscar" placeholder="Search" aria-label="Search" required>
+                  <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
                 </form>
             </div>
 

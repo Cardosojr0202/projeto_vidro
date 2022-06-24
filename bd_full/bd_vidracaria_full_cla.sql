@@ -24,15 +24,15 @@
      INSERT INTO `tb_produtos` ( `codigo_produto`,`legenda_produto`,`descri_produto`,`unidade_produto`,`espessura_produto`,`cor_produto`,
      `id_categoria_produto`,`venda_produto`,`imagem_produto`,`promo_produto`)
      VALUES
-     ('VTI4','Vidro temperado incolor 4mm','Vidro temperado 4mm suporta peso de até 50kg e na cor incolor tem mais transparencia','ml','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('VTV4','Vidro temperado VERDE 4mm','Vidro temperado 4mm suporta peso de até 50kg e na cor verde tem mais proteção','ml','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('VTI6','Vidro temperado incolor 6mm','Vidro temperado 6mm suporta peso de até 100kg','br','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('VTV6','Vidro temperado VERDE 6mm','Vidro temperado 6mm suporta peso de até 100kg','br','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('AL1523','TRINCO SUPERIOR PARA BASCULANTE','Utilizado como trinco de basculante','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('AL1335','TRINCP PARA PORTA PIVOTANTE','Utilizado como trinco de porta na parte inferior','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('CG-25','CORRRIMÃO PANORAMICO','Utilizado no guarda corpo uma barra mais reformaçada','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('BCC-02','TRILHO SUPERIOR','Utilizado no guarda corpo uma barra mais reformaçada','un','8mm','incolor',1,'150.00','incolor.png','Sim'),
-	 ('GUA-00','BARRACHA PARA VIDRO FIXO','em caso de aluminio mais largo que o vidro podemos usar a borracha','un','8mm','incolor',1,'150.00','incolor.png','Sim');
+     ('VTI4','Vidro temperado incolor 4mm','Vidro temperado 4mm suporta peso de até 50kg e na cor incolor tem mais transparencia','ml','8mm','incolor',1,'150.00','incolor.png','Não'),
+	 ('VTV4','Vidro temperado VERDE 4mm','Vidro temperado 4mm suporta peso de até 50kg e na cor verde tem mais proteção','ml','8mm','incolor',1,'150.00','incolor.png','Não'),
+	 ('VTI6','Vidro temperado incolor 6mm','Vidro temperado 6mm suporta peso de até 100kg','br','8mm','incolor',1,'150.00','incolor.png','Não'),
+	 ('VTV6','Vidro temperado VERDE 6mm','Vidro temperado 6mm suporta peso de até 100kg','br','8mm','incolor',1,'150.00','incolor.png','Não'),
+	 ('AL1523','TRINCO SUPERIOR PARA BASCULANTE','Utilizado como trinco de basculante','un','8mm','incolor',1,'150.00','incolor.png','Não'),
+	 ('AL1335','TRINCP PARA PORTA PIVOTANTE','Utilizado como trinco de porta na parte inferior','un','8mm','incolor',1,'150.00','incolor.png','Não'),
+	 ('CG-25','CORRRIMÃO PANORAMICO','Utilizado no guarda corpo uma barra mais reformaçada','un','8mm','incolor',1,'150.00','incolor.png','Não'),
+	 ('BCC-02','TRILHO SUPERIOR','Utilizado no guarda corpo uma barra mais reformaçada','un','8mm','incolor',1,'150.00','incolor.png','Não'),
+	 ('GUA-00','BARRACHA PARA VIDRO FIXO','em caso de aluminio mais largo que o vidro podemos usar a borracha','un','8mm','incolor',1,'150.00','incolor.png','Não');
     
 
 

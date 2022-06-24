@@ -38,19 +38,18 @@ $totalRows  =   ($lista)->num_rows;
         <div class="row"> <!-- manter os elementos da linha -->
             <section style="margin-top: 10px;">
                 <h3 class="bg-primary bg-gradient">
-                    <a href="javascript:window.history.go(-1)" class="btn btn-success">
+                    <a href="javascript:window.history.go(-1)" class="btn btn-danger">
                         <span class="bi bi-chevron-left"></span>
                     </a>
                     Descrição Completa do Produto
                 </h3>
 
                 <br>
-                <?php do { ?>
-
+                <div class="mx-auto col-sm-8 col-md-8 col-lg-9 col-xs-9">
                     <div class="container" style="background-color: #fff;">
                         <div class="row d-flex flex-xl-wrap">
                             <div class="col text-center m-auto">
-                                <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="rounded mx-auto d-block" alt="Produto" style="max-width: 20em; max-height: 20%;">
+                                <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="rounded mx-auto d-block img-responsive" alt="Produto" style="width: 90%; max-height: 20%;">
                             </div>
                             <div class="col border">
                                 <h2><?php echo $row['legenda_produto']; ?></h2>
@@ -70,8 +69,8 @@ $totalRows  =   ($lista)->num_rows;
                             </div>
                         </div><!-- Fecha Row(Card) -->
                     </div><!-- Fecha Card -->
-                
-                <?php } while ($row=$lista->fetch_assoc()); ?>
+                </div><!-- Fecha Dimencionamento -->
+                    
             </section>
         </div> <!-- fecha row -->
     </main>
