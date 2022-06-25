@@ -40,7 +40,7 @@ $totalRows  =   ($lista)->num_rows;
                         <a href="javascript:window.history.go(-1)" class="btn btn-danger">        
                             <i class="bi bi-caret-left-fill"></i>    
                         </a>
-                        <strong><i><?php echo $_GET['buscar'] ?></i></strong>
+                        Você pesquisou: <strong><i><?php echo $_GET['buscar'] ?></i></strong>
                         <br>       
                         Em breve mais produtos ao seu dispor!     
                 </h2> 
@@ -49,10 +49,12 @@ $totalRows  =   ($lista)->num_rows;
             <!-- Mostrar se o registro NÃO retornar VAZIO -->
             <?php if($totalRows > 0){ ?>
                 <br>
-                <h2 class="breadcrumb alert-primary">
+                <h2 class="alert-primary" style="margin-bottom: 26px;">
                     <a href="javascript:window.history.go(-1)" class="btn btn-danger">
                         <i class="bi bi-caret-left-fill"></i>
                     </a>
+                    Você pesquisou: <strong><?php echo $_GET['buscar'] ?></strong>
+                    <br>
                     <?php echo $row['rotulo_categoria']; ?>
                 </h2>
 
@@ -61,6 +63,7 @@ $totalRows  =   ($lista)->num_rows;
                     <?php do { ?>
 
                         <div class="col-sm-6 col-md-4"><!-- Abre Dimensionamento -->
+                            <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" style="text-decoration: none;">
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-1">
                                     <div class="col-md-4"><br><!-- Abre Dimensionamento da img -->
@@ -72,29 +75,24 @@ $totalRows  =   ($lista)->num_rows;
                                             <strong><?php echo $row['rotulo_categoria']; ?></strong>  
                                             </h5>
                                             <br>
-                                            <p class="card ">
+                                            <hr>
+                                            <p>
                                                 <h4 class="text-danger">
                                                     <strong><?php echo $row['legenda_produto']; ?></strong>
                                                 </h4>
                                             </p>
                                             <br>
                                             <p>
-                                                <button class="btn btn-primary text-right" role="button">R$  
+                                                <h3 class="btn btn-outline-info disabled" role="button">R$  
                                                     <?php echo number_format($row['venda_produto'],2,',','.'); ?>
-                                                </button>
-                                                <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" class="btn btn-warning" role="button">
-                                                    <span class="hidden-xs">Saiba mais...</span>
-                                                    <span class="visible-xs glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                                </a>
-                                                <a href="#" class="btn btn-success" role="button">
-                                                    <span class="hidden-xs">Comprar</span>
-                                                    <span class="visible-xs glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                                </a>
+                                                </h3>
+                                                
                                             </p>
                                         </div><!-- Fecha Dimensionamento do text -->
                                     </div>
                                 </div><!-- FECHA row g-1 -->
                             </div><!-- FECHA card mb-3 -->
+                            </a>
                         </div><!-- FECHA Dimensionamento --> 
                 
                     <?php } while ($row=$lista->fetch_assoc()); ?>

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 </head>
 <body>
-    <div class="row panel-footer d-flex align-items-center" style="background-color: rgba(0,0,0,0.7); padding: 10px;">
+    <div class="row panel-footer d-flex align-items-stretch" style="background-color: rgba(0,0,0,0.7); padding: 10px;">
         <br>
         <div class="logo text-center">
             <h3>Front <span>Vidraçaria</span></h3>
@@ -42,7 +42,7 @@
         <br>
         <div class="col-md-4">
             <!-- <h4 class="text-white text-center">Social</h4> -->
-            <ul class="nav text-center d-flex justify-content-center mx-auto">
+            <ul class="nav text-center d-flex justify-content-center mx-auto" style="margin: 90px 90px;">
                 <li class="nav-item espacamento">
                     <a href="#home" class="text-info">
                         <i class="bi bi-facebook" style="font-size: 3rem;"></i>

@@ -34,7 +34,7 @@ $totalRows  =   ($lista)->num_rows;
 
 </head>
 <body>
-    <h1 class="bg-primary bg-gradient" style="padding-left: 20px; margin-bottom: 25px;">Produtos em Promoção</h1>
+    <h1 class="bg-primary bg-gradient" style="padding-left: 20px; margin-bottom: 26px;">Produtos em Promoção</h1>
     <div class="row"><!-- abre row manter os elementos da linha -->
     <!-- Mostrar se o registro retornar VAZIO -->
     <?php if($totalRows == 0){ ?>
@@ -58,14 +58,13 @@ $totalRows  =   ($lista)->num_rows;
                   <div class="col-md-8">
                     <div class="card-body">
                       <h5 class="card-title">Categoria: 
-                      <strong><?php echo $row['rotulo_categoria']; ?></strong>  
+                        <strong><?php echo $row['rotulo_categoria']; ?></strong>  
                       </h5>
                       <hr>
                           <p>
-                            
-                              <h4 class="text-danger">
-                                  <strong><?php echo $row['legenda_produto']; ?></strong>
-                              </h4>
+                            <h4 class="text-danger">
+                              <strong><?php echo $row['legenda_produto']; ?></strong>
+                            </h4>
                           </p>
                           <br>
                           <p>

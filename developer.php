@@ -16,21 +16,66 @@
 <?php include('menu_publico.php') ?>
    <main class="container-fluid">
       <div class="row">
-         <div class="container d-flex justify-content-around align-items-center flex-wrap" style="margin-top: 10rem; margin-bottom: 6rem;">
+         <div class="container d-flex justify-content-center  flex-wrap" style="margin-top: 10rem; margin-bottom: 6rem;">
          
             <div class="card" style="width: 18rem;">
                <img src="imagens/perfil/perfil-2.jpg" class="card-img-top" alt="perfil-2">
                <div class="card-body">
                   <h3>Gabriel</h3>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <ul class="nav text-center d-flex justify-content-center mx-auto">
+                     <li class="nav-item" style="margin: 5px;">
+                        <a href="#home" class="text-info">
+                              <i class="bi bi-facebook" style="font-size: 3rem;"></i>
+                        </a>
+                     </li>
+                     <li class="nav-item" style="margin: 5px;">
+                        <a href="#home" class="text-danger">
+                              <i class="bi bi-instagram" style="font-size: 3rem;"></i>
+                        </a>
+                     </li>
+                     <li class="nav-item" style="margin: 5px;"> 
+                        <a href="#home" class="text-info">
+                              <i class="bi bi-twitter" style="font-size: 3rem;"></i>
+                        </a>
+                     </li>
+                     <li class="nav-item" style="margin: 5px;">
+                        <a href="#home" class="text-success" style="font-size: 3rem;">
+                              <i class="bi bi-whatsapp"></i>
+                        </a>
+                     </li>
+                  </ul>
                </div>
             </div><!-- Fecha Card 1 -->
+
 
             <div class="card" style="width: 18rem;">
                <img src="imagens/perfil/perfil-1.jpeg" class="card-img-top" alt="perfil-1">
                <div class="card-body">
                   <h3>Claudio</h3>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <ul class="nav text-center d-flex justify-content-center mx-auto">
+                     <li class="nav-item" style="margin: 5px;">
+                        <a href="#home" class="text-info">
+                              <i class="bi bi-facebook" style="font-size: 3rem;"></i>
+                        </a>
+                     </li>
+                     <li class="nav-item" style="margin: 5px;">
+                        <a href="#home" class="text-danger">
+                              <i class="bi bi-instagram" style="font-size: 3rem;"></i>
+                        </a>
+                     </li>
+                     <li class="nav-item" style="margin: 5px;">
+                        <a href="#home" class="text-info">
+                              <i class="bi bi-twitter" style="font-size: 3rem;"></i>
+                        </a>
+                     </li>
+                     <li class="nav-item" style="margin: 5px;">
+                        <a href="#home" class="text-success" style="font-size: 3rem;">
+                              <i class="bi bi-whatsapp"></i>
+                        </a>
+                     </li>
+                  </ul>
                </div>
             </div><!-- Fecha Card 1 -->
 

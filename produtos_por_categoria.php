@@ -47,7 +47,7 @@ $totalRows  =   ($lista)->num_rows;
             <!-- Mostrar se o registro NÃO retornar VAZIO -->
             <?php if($totalRows > 0){ ?>
                 <br>
-                <h2 class="breadcrumb alert-primary">
+                <h2 class="breadcrumb alert-primary" style="margin-bottom: 26px;">
                     <a href="javascript:window.history.go(-1)" class="btn btn-danger">
                         <i class="bi bi-caret-left-fill"></i>
                     </a>
@@ -59,42 +59,32 @@ $totalRows  =   ($lista)->num_rows;
                     <?php do { ?>
 
                         <div class="col-sm-6 col-md-4"><!-- Abre Dimensionamento -->
-                            <div class="card mb-3" style="max-width: 540px;">
+                        <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" style="text-decoration: none;">
+                            <div class="card mb-3"><!-- Abre Card / mb-3 -->
                                 <div class="row g-1">
-                                    <div class="col-md-4"><br><!-- Abre Dimensionamento da img -->
+                                    <div class="col-md-4"><br>
                                         <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start" alt="">
-                                    </div><!-- Fecha Dimensionamento da img -->
-                                    <div class="col-md-8"><!-- Abre Dimensionamento do text -->
-                                        <div class="card-body">
-                                            <h5 class="card-title">Categoria: 
-                                            <strong><?php echo $row['rotulo_categoria']; ?></strong>  
-                                            </h5>
-                                            <br>
-                                            <p class="card ">
-                                                <h4 class="text-danger">
-                                                    <strong><?php echo $row['legenda_produto']; ?></strong>
-                                                </h4>
-                                            </p>
-                                            <br>
-                                            <p>
-                                                <button class="btn btn-primary text-right" role="button">R$  
-                                                    <?php echo number_format($row['venda_produto'],2,',','.'); ?>
-                                                </button>
-                                                <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" class="btn btn-warning" role="button">
-                                                    <span class="hidden-xs">Saiba mais...</span>
-                                                    <span class="visible-xs glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                                </a>
-                                                <a href="#" class="btn btn-success" role="button">
-                                                    <span class="hidden-xs">Comprar</span>
-                                                    <span class="visible-xs glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                                </a>
-                                            </p>
-                                        </div><!-- Fecha Dimensionamento do text -->
                                     </div>
-                                </div><!-- FECHA row g-1 -->
-                            </div><!-- FECHA card mb-3 -->
+                                    <div class="col-md-8">
+                                        <div class="card-body"><!-- Abre Card-body -->
+                                            <h5 class="card-title">Categoria: 
+                                                <strong><?php echo $row['rotulo_categoria']; ?></strong>  
+                                            </h5>
+                                            <hr>
+                                            <h4 class="text-danger">
+                                                <strong><?php echo $row['legenda_produto']; ?></strong>
+                                            </h4>
+                                            <h3 class="btn btn-outline-info disabled my-3" role="button">R$  
+                                                <?php echo number_format($row['venda_produto'],2,',','.'); ?>
+                                            </h3>
+
+                                        </div><!-- FECHA Card-body -->
+                                    </div>
+                                </div>
+                            </div><!-- FECHA Card / mb-3 -->
+                            </a>
                         </div><!-- FECHA Dimensionamento --> 
-                
+                        
                     <?php } while ($row=$lista->fetch_assoc()); ?>
                     <!-- FECHA estrutura de repetição -->
                 </div> <!-- fecha row -->
