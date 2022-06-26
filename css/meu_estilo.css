@@ -96,3 +96,27 @@
     font-weight: 500;
     opacity: 0.5;
 }
+.card-dev .content .details .data{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.card-dev .content .details .data h3{
+    font-size: 1em;
+    color: gray;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+.card-dev .content .details .data h3 span{
+    font-size: 0.85em;
+    font-weight: 600;
+    opacity: 0.5;
+}
+.card-dev .content .details .actionBtn{
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+}
+.card-dev .content .details .actionBtn button{
+    padding: 10px 30px;
+}

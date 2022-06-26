@@ -29,10 +29,10 @@
                         <h3>322<br><span>Posts</span></h3>
                         <h3>120k<br><span>Followers</span></h3>
                         <h3>280<br><span>Following</span></h3>
-                     </div>
+                     </div> 
                      <div class="actionBtn">
-                        <button>Follow</button>
-                        <button>Menssage</button>
+                        <button class="btn btn-danger">Follow</button>
+                        <button class="btn btn-outline-danger">Menssage</button>
                      </div>
                   </div>
                </div>
