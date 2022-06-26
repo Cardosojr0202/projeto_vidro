@@ -31,8 +31,8 @@
                         <h3>280<br><span>Following</span></h3>
                      </div> 
                      <div class="actionBtn">
-                        <button class="btn btn-danger">Follow</button>
-                        <button class="btn btn-outline-danger">Menssage</button>
+                        <button class="btn">Follow</button>
+                        <button class="btn">Menssage</button>
                      </div>
                   </div>
                </div>

@@ -37,15 +37,15 @@
 .card-dev{
     position: relative;
     width: 350px;
-    height: 190px;
+    /* height: 190px; */
     height: 450px;
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
 }
-.card-dev:hover{
+/* .card-dev:hover{
     height: 450px;
-}
+} */
 .imgBg{
     position: relative;
     left: 50%;
@@ -59,10 +59,10 @@
     overflow: hidden;
     transition: 00.5s;
 }
-.card-dev:hover .imgBg{
+/* .card-dev:hover .imgBg{
     width: 250px;
     height: 250px;
-}
+} */
 .imgBg img{
     position: relative;
     top: 0;
@@ -78,12 +78,14 @@
     display: flex;
     justify-content: center;
     /* align-items: flex-end; */
+    overflow: hidden;
 }
 .card-dev .content .details{
     padding: 40px;
     text-align: center;
     width: 100%;
     transition: 00.5s;
+    /* transform: translateY(150px); */
 }
 .card-dev .content .details h2{
     font-size: 1.26em;
@@ -119,4 +121,14 @@
 }
 .card-dev .content .details .actionBtn button{
     padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    background: #ff5f95;
+    color: #fff;
+}
+.card-dev .content .details .actionBtn button:nth-child(2){
+    border: 1px solid #999;
+    color: #999;
+    background: #fff;
 }
