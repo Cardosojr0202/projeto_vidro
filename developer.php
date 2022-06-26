@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developers</title>
+    <title>DEVs</title>
     <!-- Link do CSS do bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" >
     <!-- Link para CSS específico -->
@@ -18,66 +18,28 @@
       <div class="row">
          <div class="container d-flex justify-content-center  flex-wrap" style="margin-top: 10rem; margin-bottom: 6rem;">
          
-            <div class="card" style="width: 18rem;">
-               <img src="imagens/perfil/perfil-2.jpg" class="card-img-top" alt="perfil-2">
-               <div class="card-body">
-                  <h3>Gabriel</h3>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <ul class="nav text-center d-flex justify-content-center mx-auto">
-                     <li class="nav-item" style="margin: 5px;">
-                        <a href="#home" class="text-info">
-                              <i class="bi bi-facebook" style="font-size: 3rem;"></i>
-                        </a>
-                     </li>
-                     <li class="nav-item" style="margin: 5px;">
-                        <a href="#home" class="text-danger">
-                              <i class="bi bi-instagram" style="font-size: 3rem;"></i>
-                        </a>
-                     </li>
-                     <li class="nav-item" style="margin: 5px;"> 
-                        <a href="#home" class="text-info">
-                              <i class="bi bi-twitter" style="font-size: 3rem;"></i>
-                        </a>
-                     </li>
-                     <li class="nav-item" style="margin: 5px;">
-                        <a href="#home" class="text-success" style="font-size: 3rem;">
-                              <i class="bi bi-whatsapp"></i>
-                        </a>
-                     </li>
-                  </ul>
+            <div class="card-dev">
+               <div class="imgBg">
+                  <img src="imagens/perfil/perfil-2.jpg" alt="">
                </div>
-            </div><!-- Fecha Card 1 -->
+               <div class="content">
+                  <div class="details">
+                     <h2>Gabriel cardoso<br><span>junior ux/ui Designer</span></h2>
+                     <div class="data">
+                        <h3>322<br><span>Posts</span></h3>
+                        <h3>120k<br><span>Followers</span></h3>
+                        <h3>280<br><span>Following</span></h3>
+                     </div>
+                     <div class="actionBtn">
+                        <button>Follow</button>
+                        <button>Menssage</button>
+                     </div>
+                  </div>
+               </div>
+            </div><!-- Fecha card-dev -->
 
 
-            <div class="card" style="width: 18rem;">
-               <img src="imagens/perfil/perfil-1.jpeg" class="card-img-top" alt="perfil-1">
-               <div class="card-body">
-                  <h3>Claudio</h3>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <ul class="nav text-center d-flex justify-content-center mx-auto">
-                     <li class="nav-item" style="margin: 5px;">
-                        <a href="#home" class="text-info">
-                              <i class="bi bi-facebook" style="font-size: 3rem;"></i>
-                        </a>
-                     </li>
-                     <li class="nav-item" style="margin: 5px;">
-                        <a href="#home" class="text-danger">
-                              <i class="bi bi-instagram" style="font-size: 3rem;"></i>
-                        </a>
-                     </li>
-                     <li class="nav-item" style="margin: 5px;">
-                        <a href="#home" class="text-info">
-                              <i class="bi bi-twitter" style="font-size: 3rem;"></i>
-                        </a>
-                     </li>
-                     <li class="nav-item" style="margin: 5px;">
-                        <a href="#home" class="text-success" style="font-size: 3rem;">
-                              <i class="bi bi-whatsapp"></i>
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-            </div><!-- Fecha Card 1 -->
+            
 
          </div>
       </div><!-- Fecha Row -->
