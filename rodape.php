@@ -14,11 +14,11 @@
 </head>
 <body>
     <div class="row panel-footer d-flex align-items-stretch" style="background-color: rgba(0,0,0,0.7); padding: 10px;">
-        <br>
+        
         <div class="logo text-center">
             <h3>Front <span>Vidraçaria</span></h3>
         </div>
-        <div class="col-sm-6 col-md-4 gx-10">
+        <div class=" col-md-4 gx-10">
             <h4 class="text-white text-center">Fale conosco</h4>
             <br>
             <i class="text-white">A melhor Vidraçaria da região!</i>
@@ -109,7 +109,7 @@
         </div>
         
         <br>
-        <div class="container my-3">
+        <div class="container ">
             <h6 class="text-info text-center">
                 Developed by cardosojr™/claudio™ 2022.
                 <br>
