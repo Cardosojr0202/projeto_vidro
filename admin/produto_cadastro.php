@@ -78,6 +78,28 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <!-- Link para CSS específico -->
     <link rel="stylesheet" href="../css/meu_estilo.css">
+    <style>
+        /* Estilizando barras de rolagem no Chrome, Edge e Safari */
+        body::-webkit-scrollbar {
+        width: 10px;               /* width of the entire scrollbar */
+        }
+
+        body::-webkit-scrollbar-track {
+        background: rgba(59, 153, 241, 0.846);        /* color of the tracking area */
+        }
+
+        body::-webkit-scrollbar-thumb {
+        background-color: rgb(48, 48, 242);    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+        border: 3px solid rgb(0, 60, 255);  /* creates padding around scroll thumb */
+        }
+
+        /* Estilizando barras de rolagem no Firefox */
+       * {
+        scrollbar-width: thin;
+        scrollbar-color: blue rgb(0, 153, 255);
+        }
+    </style>
 </head>
 <body class="fundofixo"><br>
     <main class="container">
