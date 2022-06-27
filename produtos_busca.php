@@ -28,6 +28,28 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/meu_estilo.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <style>
+        /* Estilizando barras de rolagem no Chrome, Edge e Safari */
+        body::-webkit-scrollbar {
+        width: 10px;               
+        }
+
+        body::-webkit-scrollbar-track {
+        background: rgba(59, 153, 241, 0.846);        
+        }
+
+        body::-webkit-scrollbar-thumb {
+        background-color: rgb(48, 48, 242);   
+        border-radius: 20px;       
+        border: 3px solid rgb(0, 60, 255);  
+        }
+
+        /* Estilizando barras de rolagem no Firefox */
+       * {
+        scrollbar-width: thin;
+        scrollbar-color: blue rgb(0, 153, 255);
+        }
+    </style>
 </head>
 <body class="fundofixo">
 <?php //include('menu_publico.php') ?>
@@ -78,7 +100,7 @@ $totalRows  =   ($lista)->num_rows;
                                             <hr>
                                             <p>
                                                 <h4 class="text-danger">
-                                                    <strong><?php echo $row['legenda_produto']; ?></strong>
+                                                    <strong><?php echo mb_strimwidth($row['legenda_produto'],0,18,'...'); ?></strong>
                                                 </h4>
                                             </p>
                                             <br>
