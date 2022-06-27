@@ -34,7 +34,7 @@ $totalRows  =   ($lista)->num_rows;
 
 </head>
 <body>
-<h1 class="bg-primary bg-gradient" style="padding-left: 15px; margin-bottom: 26px;">Todos Nossos Produtos</h1>
+<h1 class="bg-primary bg-gradient" style="padding-left: 15px;">Todos Nossos Produtos</h1>
 
 <div class="row"><!-- abre row manter os elementos da linha -->
     <!-- ABRE estrutura de repetição -->
@@ -54,13 +54,13 @@ $totalRows  =   ($lista)->num_rows;
                   <hr>
                       <p>
                           <h4 class="text-danger">
-                              <strong><?php echo $row['legenda_produto']; ?></strong>
+                              <strong><?php echo mb_strimwidth($row['legenda_produto'],0,15,'...'); ?></strong>
                           </h4>
                       </p>
                       <br>
                       <p class="d-flex justify-content-between">
                           <h3 class="btn btn-outline-info disabled" role="button">R$  
-                              <?php echo number_format($row['venda_produto'],2,',','.'); ?>
+                            <?php echo number_format($row['venda_produto'],2,',','.'); ?>
                           </h3>
                       </p>
                 </div>

@@ -34,14 +34,14 @@ $totalRows  =   ($lista)->num_rows;
 
 </head>
 <body>
-    <h1 class="bg-primary bg-gradient" style="padding-left: 20px; margin-bottom: 26px;">Produtos em Promoção</h1>
+    <h1 class="bg-primary bg-gradient" style="padding-left: 20px;">Produtos em Promoção</h1>
     <div class="row"><!-- abre row manter os elementos da linha -->
     <!-- Mostrar se o registro retornar VAZIO -->
     <?php if($totalRows == 0){ ?>
       <br>    
-      <h2 class=" alert alert-primary">
-             DESCULPA. <br>
-              No momento não temos Produto em Promoção!!    
+      <h2 class="alert alert-primary">
+            DESCULPA.<br>
+            No momento não temos Produto em Promoção!!    
       </h2> 
     <?php }; ?> 
     <!-- Mostrar se o registro NÃO retornar VAZIO -->
@@ -63,7 +63,7 @@ $totalRows  =   ($lista)->num_rows;
                       <hr>
                           <p>
                             <h4 class="text-danger">
-                              <strong><?php echo $row['legenda_produto']; ?></strong>
+                              <strong><?php echo mb_strimwidth($row['legenda_produto'],0,15,'...'); ?></strong>
                             </h4>
                           </p>
                           <br>
@@ -82,8 +82,8 @@ $totalRows  =   ($lista)->num_rows;
         <!-- FECHA estrutura de repetição-->
       <?php };?>
     </div><!-- fecha row manter os elementos da linha -->
-<!--link arquivo bootstrap script js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!--link arquivo bootstrap script js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>   
 </body>
