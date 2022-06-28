@@ -20,7 +20,7 @@ $totalRows  =   ($lista)->num_rows;
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<header>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,17 +32,19 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Link para icones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
-</head>
+</header>
 <body>
     <h1 class="bg-primary bg-gradient" style="padding-left: 20px;">Produtos em Promoção</h1>
     <div class="row"><!-- abre row manter os elementos da linha -->
     <!-- Mostrar se o registro retornar VAZIO -->
     <?php if($totalRows == 0){ ?>
-      <br>    
-      <h2 class="alert alert-primary">
-            DESCULPA.<br>
-            No momento não temos Produto em Promoção!!    
-      </h2> 
+      <br>
+      <div class="col-md-12"> 
+        <h2 class="alert alert-primary">
+              DESCULPA.<br>
+              No momento não temos Produto em Promoção!!    
+        </h2> 
+      </div>
     <?php }; ?> 
     <!-- Mostrar se o registro NÃO retornar VAZIO -->
      <?php if($totalRows > 0){ ?>

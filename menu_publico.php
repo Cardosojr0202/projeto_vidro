@@ -27,6 +27,7 @@ $totalRows_tipos = ($lista_categoria)->num_rows;
   <!-- Meu CSS -->
   <link rel="stylesheet" href="css/menu_publico.css">
   <link rel="stylesheet" href="css/meu_estilo.css">
+ 
   <title>menu_publico</title>
 </head>
 <body>
@@ -34,9 +35,9 @@ $totalRows_tipos = ($lista_categoria)->num_rows;
   <nav class="navbar navbar-dark bg-dark position-fixed" style="width: 100%; height: 5em; z-index: 1000;">
     <div class="container-fluid">
         <!--header começo-->
-          <header class="d-flex ">
-
-            <div class="menu-btn mx-3">
+          <header class="d-flex justify-content-between flex-wrap">
+            
+            <div class="menu-btn me-2">
               <i class="fas fa-bars"></i>
             </div>
 
@@ -46,7 +47,7 @@ $totalRows_tipos = ($lista_categoria)->num_rows;
               </a>
             </div>
 
-            <div class="direita position-absolute end-0 top-o me-3">
+            <div class="position-absolute end-0 top-50% me-2">
                 <form action="produtos_busca.php" method="get" name="form_busca" id="form_busca" class="d-flex" role="search">
                   <div class="input-group" style="width: 9em;">
                     <input type="search" name="buscar" id="buscar" placeholder="Pesquise" aria-describedby="basic-addon1" required class="form-control">
