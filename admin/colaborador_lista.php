@@ -35,13 +35,13 @@ $totalRows  =   ($lista)->num_rows;
         }
 
         body::-webkit-scrollbar-track {
-        background: rgba(59, 153, 241, 0.846);        /* color of the tracking area */
+        background: rgba(59, 153, 241, 0.846);       
         }
 
         body::-webkit-scrollbar-thumb {
-        background-color: rgb(48, 48, 242);    /* color of the scroll thumb */
-        border-radius: 20px;       /* roundness of the scroll thumb */
-        border: 3px solid rgb(0, 60, 255);  /* creates padding around scroll thumb */
+        background-color: rgb(48, 48, 242);    
+        border-radius: 20px;      
+        border: 3px solid rgb(0, 60, 255);  
         }
 
         /* Estilizando barras de rolagem no Firefox */
@@ -55,7 +55,7 @@ $totalRows  =   ($lista)->num_rows;
 <?php include'menu_adm.php'; ?>
 <main class="container"><br>
     <div class="row" style="margin-top: 4rem;">
-        <div class="mx-auto col-sm-7 col-md-8 col-lg-8 col-xs-9">
+        <div class="mx-auto col-sm-12 col-md-10 col-lg-9">
             <h1 class="bg-primary bg-gradient">Lista de Colaboradores</h1>
             <table class="table table-hover table-condensed tbopacidade blur">
                     <thead>
@@ -76,12 +76,12 @@ $totalRows  =   ($lista)->num_rows;
 
                     <tbody>
                         <?php do { ?>
-                        <tr>
+                        <tr class="">
                             <td class="d-none"><?php echo $row['id_colaborador']; ?></td>
                             <td class="text-light"><?php echo $row['login_colaborador']; ?></td>
                             <td class="d-none"><?php echo $row['senha_colaborador']; ?></td>
                             <td class="text-light"><?php echo $row['nivel_colaborador']; ?></td>
-                            <td class="text-light"><img src="../imagens/perfil/<?php echo $row['imagem_colaborador']; ?>" alt="" width="100px"></td>                 
+                            <td class="text-light"><img src="../imagens/perfil/<?php echo $row['imagem_colaborador']; ?>" alt="" width="55px"></td>                 
                             <td class="d-grid gx-3 gap-2">
                                 <a href="colaborador_atualiza.php?id_colaborador=<?php echo $row['id_colaborador']; ?>" target="_self" class="btn btn-sm btn-success btn-xs">
                                     <span class="d-none d-sm-block">Atualizar</span>

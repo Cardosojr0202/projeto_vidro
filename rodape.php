@@ -109,7 +109,7 @@
         </div>
         
         <br>
-        <div class="container ">
+        <div class="container my-4">
             <h6 class="text-info text-center">
                 Developed by cardosojr™/claudio™ 2022.
                 <br>

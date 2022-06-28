@@ -104,7 +104,7 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
 <body class="fundofixo"><br>
     <main class="container">
         <div class="row"> <!-- Abre Row -->
-            <div class="mx-auto col-sm-12 col-md-7 col-lg-6"><!--Abre Dimensionamento -->
+            <div class="mx-auto col-sm-12 col-md-6 col-lg-7"><!--Abre Dimensionamento -->
                 <h2 class="text-light bg-info bg-gradient">
                     <a href="produto_lista.php">
                         <button class="btn btn-danger">
@@ -201,7 +201,7 @@ $totalRows_cat      =   ($lista_cat_fk)->num_rows;
                                     <i class="bi bi-image-fill" aria-hidden="true"></i>
                                 </span>
                                 <!-- Exibe a imagem inserida -->
-                                <img src="" alt="" name="imagem" id="imagem" class="img-responsive" >
+                                <img src="" alt="" name="imagem" id="imagem" class="img-fluid">
                                 <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="imagens/*" style="width: 30%;">
                             </div> <!-- Fecha grupo de inserção -->
 

@@ -130,7 +130,7 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
 <body class="fundofixo"><br>
     <main class="container">
         <div class="row"> <!-- Abre Row -->
-            <div class="mx-auto col-sm-12 col-md-7 col-lg-6"> <!-- Dimensionamento -->
+            <div class="mx-auto col-sm-12 col-md-6 col-lg-7"> <!-- Dimensionamento -->
                 <h2 class="text-light bg-info bg-gradient">
                     <a href="produto_lista.php">
                         <button class="btn btn-danger">
@@ -242,7 +242,7 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                             <br>
                             <!-- file imagem_produto ATUAL -->
                             <label for="">Imagem Atual:</label>
-                            <img src="../imagens/<?php echo $row['imagem_produto']; ?>" alt="" class="img-responsive" style="max: width 100px;">
+                            <img src="../imagens/<?php echo $row['imagem_produto']; ?>" alt="" class="img-fluid" style="max: width 30%;">
 
                             <!-- guardamos o nome da imagem caso não seja alterada -->
                             <input type="hidden" name="imagem_produto_atual" id="imagem_produto_atual" value="<?php echo $row['imagem_produto']; ?>"> 
@@ -255,8 +255,8 @@ $totalRows_fk   =   ($lista_fk)->num_rows;
                                     <i class="bi bi-image-fill"></i>
                                 </span>
                                 <!-- Exibe a imagem inserida -->
-                                <img src="" alt="" name="imagem" id="imagem" class="img-responsive" >
-                                <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" accept="imagens/*">
+                                <img src="" alt="" name="imagem" id="imagem" class="img-fluid" style="width 30%;">
+                                <input type="file" name="imagem_produto" id="imagem_produto" class="form-control" style="max-width 30%;" accept="imagens/*">
                             </div> <!-- Fecha grupo de inserção -->
                             <!-- Fecha file imagem_produto -->
                             <br>

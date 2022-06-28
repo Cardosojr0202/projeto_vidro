@@ -61,7 +61,7 @@ $totalRows  =   ($lista)->num_rows;
                     <thead>
                         <tr>
                             <th class="col d-none">ID</th>
-                            <th class="col text-light d-none">CODIGO</th>
+                            <th class="col text-light">CODIGO</th>
                             <th class="col text-light">LEGENDA</th>
                             <th class="col text-light">DESCRIÇÃO</th>
                             <th class="col text-light">UNIDADE</th>
@@ -84,9 +84,9 @@ $totalRows  =   ($lista)->num_rows;
                         <?php do { ?>
                         <tr>
                             <td class="col d-none"><?php echo $row['id_produto']; ?></td>
-                            <td class="col text-light d-none"><?php echo $row['codigo_produto']; ?></td>
+                            <td class="col text-light"><?php echo $row['codigo_produto']; ?></td>
                             <td class="col text-light"><?php echo $row['legenda_produto']; ?></td>
-                            <td class="col text-light"><?php echo $row['descri_produto']; ?></td>
+                            <td class="col text-light"><?php echo mb_strimwidth($row['descri_produto'],0,25,'...'); ?></td>
                             <td class="col text-center text-light"><?php echo $row['unidade_produto']; ?></td>
                             <td class="col text-center text-light"><?php echo $row['espessura_produto']; ?></td>
                             <td class="col text-center text-light"><?php echo $row['cor_produto']; ?></td>
@@ -94,7 +94,7 @@ $totalRows  =   ($lista)->num_rows;
                                 <span class="d-none d-sm-none d-md-block"><?php echo $row['rotulo_categoria']; ?></span>
                                 <span class="d-none d-md-none d-sm-block d-xs-block"><?php echo $row['sigla_categoria']; ?></span>
                             </td>
-                            <td class="text-light"><img src="../imagens/<?php echo $row['imagem_produto']; ?>" alt="" width="100px"></td>
+                            <td class="text-light"><img src="../imagens/<?php echo $row['imagem_produto']; ?>" alt="" width="55px"></td>
                             <td class="text-light"><?php echo number_format($row['venda_produto'],2,',','.');?></td>   
                             <td>
                                 <?php 

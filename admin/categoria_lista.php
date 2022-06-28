@@ -10,7 +10,7 @@ $list   = $conexao->query($consul);
 // Separar os dados em linhas (row)
 $row    = $list->fetch_assoc();
 // Contar o total de linhas
-$totalrows = ($list)->fetch_assoc();
+$totalrows = ($list)->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -27,17 +27,17 @@ $totalrows = ($list)->fetch_assoc();
     <style>
         /* Estilizando barras de rolagem no Chrome, Edge e Safari */
         body::-webkit-scrollbar {
-        width: 10px;               /* width of the entire scrollbar */
+        width: 10px;              
         }
 
         body::-webkit-scrollbar-track {
-        background: rgba(59, 153, 241, 0.846);        /* color of the tracking area */
+        background: rgba(59, 153, 241, 0.846);       
         }
 
         body::-webkit-scrollbar-thumb {
-        background-color: rgb(48, 48, 242);    /* color of the scroll thumb */
-        border-radius: 20px;       /* roundness of the scroll thumb */
-        border: 3px solid rgb(0, 60, 255);  /* creates padding around scroll thumb */
+        background-color: rgb(48, 48, 242);   
+        border-radius: 20px;      
+        border: 3px solid rgb(0, 60, 255);  
         }
 
         /* Estilizando barras de rolagem no Firefox */
@@ -50,7 +50,7 @@ $totalrows = ($list)->fetch_assoc();
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>
     <main class="container"><br>
-        <div class="mx-auto col-sm-8 col-md-8 col-lg-9 col-xs-9" style="margin-top: 4rem;">
+        <div class="mx-auto col-sm-12 col-md-10 col-lg-9" style="margin-top: 4rem;">
             <h1 class="text-light bg-primary bg-gradient">Lista de Categoria</h1>
             <table class="table table-hover tbopacidade blur">
              <!-- thead>tr>th*8 -->
