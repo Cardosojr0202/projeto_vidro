@@ -43,7 +43,7 @@ $totalRows_tipos = ($lista_categoria)->num_rows;
 
             <div class="logo">
               <a href="index.php" style="text-decoration: none;">
-                <h3>Front <span>Vidraçaria</span></h3>
+                <h3>Glass <span>Vidraçaria</span></h3>
               </a>
             </div>
 

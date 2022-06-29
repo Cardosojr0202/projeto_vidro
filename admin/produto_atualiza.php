@@ -43,7 +43,7 @@ if($_POST){
 // Consulta SQL para atualização dos dados
     $updateSQL  =   "UPDATE ".$tabela."
                     SET codigo_produto  = '".$codigo_produto."',
-                        descri_produto  = '".$legenda_produto."',
+                        legenda_produto  = '".$legenda_produto."',
                         descri_produto  = '".$descri_produto."',
                         unidade_produto = '".$unidade_produto."',
                         espessura_produto  = '".$espessura_produto."',

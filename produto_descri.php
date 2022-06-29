@@ -25,13 +25,35 @@ $totalRows  =   ($lista)->num_rows;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rotulo_categoria</title>
+    <title><?php echo $row['rotulo_categoria']; ?></title>
     <!--link  para o Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
     <!--link  para o meu css-->
     <link rel="stylesheet" href="css/meu_estilo.css" type="text/css">
     <!-- Link para icones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <style>
+         /* Estilizando barras de rolagem no Chrome, Edge e Safari */
+         body::-webkit-scrollbar {
+        width: 10px;               
+        }
+
+        body::-webkit-scrollbar-track {
+        background: rgba(59, 153, 241, 0.846);        
+        }
+
+        body::-webkit-scrollbar-thumb {
+        background-color: rgb(48, 48, 242);    
+        border-radius: 20px;       
+        border: 3px solid rgb(0, 60, 255);  
+        }
+
+        /* Estilizando barras de rolagem no Firefox */
+       * {
+        scrollbar-width: thin;
+        scrollbar-color: blue rgb(0, 153, 255);
+        }
+    </style>
 </head>
 <body class="fundofixo">
     <main class="container-fluid">
@@ -45,11 +67,12 @@ $totalRows  =   ($lista)->num_rows;
                 </h3>
 
                 <br>
-                <div class="mx-auto col-sm-8 col-md-8 col-lg-9 col-xs-9">
+                <?php do { ?>
+
                     <div class="container" style="background-color: #fff;">
                         <div class="row d-flex flex-xl-wrap">
                             <div class="col text-center m-auto">
-                                <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="rounded mx-auto d-block img-responsive" alt="Produto" style="width: 90%; max-height: 20%;">
+                                <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="rounded mx-auto d-block" alt="Produto" style="max-width: 20em; max-height: 20%;">
                             </div>
                             <div class="col border">
                                 <h2><?php echo $row['legenda_produto']; ?></h2>
@@ -69,10 +92,11 @@ $totalRows  =   ($lista)->num_rows;
                             </div>
                         </div><!-- Fecha Row(Card) -->
                     </div><!-- Fecha Card -->
-                </div><!-- Fecha Dimencionamento -->
-                    
+                
+                <?php } while ($row=$lista->fetch_assoc()); ?>
             </section>
         </div> <!-- fecha row -->
+        <?php include('produtos_promo_carroussel.php'); ?>
     </main>
 
     <!--link arquivo bootstrap script js -->
