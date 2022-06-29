@@ -72,7 +72,7 @@ $totalRows  =   ($lista)->num_rows;
                     <div class="container" style="background-color: #fff;">
                         <div class="row d-flex flex-xl-wrap">
                             <div class="col text-center m-auto">
-                                <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="rounded mx-auto d-block" alt="Produto" style="max-width: 20em; max-height: 20%;">
+                                <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded mx-auto d-block" alt="Produto" style="max-width: 15em; max-height: 20%;">
                             </div>
                             <div class="col border">
                                 <h2><?php echo $row['legenda_produto']; ?></h2>
