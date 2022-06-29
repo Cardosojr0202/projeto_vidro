@@ -69,11 +69,9 @@ $totalRows  =   ($lista)->num_rows;
                             </h4>
                           </p>
                           <br>
-                          <p>
-                            <button class="btn btn-outline-primary text-dark disabled" role="button">R$  
-                              <?php echo number_format($row['venda_produto'],2,',','.'); ?>
-                            </button>
-                          </p>    
+                          <h5 class="text-dark " role="button">R$  
+                            <?php echo number_format($row['venda_produto'],2,',','.'); ?>
+                          </h5>    
                     </div>
                   </div>
                 </div>

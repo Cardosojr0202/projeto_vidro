@@ -96,9 +96,9 @@ $totalRows  =   ($lista)->num_rows;
                                             <h4 class="text-danger">
                                                 <strong><?php echo mb_strimwidth($row['legenda_produto'],0,19,'...'); ?></strong>
                                             </h4>
-                                            <h3 class="btn btn-outline-info disabled my-3" role="button">R$  
+                                            <h4 class="text-dark my-3" role="button">R$  
                                                 <?php echo number_format($row['venda_produto'],2,',','.'); ?>
-                                            </h3>
+                                            </h4>
 
                                         </div><!-- FECHA Card-body -->
                                     </div>

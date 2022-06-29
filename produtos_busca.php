@@ -104,12 +104,9 @@ $totalRows  =   ($lista)->num_rows;
                                                 </h4>
                                             </p>
                                             <br>
-                                            <p>
-                                                <h3 class="btn btn-outline-info disabled" role="button">R$  
-                                                    <?php echo number_format($row['venda_produto'],2,',','.'); ?>
-                                                </h3>
-                                                
-                                            </p>
+                                            <h4 class="text-dark" role="button">R$  
+                                                <?php echo number_format($row['venda_produto'],2,',','.'); ?>
+                                            </h4>
                                         </div><!-- Fecha Dimensionamento do text -->
                                     </div>
                                 </div><!-- FECHA row g-1 -->

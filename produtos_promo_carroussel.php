@@ -75,42 +75,53 @@ $totalRows  =   ($lista)->num_rows;
 
 <body>
   <br>
-  <h2 class="bg-primary bg-gradient">Vitrine</h2>
+  <h2 class="bg-primary bg-gradient">Outros Produtos em Promoção</h2>
+   <!-- Mostrar se o registro retornar VAZIO -->
+        <?php if($totalRows == 0){ ?>
+          <br>
+          <div class="col-md-12"> 
+            <h2 class="alert alert-primary">
+                  DESCULPA.<br>
+                  No momento não temos Produto em Promoção!!    
+            </h2> 
+          </div>
+        <?php }; ?>
   <section class="responsive slider">
-        <!-- ABRE estrutura de repetição -->
-        <?php do { ?>
-          <div class="col-sm-6 col-md-4"> <!-- Abre Dimensionamento -->
-            <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" style="text-decoration: none;">
-              <div class="card mb-3">
-                <div class="row g-1">
-                  <div class="col-md-4"><br>
-                    <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start" alt="img">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Categoria: 
-                        <strong><?php echo $row['rotulo_categoria']; ?></strong>  
-                      </h5>
-                      <hr>
-                          <p>
-                            <h4 class="text-danger">
-                              <strong><?php echo mb_strimwidth($row['legenda_produto'],0,15,'...'); ?></strong>
-                            </h4>
-                          </p>
-                          <br>
-                          <p>
-                            <button class="btn btn-outline-primary text-dark disabled" role="button">R$  
+        <?php if($totalRows > 0){ ?>
+          <!-- Mostrar se o registro NÃO retornar VAZIO -->
+          <?php do { ?>
+          <!-- ABRE estrutura de repetição -->
+            <div class="col-sm-6 col-md-4"> <!-- Abre Dimensionamento -->
+              <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" style="text-decoration: none;">
+                <div class="card mb-3">
+                  <div class="row g-1">
+                    <div class="col-md-4"><br>
+                      <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start" alt="img">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Categoria: 
+                          <strong><?php echo $row['rotulo_categoria']; ?></strong>  
+                        </h5>
+                        <hr>
+                            <p>
+                              <h4 class="text-danger">
+                                <strong><?php echo mb_strimwidth($row['legenda_produto'],0,15,'...'); ?></strong>
+                              </h4>
+                            </p>
+                            <br>
+                            <h4 class="text-dark" role="button">R$  
                               <?php echo number_format($row['venda_produto'],2,',','.'); ?>
-                            </button>
-                          </p>    
+                            </h4>  
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </a>
-          </div><!-- FECHA Dimensionamento --> 
-        <?php } while ($row=$lista->fetch_assoc()); ?>
-        <!-- FECHA estrutura de repetição-->
+              </a>
+            </div><!-- FECHA Dimensionamento -->
+          <!-- FECHA estrutura de repetição-->   
+          <?php } while ($row=$lista->fetch_assoc()); ?>
+        <?php };?>
   </section>
  
   <!-- Link arquivos Bootstrap 5 js -->    

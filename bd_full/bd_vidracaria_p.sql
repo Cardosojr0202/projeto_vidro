@@ -64,8 +64,9 @@ CREATE TABLE `tb_colaborador` (
 INSERT INTO `tb_colaborador` (`id_colaborador`, `login_colaborador`, `senha_colaborador`, `nivel_colaborador`, `imagem_colaborador`) VALUES
 (1, 'claudio milton', '123', 'adm', 'perfil-1.jpeg'),
 (2, 'aline silva', '123', 'comum', 'perfil-2.jpg'),
-(3, 'gabriel', '123', 'comum', 'perfil-2.jpg'),
-(4, 'Anderson', '123', 'adm', 'perfil-1.jpeg');
+(3, 'gabriel', '123', 'adm', 'perfil-2.jpg'),
+(4, 'Anderson', '123', 'adm', 'perfil-3.png'),
+(5, 'maria', '123', 'comum', 'perfil-1.jpeg');
 
 -- --------------------------------------------------------
 
