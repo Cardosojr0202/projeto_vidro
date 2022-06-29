@@ -89,13 +89,13 @@ $totalRows  =   ($lista)->num_rows;
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body"><!-- Abre Card-body -->
-                                            <h5 class="card-title">Categoria: 
+                                            <p class="card-title">Categoria: 
                                                 <strong><?php echo $row['rotulo_categoria']; ?></strong>  
-                                            </h5>
+                                            </p>
                                             <hr>
-                                            <h4 class="text-danger">
+                                            <h3 class="text-danger">
                                                 <strong><?php echo mb_strimwidth($row['legenda_produto'],0,19,'...'); ?></strong>
-                                            </h4>
+                                            </h3>
                                             <h4 class="text-dark my-3" role="button">R$  
                                                 <?php echo number_format($row['venda_produto'],2,',','.'); ?>
                                             </h4>

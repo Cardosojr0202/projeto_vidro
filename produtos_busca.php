@@ -93,16 +93,13 @@ $totalRows  =   ($lista)->num_rows;
                                     </div><!-- Fecha Dimensionamento da img -->
                                     <div class="col-md-8"><!-- Abre Dimensionamento do text -->
                                         <div class="card-body">
-                                            <h5 class="card-title">Categoria: 
-                                            <strong><?php echo $row['rotulo_categoria']; ?></strong>  
-                                            </h5>
-                                            <br>
-                                            <hr>
-                                            <p>
-                                                <h4 class="text-danger">
-                                                    <strong><?php echo mb_strimwidth($row['legenda_produto'],0,18,'...'); ?></strong>
-                                                </h4>
+                                            <p class="card-title">Categoria: 
+                                                <strong><?php echo $row['rotulo_categoria']; ?></strong>  
                                             </p>
+                                            <hr>
+                                            <h3 class="text-danger">
+                                                <strong><?php echo mb_strimwidth($row['legenda_produto'],0,18,'...'); ?></strong>
+                                            </h3>
                                             <br>
                                             <h4 class="text-dark" role="button">R$  
                                                 <?php echo number_format($row['venda_produto'],2,',','.'); ?>
