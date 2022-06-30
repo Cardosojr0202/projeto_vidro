@@ -28,6 +28,7 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/meu_estilo.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
     <style>
         /* Estilizando barras de rolagem no Chrome, Edge e Safari */
         body::-webkit-scrollbar {
@@ -86,23 +87,20 @@ $totalRows  =   ($lista)->num_rows;
 
                         <div class="col-sm-6 col-md-4"><!-- Abre Dimensionamento -->
                             <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" style="text-decoration: none;">
-                            <div class="card mb-3" style="max-width: 540px;">
+                            <div class="card mb-3">
                                 <div class="row g-1">
                                     <div class="col-md-4"><br><!-- Abre Dimensionamento da img -->
-                                        <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start" alt="">
+                                        <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start" style="max-width: 70%;" alt="">
                                     </div><!-- Fecha Dimensionamento da img -->
                                     <div class="col-md-8"><!-- Abre Dimensionamento do text -->
                                         <div class="card-body">
-                                            <h5 class="card-title">Categoria: 
-                                            <strong><?php echo $row['rotulo_categoria']; ?></strong>  
-                                            </h5>
-                                            <br>
-                                            <hr>
-                                            <p>
-                                                <h4 class="text-danger">
-                                                    <strong><?php echo mb_strimwidth($row['legenda_produto'],0,18,'...'); ?></strong>
-                                                </h4>
+                                            <p class="card-title">Categoria: 
+                                                <strong><?php echo $row['rotulo_categoria']; ?></strong>  
                                             </p>
+                                            <hr>
+                                            <h3 class="text-danger">
+                                                <strong><?php echo mb_strimwidth($row['legenda_produto'],0,18,'...'); ?></strong>
+                                            </h3>
                                             <br>
                                             <h4 class="text-dark" role="button">R$  
                                                 <?php echo number_format($row['venda_produto'],2,',','.'); ?>

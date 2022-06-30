@@ -15,12 +15,12 @@
 <body class="fundofixo">
     <main class="container">
         <h1 class=" bg-primary bg-gradient ">Área Administrativa</h1>
-        <div class="row"> <!-- manter os elementos na linha -->
+        <div class="row gx-3 gy-4"> <!-- manter os elementos na linha -->
 
             <!-- ADM PRODUTOS -->
             <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
                 <div class="thumbnail alert-danger">
-                    <img src="../imagens/carrinho_compra.jpg" alt="">
+                    <img class="img-fluid img-thumbnail rounded mx-auto d-block" src="../imagens/c1.jpg" alt="">
                     <br>
                     <div class="alert-danger">
                         <!-- Botão Principal -->
@@ -58,7 +58,7 @@
             <!-- ADM categoria -->
             <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
                 <div class="thumbnail alert-warning">
-                    <img src="../imagens/categoria.jpg" alt="">
+                    <img class="img-fluid img-thumbnail rounded mx-auto d-block" src="../imagens/cat1.jpg" alt="">
                     <br>
                     <div class="alert-warning">
                         <!-- Botão Principal -->
@@ -96,7 +96,7 @@
             <!-- ADM colaboradores -->
             <div class="col-sm-6 col-md-4"> <!-- dimensionamento -->
                 <div class="thumbnail alert-info">
-                    <img src="../imagens/colaboradores.jpg" alt="">
+                    <img class="img-fluid img-thumbnail rounded mx-auto d-block" src="../imagens/col1.png" alt="">
                     <br>
                     <div class="alert-info">
                         <!-- Botão Principal -->
@@ -131,7 +131,7 @@
             </div><!-- fecha dimensionamento -->
             <!-- FECHA ADM colaboradores -->
         </div> <!-- fecha row -->
-    </main>
+    </main><br>
 
   <!-- Link arquivos bootstrap script js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

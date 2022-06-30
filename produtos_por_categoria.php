@@ -28,24 +28,24 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/meu_estilo.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
     <style>
         /* Estilizando barras de rolagem no Chrome, Edge e Safari */
         body::-webkit-scrollbar {
-        width: 10px;               /* width of the entire scrollbar */
+        width: 10px;               
         }
 
         body::-webkit-scrollbar-track {
-        background: rgba(59, 153, 241, 0.846);        /* color of the tracking area */
+        background: rgba(59, 153, 241, 0.846);        
         }
 
         body::-webkit-scrollbar-thumb {
-        background-color: rgb(48, 48, 242);    /* color of the scroll thumb */
-        border-radius: 20px;       /* roundness of the scroll thumb */
-        border: 3px solid rgb(0, 60, 255);  /* creates padding around scroll thumb */
+        background-color: rgb(48, 48, 242);    
+        border-radius: 20px;       
+        border: 3px solid rgb(0, 60, 255);  
         }
-
         /* Estilizando barras de rolagem no Firefox */
-       * {
+        * {
         scrollbar-width: thin;
         scrollbar-color: blue rgb(0, 153, 255);
         }
@@ -89,13 +89,13 @@ $totalRows  =   ($lista)->num_rows;
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body"><!-- Abre Card-body -->
-                                            <h5 class="card-title">Categoria: 
+                                            <p class="card-title">Categoria: 
                                                 <strong><?php echo $row['rotulo_categoria']; ?></strong>  
-                                            </h5>
+                                            </p>
                                             <hr>
-                                            <h4 class="text-danger">
+                                            <h3 class="text-danger">
                                                 <strong><?php echo mb_strimwidth($row['legenda_produto'],0,19,'...'); ?></strong>
-                                            </h4>
+                                            </h3>
                                             <h4 class="text-dark my-3" role="button">R$  
                                                 <?php echo number_format($row['venda_produto'],2,',','.'); ?>
                                             </h4>

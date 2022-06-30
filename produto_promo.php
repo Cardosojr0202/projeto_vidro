@@ -55,23 +55,21 @@ $totalRows  =   ($lista)->num_rows;
               <div class="card mb-3">
                 <div class="row g-1">
                   <div class="col-md-4"><br>
-                    <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start" alt="">
+                    <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start text-center me-4" alt="img" >
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Categoria: 
+                      <p class="card-title">Categoria: 
                         <strong><?php echo $row['rotulo_categoria']; ?></strong>  
-                      </h5>
+                      </p>
                       <hr>
-                          <p>
-                            <h4 class="text-danger">
-                              <strong><?php echo mb_strimwidth($row['legenda_produto'],0,15,'...'); ?></strong>
-                            </h4>
-                          </p>
-                          <br>
-                          <h5 class="text-dark " role="button">R$  
-                            <?php echo number_format($row['venda_produto'],2,',','.'); ?>
-                          </h5>    
+                        <h3 class="text-danger">
+                          <strong><?php echo mb_strimwidth($row['legenda_produto'],0,15,'...'); ?></strong>
+                        </h3>
+                        <br>
+                        <h5 class="text-dark " role="button">R$  
+                          <?php echo number_format($row['venda_produto'],2,',','.'); ?>
+                        </h5>    
                     </div>
                   </div>
                 </div>

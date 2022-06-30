@@ -31,7 +31,7 @@
                 <i class="text-white bi bi-envelope-dash-fill"></i>
                 <span class="text-white">&nbsp;Email:</span>
                 <a href="mailto:contato@FrontVidraçaria.com.br?subject=Contato&amp;cc=seuemail@hotmail.com">
-                    contato@FrontVidraçaria.com.br
+                    contato@GlassVidraçaria.com.br
                 </a>
             </address>
             <div class=" embed-responsive embed-responsive-16by9">

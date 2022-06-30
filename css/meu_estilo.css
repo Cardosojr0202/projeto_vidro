@@ -37,7 +37,6 @@
 .card-dev{
     position: relative;
     width: 350px;
-    /* height: 190px; */
     height: 450px;
     background: #fff;
     border-radius: 20px;
@@ -106,7 +105,7 @@
     font-weight: 600;
     opacity: 0.5;
 }
-.card-dev .content .details .actionBtn{
+/* .card-dev .content .details .actionBtn{
     display: flex;
     justify-content: space-between;
 }
@@ -122,4 +121,14 @@
     border: 1px solid #999;
     color: #999;
     background: #fff;
+} */
+
+/* card-senac */
+.card-senac{
+    position: relative;
+    width: 350px;
+    height: 210px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
 }

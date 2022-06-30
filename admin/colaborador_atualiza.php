@@ -71,6 +71,7 @@ $totalRows      =   ($lista)->num_rows;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atualização de produtos</title>
+    <link rel="shortcut icon" href="../imagens/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- Link para icones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">

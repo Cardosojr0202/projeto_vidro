@@ -28,6 +28,7 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="../css/meu_estilo.css" type="text/css">
     <!-- Link para icones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="../imagens/logo.png" type="image/x-icon">
 </head>
 <body class="fundofixo">
 <?php include'menu_adm.php'; ?>

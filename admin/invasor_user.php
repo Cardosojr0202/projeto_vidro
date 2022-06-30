@@ -6,6 +6,7 @@
     <meta http-equiv="Refresh" content="15;URL=index.php">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invasor</title>
+    <link rel="shortcut icon" href="../imagens/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2495680ceb.js" crossorigin="anonymous"></script> 
     <!-- Link para CSS específico -->

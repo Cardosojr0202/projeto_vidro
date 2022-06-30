@@ -11,24 +11,24 @@
     <link rel="stylesheet" href="css/meu_estilo.css">
     <!-- Link para icones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
     <style>
         /* Estilizando barras de rolagem no Chrome, Edge e Safari */
         body::-webkit-scrollbar {
-        width: 10px;               /* width of the entire scrollbar */
+        width: 10px;              
         }
 
         body::-webkit-scrollbar-track {
-        background: rgba(59, 153, 241, 0.846);        /* color of the tracking area */
+        background: rgba(59, 153, 241, 0.846);        
         }
 
         body::-webkit-scrollbar-thumb {
-        background-color: rgb(48, 48, 242);    /* color of the scroll thumb */
-        border-radius: 20px;       /* roundness of the scroll thumb */
-        border: 3px solid rgb(0, 60, 255);  /* creates padding around scroll thumb */
+        background-color: rgb(48, 48, 242);    
+        border-radius: 20px;       
+        border: 3px solid rgb(0, 60, 255);  
         }
-
         /* Estilizando barras de rolagem no Firefox */
-       * {
+        * {
         scrollbar-width: thin;
         scrollbar-color: blue rgb(0, 153, 255);
         }
@@ -38,7 +38,7 @@
 <?php include('menu_publico.php') ?>
    <main class="container-fluid">
       <div class="row">
-         <div class="container d-flex justify-content-center  flex-wrap" style="margin-top: 10rem; margin-bottom: 6rem;">
+         <div class="container d-flex justify-content-center flex-wrap" style="margin-top: 10rem; margin-bottom: 6rem;">
          
             <div class="card-dev" style="margin: 36px;">
                <div class="imgBg">
@@ -50,35 +50,34 @@
                      <div class="data">
                         <ul class="nav text-center d-flex justify-content-center mx-auto">
                            <li class="nav-item mx-2">
-                               <a href="#home" class="text-info">
+                               <a href="https://www.facebook.com/cardosojr1239/" target="_self" class="text-info">
                                    <i class="bi bi-facebook" style="font-size: 3rem;"></i>
                                </a>
                            </li>
                            <li class="nav-item mx-2">
-                               <a href="#home" class="text-danger">
+                               <a href="https://www.instagram.com/cardosojr_ff/" target="_self" class="text-danger">
                                    <i class="bi bi-instagram" style="font-size: 3rem;"></i>
                                </a>
                            </li>
                            <li class="nav-item mx-2">
-                               <a href="#home" class="text-info">
+                               <a href="https://twitter.com/Gabriel35230311" target="_self" class="text-info">
                                    <i class="bi bi-twitter" style="font-size: 3rem;"></i>
                                </a>
                            </li>
                            <li class="nav-item mx-2">
-                               <a href="#home" class="text-success" style="font-size: 3rem;">
+                               <a href="#home" class="text-success" target="_self" style="font-size: 3rem;">
                                    <i class="bi bi-whatsapp"></i>
                                </a>
                            </li>
                        </ul>
                      </div> 
-                     <div class="actionBtn">
+                     <!-- <div class="actionBtn">
                         <button class="btn">Follow</button>
                         <button class="btn">Menssage</button>
-                     </div>
+                     </div> -->
                   </div>
                </div>
             </div><!-- Fecha card-dev -->
-
 
             <div class="card-dev" style="margin: 36px;">
                <div class="imgBg">
@@ -111,17 +110,54 @@
                            </li>
                        </ul>
                      </div> 
-                     <div class="actionBtn">
+                     <!-- <div class="actionBtn">
                         <button class="btn">Follow</button>
                         <button class="btn">Menssage</button>
-                     </div>
+                     </div> -->
                   </div>
                </div>
             </div><!-- Fecha card-dev -->
 
-         </div>
+         </div><!-- Fecha container Devs -->
+         <div class="container" style="margin-top: -64px; margin-bottom: 3rem;">
+
+            <div class="card-senac" style="margin: 10px auto;">
+                <div class="imgBg">
+                    <img src="imagens/senac.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="details">
+                        <div class="data" style="margin: -38px;">
+                            <ul class="nav text-center d-flex justify-content-center mx-auto">
+                               <li class="nav-item mx-2">
+                                   <a href="https://www.facebook.com/senacitapetininga" target="_self" class="text-info">
+                                       <i class="bi bi-facebook" style="font-size: 3rem;"></i>
+                                   </a>
+                               </li>
+                               <li class="nav-item mx-2">
+                                   <a href="https://www.instagram.com/senac.itapetininga/" target="_self" class="text-danger">
+                                       <i class="bi bi-instagram" style="font-size: 3rem;"></i>
+                                   </a>
+                               </li>
+                               <li class="nav-item mx-2">
+                                   <a href="https://twitter.com/SenacAlagoas" target="_self" class="text-info">
+                                       <i class="bi bi-twitter" style="font-size: 3rem;"></i>
+                                   </a>
+                               </li>
+                               <li class="nav-item mx-2">
+                                   <a href="#home" class="text-success" style="font-size: 3rem;">
+                                       <i class="bi bi-whatsapp"></i>
+                                   </a>
+                               </li>
+                           </ul>
+                         </div> 
+                    </div>
+                </div>
+            </div><!-- Fecha card-senac -->
+            
+         </div><!-- Fecha container senac -->
       </div><!-- Fecha Row -->
-   </main>
+   </main><!-- Fecha container geral -->
 
    <!-- Link arquivos bootstrap script js -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

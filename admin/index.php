@@ -15,6 +15,7 @@ include("acesso_com.php");
     <link rel="stylesheet" href="../css/meu_estilo.css">
     <!-- Link para icones do bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="../imagens/logo.png" type="image/x-icon">
 </head>
 <body>
     <?php include('menu_adm.php'); ?>
