@@ -89,7 +89,7 @@ $totalRows  =   ($lista)->num_rows;
                                     <span class="d-none d-sm-block">Atualizar</span>
                                     <i class="bi bi-arrow-clockwise"></i>
                                 </a>    
-                                <button class="btn btn-sm btn-danger btn-xs delete" role="button" data-nome="<?php echo $row['descri_produto'];?>" data-id="<?php echo $row['id_produto'];?>">
+                                <button class="btn btn-sm btn-danger btn-xs delete" role="button" data-nome="<?php echo $row['legenda_produto'];?>" data-id="<?php echo $row['id_produto'];?>">
                                     <span class="d-none d-sm-block">Excluir</span>
                                     <i class="bi bi-trash-fill"></i>
                                 </button> 
