@@ -16,7 +16,7 @@
     <div class="row panel-footer d-flex align-items-stretch" style="background-color: rgba(0,0,0,0.7); padding: 10px;">
         
         <div class="logo text-center">
-            <h3>Glass <span>Vidraçaria</span></h3>
+            <h3>Front <span>Vidraçaria</span></h3>
         </div>
         <div class=" col-md-4 gx-10">
             <h4 class="text-white text-center">Fale conosco</h4>
@@ -31,7 +31,7 @@
                 <i class="text-white bi bi-envelope-dash-fill"></i>
                 <span class="text-white">&nbsp;Email:</span>
                 <a href="mailto:contato@FrontVidraçaria.com.br?subject=Contato&amp;cc=seuemail@hotmail.com">
-                    contato@GlassVidraçaria.com.br
+                    contato@FrontVidraçaria.com.br
                 </a>
             </address>
             <div class=" embed-responsive embed-responsive-16by9">
@@ -111,7 +111,7 @@
         <br>
         <div class="container my-4">
             <h6 class="text-info text-center">
-                Developed by cardosojr™/claudio™ 2022.
+                Developed by cardosojr™/Cláudio™ 2022.
                 <br>
                 <a class="link-warning" href="developer.php">
                     www.developer.com.br

@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" >
     <link rel="stylesheet" href="css/meu_estilo.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-    <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
 </head>
 <body class="fundofixo">
     <?php //include('menu_publico.php'); ?>
@@ -19,7 +18,7 @@
         <div class="jumbotron alert-info">
             <h1 class="text-info text-center">Agradecemos seu contato</h1>
             <?php
-                $destino = "contato@GlassVidraçaria.com.br";
+                $destino = "contato@FrontVidraçaria.com.br";
                 $nome_contato = $_POST['nome_contato'];
                 $email_contato = $_POST['email_contato'];
                 $msg_contato = "Mensagem de: ".$_POST['nome_contato']."\n".$_POST['comentarios_contato'];

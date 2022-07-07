@@ -31,23 +31,23 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
     <style>
         /* Estilizando barras de rolagem no Chrome, Edge e Safari */
-        body::-webkit-scrollbar {
-        width: 10px;               
+         body::-webkit-scrollbar {
+            width: 10px;               
         }
 
         body::-webkit-scrollbar-track {
-        background: rgba(59, 153, 241, 0.846);        
+            background: rgba(0, 0, 0, 0.8);        
         }
 
         body::-webkit-scrollbar-thumb {
-        background-color: rgb(48, 48, 242);    
-        border-radius: 20px;       
-        border: 3px solid rgb(0, 60, 255);  
+            background-color: rgb(48, 48, 242);    
+            border-radius: 20px;       
+            border: 3px solid rgb(0, 60, 255);  
         }
         /* Estilizando barras de rolagem no Firefox */
         * {
-        scrollbar-width: thin;
-        scrollbar-color: blue rgb(0, 153, 255);
+            scrollbar-width: thin;
+            scrollbar-color: blue rgba(0, 0, 0,.6);
         }
     </style>
 </head>
@@ -89,16 +89,19 @@ $totalRows  =   ($lista)->num_rows;
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body"><!-- Abre Card-body -->
-                                            <p class="card-title">Categoria: 
+
+                                            <h5 class="card-title">Categoria: 
                                                 <strong><?php echo $row['rotulo_categoria']; ?></strong>  
-                                            </p>
+                                            </h5>
                                             <hr>
-                                            <h3 class="text-danger">
-                                                <strong><?php echo mb_strimwidth($row['legenda_produto'],0,19,'...'); ?></strong>
-                                            </h3>
-                                            <h4 class="text-dark my-3" role="button">R$  
-                                                <?php echo number_format($row['venda_produto'],2,',','.'); ?>
+                                            <h4 class="text-danger">
+                                                <strong><?php echo mb_strimwidth($row['legenda_produto'],0,19,'...');?></strong>
                                             </h4>
+                                            <br>
+                                            <p class="text-dark" role="button">
+                                                Apenas 10X 
+                                                <span class="h2">R$<?php echo number_format($row['venda_produto']/10,2,',','.'); ?></span>   
+                                            </p>
 
                                         </div><!-- FECHA Card-body -->
                                     </div>

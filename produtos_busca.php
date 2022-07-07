@@ -4,7 +4,7 @@ include("connection/connection.php");
 
 // Consulta para trazer os dados e se necessário filtrar
 $table          = "vw_tbprodutos";
-$order          = "legenda_produto ASC";
+$order          = "codigo_produto ASC";
 $campo_filtro   = "legenda_produto";
 $filtro_s  = $_GET['buscar'];
 $consul     =   "
@@ -87,24 +87,27 @@ $totalRows  =   ($lista)->num_rows;
 
                         <div class="col-sm-6 col-md-4"><!-- Abre Dimensionamento -->
                             <a href="produto_descri.php?id_produto=<?php echo $row['id_produto']; ?>" style="text-decoration: none;">
-                            <div class="card mb-3">
+                            <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row g-1">
                                     <div class="col-md-4"><br><!-- Abre Dimensionamento da img -->
-                                        <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start" style="max-width: 70%;" alt="">
+                                        <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded-start" alt="">
                                     </div><!-- Fecha Dimensionamento da img -->
                                     <div class="col-md-8"><!-- Abre Dimensionamento do text -->
                                         <div class="card-body">
+
                                             <p class="card-title">Categoria: 
                                                 <strong><?php echo $row['rotulo_categoria']; ?></strong>  
                                             </p>
                                             <hr>
-                                            <h3 class="text-danger">
+                                            <h4 class="text-danger">
                                                 <strong><?php echo mb_strimwidth($row['legenda_produto'],0,18,'...'); ?></strong>
-                                            </h3>
-                                            <br>
-                                            <h4 class="text-dark" role="button">R$  
-                                                <?php echo number_format($row['venda_produto'],2,',','.'); ?>
                                             </h4>
+                                            <br>
+                                            <p class="text-dark" role="button">
+                                                Apenas 10X  
+                                                <span class="h2">R$<?php echo number_format($row['venda_produto']/10,2,',','.'); ?></span>   
+                                            </p>
+
                                         </div><!-- Fecha Dimensionamento do text -->
                                     </div>
                                 </div><!-- FECHA row g-1 -->

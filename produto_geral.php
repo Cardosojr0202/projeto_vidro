@@ -48,17 +48,20 @@ $totalRows  =   ($lista)->num_rows;
               </div>
               <div class="col-md-8">
                 <div class="card-body">
+
                   <p class="card-title">Categoria: 
                     <strong><?php echo $row['rotulo_categoria']; ?></strong>  
                   </p>
                   <hr>
-                    <h3 class="text-danger">
-                      <strong><?php echo mb_strimwidth($row['legenda_produto'],0,15,'...'); ?></strong>
-                    </h3>
-                    <br>
-                    <h4 class="text-dark" role="button">R$  
-                      <?php echo number_format($row['venda_produto'],2,',','.'); ?>
-                    </h4>
+                  <h4 class="text-danger">
+                    <strong><?php echo mb_strimwidth($row['legenda_produto'],0,15,'...'); ?></strong>
+                  </h4>
+                  <br>
+                  <p class="text-dark" role="button">
+                    Apenas 10X<br>
+                    <span class="h2">R$<?php echo number_format($row['venda_produto']/10,2,',','.'); ?></span>  
+                  </p>
+
                 </div>
               </div>
             </div>

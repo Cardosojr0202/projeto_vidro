@@ -27,7 +27,6 @@ $totalRows_tipos = ($lista_categoria)->num_rows;
   <!-- Meu CSS -->
   <link rel="stylesheet" href="css/menu_publico.css">
   <link rel="stylesheet" href="css/meu_estilo.css">
- 
   <title>menu_publico</title>
 </head>
 <body>

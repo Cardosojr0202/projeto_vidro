@@ -25,29 +25,29 @@
         <div class="carousel-item active">
           <img src="imagens/banner_1.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+            <h5>PROFISSIONALISMO</h5>
+            <p>Uma equipe treinada e focada no atendimento ao cliente </p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="imagens/banner_2.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
+            <h5>SEGURANÇA</h5>
+            <p>Produtos dentro das norma ABNT Proporcionando qualidade e durabilidade</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="imagens/banner_3.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
+            <h5>TRANSPARENCIA</h5>
+            <p>Elegancia e proteção sem perder a visibilidade do ambiente</p>
           </div>
         </div>
         <div class="carousel-item">
             <img src="imagens/Banner_4.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
+              <h5>DIVERSOS PRODUTOS</h5>
+              <p>Temos solucões para todos os ambiente </p>
             </div>
           </div>
       </div>

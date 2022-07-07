@@ -25,7 +25,7 @@ $totalRows  =   ($lista)->num_rows;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $row['rotulo_categoria']; ?></title>
+    <title>rotulo_categoria</title>
     <!--link  para o Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css" rel="stylesheet">
     <!--link  para o meu css-->
@@ -34,24 +34,24 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
     <style>
-         /* Estilizando barras de rolagem no Chrome, Edge e Safari */
+        /* Estilizando barras de rolagem no Chrome, Edge e Safari */
          body::-webkit-scrollbar {
-        width: 10px;               
+            width: 10px;               
         }
 
         body::-webkit-scrollbar-track {
-        background: rgba(59, 153, 241, 0.846);        
+            background: rgba(0, 0, 0, 0.8);        
         }
 
         body::-webkit-scrollbar-thumb {
-        background-color: rgb(48, 48, 242);    
-        border-radius: 20px;       
-        border: 3px solid rgb(0, 60, 255);  
+            background-color: rgb(48, 48, 242);    
+            border-radius: 20px;       
+            border: 3px solid rgb(0, 60, 255);  
         }
         /* Estilizando barras de rolagem no Firefox */
         * {
-        scrollbar-width: thin;
-        scrollbar-color: blue rgb(0, 153, 255);
+            scrollbar-width: thin;
+            scrollbar-color: blue rgba(0, 0, 0,.6);
         }
     </style>
 </head>
@@ -72,12 +72,13 @@ $totalRows  =   ($lista)->num_rows;
                     <div class="container" style="background-color: #fff;">
                         <div class="row d-flex flex-xl-wrap">
                             <div class="col text-center m-auto">
-                                <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="img-fluid rounded mx-auto d-block" alt="Produto" style="max-width: 15em; max-height: 20%;">
+                                <img src="imagens/<?php echo $row['imagem_produto']; ?>" class="rounded mx-auto d-block" alt="Produto" style="max-width: 20em; max-height: 20%;">
                             </div>
                             <div class="col border">
                                 <h2><?php echo $row['legenda_produto']; ?></h2>
-                                <h3 style="margin-top: 40px;">R$
-                                    <?php echo number_format($row['venda_produto'],2,',','.'); ?> 
+                                <h3 style="margin-top: 40px;">
+                                    <span class="h5">10x</span> 
+                                    R$<?php echo number_format($row['venda_produto']/10,2,',','.'); ?> 
                                 </h3>
                                 <p>
                                     <?php echo $row['descri_produto']; ?>
@@ -87,8 +88,12 @@ $totalRows  =   ($lista)->num_rows;
                                     <?php echo $row['rotulo_categoria']; ?>
                                 </p>
                                 <div class="btn-group d-flex flex-column m-3" role="group" aria-label="Basic example">
-                                    <a type="button" class="btn btn-success">Comprar agora</a>
+                                <a href="pagamento.html" type="button" class="btn btn-success btn-lg btn-block"><h2>Comprar Agora</h2></a>
                                 </div>
+                                <div class="btn-group d-flex flex-column m-3" role="group" aria-label="Basic example">
+                                    <a  href="carrinho_lista.php"  type="button" class="btn btn-success">Adicionar ao carrinho</a>
+                                </div>
+
                             </div>
                         </div><!-- Fecha Row(Card) -->
                     </div><!-- Fecha Card -->
